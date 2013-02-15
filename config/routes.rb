@@ -1,4 +1,10 @@
 App10k::Application.routes.draw do
+  get "page/index"
+
+  get "page/contacts"
+
+  get "page/about"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
