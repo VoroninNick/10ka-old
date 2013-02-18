@@ -14,7 +14,31 @@
   font-size: 0.95em;
   width: 65%;
   float: left;
+
+  font-weight: 300;
 }
+
+.main-descr-img{
+  text-align: center;
+}
+
+
+
+
+#banner-wrapper div.banner-holder{
+  border: 4px solid #fff;
+  -moz-box-shadow: 0 0 5px rgba(0,0,0,.37);
+  -webkit-box-shadow: 0 0 5px rgba(0,0,0,.37);
+  box-shadow: 0 0 5px rgba(0,0,0,.37);
+  height: 408px;
+  overflow: hidden;
+}
+
+#banner-wrapper div.banner-holder img{
+  width: 100%;
+}
+
+
 
 
 #catalog-wrapper{
@@ -93,4 +117,41 @@
 #catalog-wrapper div.catalog-block div.catalog-item.open a.catalog-show-more{
   color: #dd2e21;
   text-shadow: 0 1px 0 rgba(255,255,255,.46);
+}
+
+
+
+
+
+
+
+#articles-wrapper{}
+
+#articles-wrapper div.g12 h1{
+  color: #838383;
+  font-weight: 600;
+}
+
+#articles-wrapper div.news-item div.image-cont{
+  border: 4px solid #fff;
+  -moz-box-shadow: 0 0 5px rgba(0,0,0,.37);
+  -webkit-box-shadow: 0 0 5px rgba(0,0,0,.37);
+  box-shadow: 0 0 5px rgba(0,0,0,.37);
+  overflow: hidden;
+  height: 108px;
+}
+
+#articles-wrapper div.news-item div.image-cont img{
+  width: 100%;
+}
+
+#articles-wrapper div.news-item h2.article-header{
+  color: #bf291f;
+  font-weight: 300;
+}
+
+#articles-wrapper div.news-item p.article-short-description{
+  color: #666;
+  font-weight: 300;
+  font-size: 0.95em;
 }
