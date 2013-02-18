@@ -17,8 +17,11 @@
 }
 
 
-#catalog-wrapper div.catalog-block{
-
+#catalog-wrapper{
+  background: url(catalog-main-bg.jpg) repeat;
+  padding: 50px 0 25px 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 #catalog-wrapper div.catalog-block div.catalog-item{
