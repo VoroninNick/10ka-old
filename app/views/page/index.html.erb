@@ -1,2 +1,140 @@
-<h1>Page#index</h1>
-<p>Find me in app/views/page/index.html.erb</p>
+<div class="container" id="header">
+    <div id="hd-wrapper" class="f-height">
+      <div class="g4">
+        <% if current_page?(root_path) %>
+          <%= image_tag('logo.png', :alt => '') %>
+        <% else %>
+          <%= link_to(image_tag('logo.png', :alt => ''), root_path) %>
+        <% end %>
+      </div><!-- span4 -->
+
+      <div class="g8">
+        <nav>
+          <ul class="header-nav">
+            <li><a href="#">Про компанію</a></li>
+            <li class="active"><a href="#">Каталог</a></li>
+            <li><a href="#">Статті</a></li>
+            <li><a href="#">Контакти</a></li>
+          </ul>
+        </nav>
+      </div><!-- span8 -->
+    </div>
+
+    <!-- Info area -->
+    <div id="info-wrapper" class="f-height">
+      <div class="g4 main-descr-img">
+
+      </div>
+
+      <div class="g8 main-descr-area">
+        <h1>Вас вітає «Десятка» &mdash; гуртівня буд-матеріалів</h1>
+        <p class="h1-cont">&mdash; лідер з гуртового продажу будівельно-оздоблювальних матеріалів у Західній Україні</p>
+
+        <p class="af-description">Компанія знаходиться на ринку вже протягом 10 років та зарекомендувала себе як надійний партнер не лише для будівельних компаній та гуртових магазинів, а і для мереж гіпермаркетів, таких як «Нова Лінія», «Практікер» та ін.</p>
+      </div>
+    </div>
+    <!-- /Info area -->
+
+    <!-- Catalog area -->
+  <div id="catalog-wrapper" class="f-height">
+    <div class="catalog-block g4">
+      <div class="catalog-item" id="main-cat-1" data-category-name="" data-category-id="">
+        <a class="catalog-show-more animate" >Сухі суміші<span data-opened="false">+</span></a>
+        <ul class="catalog-menu" id="menu-cat-1">
+          <li><a href="#">Шпаклівки сухі <span>+</span></a></li>
+          <li><a href="#">Шпаклівки готові <span>+</span></a></li>
+          <li><a href="#">Супутні матеріали <span>+</span></a></li>
+          <li><a href="#">Більше <span>+</span></a></li>
+          <li><a href="#">Меньше <span>+</span></a></li>
+        </ul>
+      </div>
+      <div class="catalog-item" id="main-cat-2" data-category-name="" data-category-id="">
+        <a class="catalog-show-more animate" >Сухі суміші<span data-opened="false">+</span></a>
+        <ul class="catalog-menu" id="menu-cat-2">
+          <li><a href="#">Шпаклівки сухі <span>+</span></a></li>
+          <li><a href="#">Шпаклівки готові <span>+</span></a></li>
+          <li><a href="#">Супутні матеріали <span>+</span></a></li>
+          <li><a href="#">Більше <span>+</span></a></li>
+          <li><a href="#">Меньше <span>+</span></a></li>
+        </ul>
+      </div>
+      <div class="catalog-item " id="main-cat-3" data-category-name="" data-category-id="">
+        <a class="catalog-show-more animate" >Сухі суміші<span data-opened="false">+</span></a>
+        <ul class="catalog-menu" id="menu-cat-3">
+          <li><a href="#">Шпаклівки сухі <span>+</span></a></li>
+          <li><a href="#">Шпаклівки готові <span>+</span></a></li>
+          <li><a href="#">Супутні матеріали <span>+</span></a></li>
+          <li><a href="#">Більше <span>+</span></a></li>
+          <li><a href="#">Меньше <span>+</span></a></li>
+        </ul>
+      </div>
+    </div><!-- Catalog wrap stuff -->
+    <div class="catalog-block g4">
+      <div class="catalog-item " id="main-cat-4" data-category-name="" data-category-id="">
+        <a class="catalog-show-more animate" >Сухі суміші<span data-opened="false">+</span></a>
+        <ul class="catalog-menu" id="menu-cat-4">
+          <li><a href="#">Шпаклівки сухі <span>+</span></a></li>
+          <li><a href="#">Шпаклівки готові <span>+</span></a></li>
+          <li><a href="#">Супутні матеріали <span>+</span></a></li>
+          <li><a href="#">Більше <span>+</span></a></li>
+          <li><a href="#">Меньше <span>+</span></a></li>
+        </ul>
+      </div>
+      <div class="catalog-item " id="main-cat-5" data-category-name="" data-category-id="">
+        <a class="catalog-show-more animate" >Сухі суміші<span data-opened="false">+</span></a>
+        <ul class="catalog-menu" id="menu-cat-5">
+          <li><a href="#">Шпаклівки сухі <span>+</span></a></li>
+          <li><a href="#">Шпаклівки готові <span>+</span></a></li>
+          <li><a href="#">Супутні матеріали <span>+</span></a></li>
+          <li><a href="#">Більше <span>+</span></a></li>
+          <li><a href="#">Меньше <span>+</span></a></li>
+        </ul>
+      </div>
+      <div class="catalog-item " id="main-cat-6" data-category-name="" data-category-id="">
+        <a class="catalog-show-more animate" >Сухі суміші<span data-opened="false">+</span></a>
+        <ul class="catalog-menu" id="menu-cat-6">
+          <li><a href="#">Шпаклівки сухі <span>+</span></a></li>
+          <li><a href="#">Шпаклівки готові <span>+</span></a></li>
+          <li><a href="#">Супутні матеріали <span>+</span></a></li>
+          <li><a href="#">Більше <span>+</span></a></li>
+          <li><a href="#">Меньше <span>+</span></a></li>
+        </ul>
+      </div>
+    </div><!-- Catalog wrap stuff -->
+    <div class="catalog-block g4">
+      <div class="catalog-item " id="main-cat-7" data-category-name="" data-category-id="">
+        <a class="catalog-show-more animate" >Сухі суміші<span data-opened="false">+</span></a>
+        <ul class="catalog-menu" id="menu-cat-7">
+          <li><a href="#">Шпаклівки сухі <span>+</span></a></li>
+          <li><a href="#">Шпаклівки готові <span>+</span></a></li>
+          <li><a href="#">Супутні матеріали <span>+</span></a></li>
+          <li><a href="#">Більше <span>+</span></a></li>
+          <li><a href="#">Меньше <span>+</span></a></li>
+        </ul>
+      </div>
+      <div class="catalog-item " id="main-cat-8" data-category-name="" data-category-id="">
+        <a class="catalog-show-more animate" >Сухі суміші<span data-opened="false">+</span></a>
+        <ul class="catalog-menu" id="menu-cat-8">
+          <li><a href="#">Шпаклівки сухі <span>+</span></a></li>
+          <li><a href="#">Шпаклівки готові <span>+</span></a></li>
+          <li><a href="#">Супутні матеріали <span>+</span></a></li>
+          <li><a href="#">Більше <span>+</span></a></li>
+          <li><a href="#">Меньше <span>+</span></a></li>
+        </ul>
+      </div>
+      <div class="catalog-item " id="main-cat-9" data-category-name="" data-category-id="">
+        <a class="catalog-show-more animate" >Сухі суміші<span data-opened="false">+</span></a>
+        <ul class="catalog-menu" id="menu-cat-9">
+          <li><a href="#">Шпаклівки сухі <span>+</span></a></li>
+          <li><a href="#">Шпаклівки готові <span>+</span></a></li>
+          <li><a href="#">Супутні матеріали <span>+</span></a></li>
+          <li><a href="#">Більше <span>+</span></a></li>
+          <li><a >Меньше <span>+</span></a></li>
+        </ul>
+      </div>
+    </div><!-- Catalog wrap stuff -->
+
+  </div>
+
+    <!-- /Catalog area -->
+</div>

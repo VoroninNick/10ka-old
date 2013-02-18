@@ -2,13 +2,19 @@
 <html>
 <head>
   <title>App10k</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&subset=latin,cyrillic-ext,latin-ext,cyrillic' rel='stylesheet' type='text/css'>
+  <%= stylesheet_link_tag    "application" %>
   <%= javascript_include_tag "application" %>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <%= csrf_meta_tags %>
 </head>
 <body>
 
-<%= yield %>
+<div id="wrapper">
+  <%= yield %>
+</div>
+
+
 
 </body>
 </html>

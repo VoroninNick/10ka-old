@@ -1,0 +1,42 @@
+*, ::after, ::before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.animate{
+  -webkit-transition: 0.45s ease-out all;
+  -moz-transition: 0.45s ease-out all;
+  -ms-transition: 0.45s ease-out all;
+  -o-transition: 0.45s ease-out all;
+  transition: 0.45s ease-out all;
+}
+
+html, body {
+  height: 100%;
+}
+
+body{
+  font-family: 'Open Sans', sans-serif;
+  background: url(10k-bricks-pattern.gif) repeat transparent;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+[class*="container"]{
+  background: #ffffff;
+}
+
+[class*="container"]::before, [class*="container"]::after, [class*="f-height"]::before, [class*="f-height"]::after {
+  display: table;
+  line-height: 0;
+  content: "";
+}
+
+[class*="container"]::after, [class*="f-height"]::after {
+  clear: both;
+}
+
+#wrapper{
+  padding: 10px 0;
+}
