@@ -1,8 +1,6 @@
 class PageController < ApplicationController
   def index
-  end
-
-  def contacts
+  	@fetch_banners ||= Banner.all
   end
 
   def about
