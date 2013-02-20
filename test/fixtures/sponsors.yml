@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  link: MyString
+  description: MyString
+  sponsor_file_name: MyString
+  sponsor_content_type: MyString
+  sponsor_file_size: 1
+  sponsor_updated_at: 2013-02-20 16:44:58
+
+two:
+  name: MyString
+  link: MyString
+  description: MyString
+  sponsor_file_name: MyString
+  sponsor_content_type: MyString
+  sponsor_file_size: 1
+  sponsor_updated_at: 2013-02-20 16:44:58

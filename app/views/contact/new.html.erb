@@ -1,3 +1,51 @@
+<div class="container" id="header">
+    <div id="hd-wrapper" class="f-height">
+      <div class="g4">
+        <% if current_page?(root_path) %>
+          <%= image_tag('logo.png', :alt => '') %>
+        <% else %>
+          <%= link_to(image_tag('logo.png', :alt => ''), root_path) %>
+        <% end %>
+      </div><!-- span4 -->
+
+      <div class="g8">
+        <%= render :partial => "partials/menu" %>
+      </div><!-- span8 -->
+    </div>
+
+
+
+
+    <!-- Info area -->
+    <div id="info-wrapper" class="f-height">
+      <div class="g4 main-descr-img">
+        <%= image_tag('logo-big.jpg') %>
+      </div>
+
+      <div class="g8 main-descr-area">
+        <h1>Вас вітає «Десятка» &mdash; гуртівня буд-матеріалів</h1>
+        <p class="h1-cont">&mdash; лідер з гуртового продажу будівельно-оздоблювальних матеріалів у Західній Україні</p>
+
+        <p class="af-description">Компанія знаходиться на ринку вже протягом 10 років та зарекомендувала себе як надійний партнер не лише для будівельних компаній та гуртових магазинів, а і для мереж гіпермаркетів, таких як «Нова Лінія», «Практікер» та ін.</p>
+      </div>
+    </div>
+    <!-- /Info area -->
+
+<!-- Catalog render -->
+<%= render :partial => "partials/catalog-home" %>
+<!-- Catalog render -->
+
+<!-- Article render -->
+<%= render :partial => "partials/article-home" %>
+<!-- Article render -->
+
+<!-- Sponsor render -->
+<%= render :partial => "partials/sponsor-all" %>
+<!-- Sponsor render -->
+
+</div><!-- container -->
+
+
 <%= form_for @message, :url => contact_path do |form| %>
   <fieldset class="fields">
     <div class="field">

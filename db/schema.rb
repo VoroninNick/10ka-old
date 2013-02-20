@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130219190046) do
+ActiveRecord::Schema.define(:version => 20130220144458) do
 
   create_table "banners", :force => true do |t|
     t.string   "name"
@@ -22,6 +22,18 @@ ActiveRecord::Schema.define(:version => 20130219190046) do
     t.datetime "banner_updated_at"
     t.datetime "created_at",          :null => false
     t.datetime "updated_at",          :null => false
+  end
+
+  create_table "sponsors", :force => true do |t|
+    t.string   "name"
+    t.string   "link"
+    t.string   "description"
+    t.string   "sponsor_file_name"
+    t.string   "sponsor_content_type"
+    t.integer  "sponsor_file_size"
+    t.datetime "sponsor_updated_at"
+    t.datetime "created_at",           :null => false
+    t.datetime "updated_at",           :null => false
   end
 
 end

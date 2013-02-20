@@ -1,0 +1,10 @@
+<nav>
+  <ul class="header-nav">
+    <li><a href="#">Про компанію</a></li>
+    <li class="active"><a href="#">Каталог</a></li>
+    <li><a href="#">Статті</a></li>
+
+
+    <li <% if (current_page?(:controller => 'contact', :action => 'new')) %> class="active" <% end %> ><a href="#">Контакти</a></li>
+    </ul>
+</nav>
