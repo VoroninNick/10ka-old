@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  description: MyString
+  banner_file_name: MyString
+  banner_content_type: MyString
+  banner_file_size: 1
+  banner_updated_at: 2013-02-19 21:00:46
+
+two:
+  name: MyString
+  description: MyString
+  banner_file_name: MyString
+  banner_content_type: MyString
+  banner_file_size: 1
+  banner_updated_at: 2013-02-19 21:00:46
