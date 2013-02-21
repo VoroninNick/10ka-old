@@ -23,6 +23,6 @@ end
 group :production do
   gem 'mysql2'
   gem 'dalli'
-  gem 'memcached'
+  #gem 'memcached'
 end
 
