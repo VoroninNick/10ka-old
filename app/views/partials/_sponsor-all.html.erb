@@ -1,5 +1,13 @@
-<% @fetch_sponsors ||= Sponsor.all
-	 @fetch_sponsors.each do |s| %>
+<!-- Shadow area -->
+<div class="shadow-top"></div>
+<!-- /Shadow area -->
+<!-- Catalog area -->
+<div id="sponsor-wrapper" class="f-height">
+  <% fetch_sponsors.each do |s| %>
 
-	<p>Sponsor</p>
-<% end %>
+  <% end %>
+</div>
+<!-- /Catalog area -->
+<!-- Shadow area -->
+<div class="shadow-bottom"></div>
+<!-- /Shadow area -->

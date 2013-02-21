@@ -1,74 +1,78 @@
-<div class="container" id="header">
-    <div id="hd-wrapper" class="f-height">
-      <div class="g4">
-        <% if current_page?(root_path) %>
-          <%= image_tag('logo.png', :alt => '') %>
-        <% else %>
-          <%= link_to(image_tag('logo.png', :alt => ''), root_path) %>
-        <% end %>
-      </div><!-- span4 -->
+<!-- Header render -->
+<%= render :partial => "partials/head" %>
+<!-- /Header render -->
 
-      <div class="g8">
-        <%= render :partial => "partials/menu" %>
-      </div><!-- span8 -->
+<!-- Info render -->
+<div id="contact-wrapper" class="f-height">
+  <div class="g12">
+    <h1>Контактна інформація</h1>
+  </div>
+  <div class="g4 contact-info-row">
+    <h2>Адреса:</h2>
+    <p class="title">вул. Городоцька, 357</p>
+    <p class="title">м. Львів, Україна, 79068</p>
+    <p class="sub-title">GPS: 49° 48° 757°  Пн. Ш.   23° 58°  671°  Сх. Д.</p>
+  </div>
+  <div class="g4 contact-info-row">
+    <h2>Графік роботи:</h2>
+    <p class="title">Пн—Пт: 	<span class="times">09:00 &mdash; 18:00</span></p>
+    <p class="title">Сб:      <span class="times part2">09:00 &mdash; 14:00</span></p>
+    <p class="sub-title"><i>На складі обід з 13:00 до 14:00</i></p>
+  </div>
+  <div class="g4 contact-info-row">
+    <h2>Телефони:</h2>
+    <p class="title">офіс:		<span class="times part3">+38 (032) 244 00 00</span></p>
+    <p class="title">продаж:		<span class="times">+38 (032) 244 00 15</span></p>
+    <p class="title">факс:		<span class="times part4">+38 (032) 244 00 09</span></p>
+  </div>
+</div>
+<!-- /Info render -->
+
+<!-- Gmap render -->
+<div id="gmap-wrapper" class="f-height">
+  <div class="g12">
+    <h2>Ми на Google карті:</h2>
+  </div>
+  <div id="map">
+
+  </div>
+</div>
+<!-- /Gmap render -->
+
+<!-- Form render -->
+<%= form_for @message, :url => contact_path do |form| %>
+    <div class="g5">
+      <div class="row-input">
+        <%= form.text_field :name %>
+        <%= form.label "вфвфи" %>
+      </div>
+      <div class="row-input">
+        <%= form.text_field :email %>
+        <%= form.label :email %>
+      </div>
+      <div class="row-input">
+        <%= form.text_field :phone %>
+        <%= form.label :phone %>
+      </div>
+    </div>
+    <div class="g7">
+      <div class="row-input">
+        <%= form.text_area :body %>
+        <%= form.label :body %>
+      </div>
+
     </div>
 
 
+    <%= form.submit "Надіслати!", :class => "submit-branded animate" %>
 
-
-    <!-- Info area -->
-    <div id="info-wrapper" class="f-height">
-      <div class="g4 main-descr-img">
-        <%= image_tag('logo-big.jpg') %>
-      </div>
-
-      <div class="g8 main-descr-area">
-        <h1>Вас вітає «Десятка» &mdash; гуртівня буд-матеріалів</h1>
-        <p class="h1-cont">&mdash; лідер з гуртового продажу будівельно-оздоблювальних матеріалів у Західній Україні</p>
-
-        <p class="af-description">Компанія знаходиться на ринку вже протягом 10 років та зарекомендувала себе як надійний партнер не лише для будівельних компаній та гуртових магазинів, а і для мереж гіпермаркетів, таких як «Нова Лінія», «Практікер» та ін.</p>
-      </div>
-    </div>
-    <!-- /Info area -->
-
-<!-- Catalog render -->
-<%= render :partial => "partials/catalog-home" %>
-<!-- Catalog render -->
-
-<!-- Article render -->
-<%= render :partial => "partials/article-home" %>
-<!-- Article render -->
+<% end %>
+<!-- /Form render -->
 
 <!-- Sponsor render -->
 <%= render :partial => "partials/sponsor-all" %>
 <!-- Sponsor render -->
 
-</div><!-- container -->
-
-
-<%= form_for @message, :url => contact_path do |form| %>
-  <fieldset class="fields">
-    <div class="field">
-      <%= form.label :name %>
-      <%= form.text_field :name %>
-    </div>
-
-    <div class="field">
-      <%= form.label :email %>
-      <%= form.text_field :email %>
-    </div>
-    <div class="field">
-      <%= form.label :phone %>
-      <%= form.text_field :phone %>
-    </div>
-
-    <div class="field">
-      <%= form.label :body %>
-      <%= form.text_area :body %>
-    </div>
-  </fieldset>
-
-  <fieldset class="actions">
-    <%= form.submit "Send" %>
-  </fieldset>
-<% end %>
+<!-- Footer render -->
+<%= render :partial => "partials/footer" %>
+<!-- /Footer render -->
