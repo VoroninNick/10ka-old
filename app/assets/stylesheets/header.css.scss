@@ -37,7 +37,11 @@ nav ul.header-nav li a{
 }
 
 nav ul.header-nav li a:hover{
-  text-decoration: underline;
+  text-decoration: none;
+}
+
+nav ul.header-nav li.underline:hover a:hover{
+  text-decoration: underline !important;
 }
 
 nav ul.header-nav li.active{

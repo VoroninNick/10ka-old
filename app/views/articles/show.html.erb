@@ -1,15 +1,14 @@
-<p id="notice"><%= notice %></p>
+<!-- Header render -->
+<%= render :partial => "partials/head" %>
+<!-- /Header render -->
+<!-- Article -->
+<div id="articles-wrapper" class="f-height">
 
-<p>
-  <b>Name:</b>
-  <%= @article.name %>
-</p>
-
-<p>
-  <b>Description:</b>
-  <%= @article.description %>
-</p>
-
-
-<%= link_to 'Edit', edit_article_path(@article) %> |
-<%= link_to 'Back', articles_path %>
+</div>
+<!-- Article -->
+<!-- Sponsor render -->
+<%= render :partial => "partials/sponsor-all" %>
+<!-- Sponsor render -->
+<!-- Footer render -->
+<%= render :partial => "partials/footer" %>
+<!-- /Footer render -->

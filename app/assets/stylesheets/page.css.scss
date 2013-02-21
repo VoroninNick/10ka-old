@@ -150,6 +150,12 @@
   font-weight: 300;
 }
 
+#articles-wrapper div.news-item h2.article-header a{
+  color: inherit;
+  font-weight: inherit;
+  text-decoration: none;
+}
+
 #articles-wrapper div.news-item p.article-short-description{
   color: #666;
   font-weight: 300;
