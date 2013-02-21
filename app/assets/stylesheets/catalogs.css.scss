@@ -1,3 +1,137 @@
-// Place all the styles related to the Catalogs controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+#catalog-page-wrapper h1{
+  color: #838383;
+  font-weight: 400;
+}
+
+#catalog-page-wrapper div.catalog-block div.catalog-item{
+  padding-bottom: 25px;
+  width: inherit;
+}
+
+#catalog-page-wrapper div.catalog-block div.catalog-item a.catalog-show-more{
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  background-color: #c7c7c7;
+  -moz-box-shadow: 0 1px 0 rgba(0,0,0,.17);
+  -webkit-box-shadow: 0 1px 0 rgba(0,0,0,.17);
+  box-shadow: 0 1px 0 rgba(0,0,0,.17);
+  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEwMCAxMDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxsaW5lYXJHcmFkaWVudCBpZD0iaGF0MCIgZ3JhZGllbnRVbml0cz0ib2JqZWN0Qm91bmRpbmdCb3giIHgxPSI1MCUiIHkxPSIxMDAlIiB4Mj0iNTAlIiB5Mj0iLTEuNDIxMDg1NDcxNTIwMmUtMTQlIj4KPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZkYWQwMCIgc3RvcC1vcGFjaXR5PSIxIi8+CjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2ZkZWYwMCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgIDwvbGluZWFyR3JhZGllbnQ+Cgo8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0idXJsKCNoYXQwKSIgLz4KPC9zdmc+);
+  background-image: -moz-linear-gradient(bottom, #fdad00 0%, #fdef00 100%);
+  background-image: -o-linear-gradient(bottom, #fdad00 0%, #fdef00 100%);
+  background-image: -webkit-linear-gradient(bottom, #fdad00 0%, #fdef00 100%);
+  background-image: linear-gradient(bottom, #fdad00 0%, #fdef00 100%);
+
+
+  font-size: 1.25em;
+  font-weight: 400;
+  text-decoration: none;
+  padding: 10px 20px;
+  color: #646464;
+  text-shadow: 0 1px 0 rgba(255,255,255,.46);
+
+  display: block;
+  width: inherit;
+  cursor: pointer;
+}
+
+#catalog-page-wrapper div.catalog-block div.catalog-item a.catalog-show-more:hover{
+  color: #ae4038;
+  text-shadow: 0 1px 0 rgba(255,255,255,.46);
+}
+
+#catalog-page-wrapper div.catalog-block div.catalog-item a.catalog-show-more span{
+  color: #ae4038;
+  font-size: 1.35em;
+  font-weight: 400;
+  text-shadow: 0 1px 0 rgba(255,255,255,.46);
+  float: right;
+}
+
+#catalog-page-wrapper div.catalog-block div.catalog-item ul.catalog-menu{
+  margin: 0;
+  padding: 10px 20px;
+  list-style: none;
+  display: none;
+}
+
+#catalog-page-wrapper div.catalog-block div.catalog-item ul.catalog-menu li{
+  margin-bottom: 5px;
+}
+
+#catalog-page-wrapper div.catalog-block div.catalog-item ul.catalog-menu li a{
+  color: #bf291f;
+  font-size: 1em;
+  font-weight: 300;
+  text-decoration: underline;
+}
+
+#catalog-page-wrapper div.catalog-block div.catalog-item.open a.catalog-show-more{
+  color: #dd2e21;
+  text-shadow: 0 1px 0 rgba(255,255,255,.46);
+}
+
+.catalog-page-format h1{
+  color: #bf291f !important;
+  font-weight: 400 !important;
+  margin-top: 0 !important;
+  line-height: 1.2em !important;
+}
+
+.catalog-page-format .catalog-small-descr{
+  width: 75%;
+  font-weight: 300;
+  font-style: italic;
+  color: #666;
+  font-size: 0.9em;
+}
+
+.catalog-page-format .catalog-full-descr{
+  font-weight: 300;
+  color: #666;
+}
+
+.catalog-page-format {
+
+}
+
+#catalog-page-wrapper .g4 .alpha{
+  margin-right: 25px;
+  width: 405px;
+}
+
+#catalog-page-wrapper .g8 .omega{
+  margin-left: 25px;
+  width: 885px;
+}
+
+.store-section{
+  width: inherit;
+}
+
+.store-section .top-border{
+  border-top: 1px solid #d8d8d8;
+}
+
+.online-item{
+  text-align: center;
+  margin-right: 10%;
+  width: 40%;
+  float: left;
+}
+
+.online-item p{
+  color: #bf291f !important;
+  font-weight: 400 !important;
+  margin-top: 0 !important;
+  line-height: 1.2em !important;
+}
+
+.online-item a{
+  width: 180px;
+  display: initial;
+}
+

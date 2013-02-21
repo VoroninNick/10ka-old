@@ -7,20 +7,20 @@
   <div class="g12">
     <h1>Контактна інформація</h1>
   </div>
-  <div class="g4 contact-info-row">
-    <h2>Адреса:</h2>
+  <div class="g4 contact-info-row alpha">
+    <h2><%= image_tag('h-img.png', :style => 'position: absolute; left: -35px;') %>Адреса:</h2>
     <p class="title">вул. Городоцька, 357</p>
     <p class="title">м. Львів, Україна, 79068</p>
     <p class="sub-title">GPS: 49° 48° 757°  Пн. Ш.   23° 58°  671°  Сх. Д.</p>
   </div>
   <div class="g4 contact-info-row">
-    <h2>Графік роботи:</h2>
+    <h2><%= image_tag('h-img.png', :style => 'position: absolute; left: -35px;') %>Графік роботи:</h2>
     <p class="title">Пн—Пт: 	<span class="times">09:00 &mdash; 18:00</span></p>
     <p class="title">Сб:      <span class="times part2">09:00 &mdash; 14:00</span></p>
     <p class="sub-title"><i>На складі обід з 13:00 до 14:00</i></p>
   </div>
-  <div class="g4 contact-info-row">
-    <h2>Телефони:</h2>
+  <div class="g4 contact-info-row omega">
+    <h2><%= image_tag('h-img.png', :style => 'position: absolute; left: -35px;') %>Телефони:</h2>
     <p class="title">офіс:		<span class="times part3">+38 (032) 244 00 00</span></p>
     <p class="title">продаж:		<span class="times">+38 (032) 244 00 15</span></p>
     <p class="title">факс:		<span class="times part4">+38 (032) 244 00 09</span></p>
@@ -31,7 +31,7 @@
 <!-- Gmap render -->
 <div id="gmap-wrapper" class="f-height">
   <div class="g12">
-    <h2>Ми на Google карті:</h2>
+    <h2><%= image_tag('h-img.png', :style => 'position: absolute; left: -35px;') %>Ми на Google карті:</h2>
   </div>
   <div id="map">
 
@@ -41,7 +41,7 @@
 
 <!-- Form render -->
 <%= form_for @message, :url => contact_path do |form| %>
-    <div class="g5">
+    <div class="g5 alpha">
       <div class="row-input">
         <%= form.text_field :name %>
         <%= form.label "вфвфи" %>
@@ -55,7 +55,7 @@
         <%= form.label :phone %>
       </div>
     </div>
-    <div class="g7">
+    <div class="g7 omega">
       <div class="row-input">
         <%= form.text_area :body %>
         <%= form.label :body %>

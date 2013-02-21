@@ -1,2 +1,147 @@
-<h1>Page#about</h1>
-<p>Find me in app/views/page/about.html.erb</p>
+<!-- Header render -->
+<%= render :partial => "partials/head" %>
+<!-- /Header render -->
+
+<!-- About section -->
+  <div id="about-wrapper" class="f-height">
+    <div class="g12 pd-me">
+      <h1>Про компанію</h1>
+    </div>
+    <div class="g4 alpha main-descr-img">
+      <%= image_tag('logo-big.jpg') %>
+    </div>
+    <div class="g8 fd omega pd-me">
+      <h1>«Десятка» — гуртівня буд-матеріалів і лідер з гуртового продажу будівельно-оздоблювальних матеріалів у Західній Україні</h1>
+      <p class="about-sd">Компанія знаходиться на ринку вже протягом 10 років та зарекомендувала себе як надійний партнер не лише для будівельних компаній та гуртових магазинів, а і для мереж гіпермаркетів, таких як «Нова Лінія», «Практікер» та ін.</p>
+      <p class="about-fd">ТзОВ «Торгівельна мережа «Десятка» працює на ринку з 2002 р. та являється лідером зі збуту будівельно-оздоблювальних матеріалів у Західній Україні. За роки свого існування ТМ «Десятка» зарекомендувала себе як надійний партнер не лише для будівельних компаній та гуртових магазинів, а і для мереж гіпермаркетів («Нова Лінія», «Практікер» тощо).</p>
+      <p class="about-fd">ТМ «Десятка» реалізовує продукцію українських та зарубіжних фірм-виробників та є офіційним дистриб’ютором таких компаній як:</p>
+
+      <!-- About - sponsors list -->
+      <div class="about-sponsor">
+        <div class="about-sponsor-img">
+          <%= image_tag('about-example.jpg') %>
+        </div>
+        <div class="about-sponsor-p">
+          <p class="about-fd">Будівельні суміші Ceresit, Thomsit, шпалерні клеї Metylan, побутові клеї та будівельні суміші «Момент»</p>
+        </div>
+      </div>
+      <!-- /About - sponsors list -->
+
+      <!-- About - sponsors list -->
+      <div class="about-sponsor">
+        <div class="about-sponsor-img">
+          <%= image_tag('about-example.jpg') %>
+        </div>
+        <div class="about-sponsor-p">
+          <p class="about-fd">гіпсокартонні плити Rigips</p>
+        </div>
+      </div>
+      <!-- /About - sponsors list -->
+
+      <!-- About - sponsors list -->
+      <div class="about-sponsor">
+        <div class="about-sponsor-img">
+          <%= image_tag('about-example.jpg') %>
+        </div>
+        <div class="about-sponsor-p">
+          <p class="about-fd">сухі будівельні суміші та гіпсокартонні плити KNAUF (Україна)</p>
+        </div>
+      </div>
+      <!-- /About - sponsors list -->
+
+      <!-- About - sponsors list -->
+      <div class="about-sponsor">
+        <div class="about-sponsor-img">
+          <%= image_tag('about-example.jpg') %>
+        </div>
+        <div class="about-sponsor-p">
+          <p class="about-fd">ізоляційні матеріали та системи утеплення URSA</p>
+        </div>
+      </div>
+      <!-- /About - sponsors list -->
+
+      <!-- About - sponsors list -->
+      <div class="about-sponsor">
+        <div class="about-sponsor-img">
+          <%= image_tag('about-example.jpg') %>
+        </div>
+        <div class="about-sponsor-p">
+          <p class="about-fd">сухі будівельні суміші Kreisel</p>
+        </div>
+      </div>
+      <!-- /About - sponsors list -->
+
+      <!-- About - sponsors list -->
+      <div class="about-sponsor">
+        <div class="about-sponsor-img">
+          <%= image_tag('about-example.jpg') %>
+        </div>
+        <div class="about-sponsor-p">
+          <p class="about-fd">будівельні суміші Ancer (ПрАТ «Круз»)</p>
+        </div>
+      </div>
+      <!-- /About - sponsors list -->
+
+      <!-- About - sponsors list -->
+      <div class="about-sponsor">
+        <div class="about-sponsor-img">
+          <%= image_tag('about-example.jpg') %>
+        </div>
+        <div class="about-sponsor-p">
+          <p class="about-fd">будівельна хімія (герметики, піни, будівельні стрічки, засоби комплексного захисту деревину та ін.) Titan</p>
+        </div>
+      </div>
+      <!-- /About - sponsors list -->
+
+      <!-- About - sponsors list -->
+      <div class="about-sponsor">
+        <div class="about-sponsor-img">
+          <%= image_tag('about-example.jpg') %>
+        </div>
+        <div class="about-sponsor-p">
+          <p class="about-fd">сухі будівельні суміші ТМ «Мастер»</p>
+        </div>
+      </div>
+      <!-- /About - sponsors list -->
+
+      <!-- About - sponsors list -->
+      <div class="about-sponsor">
+        <div class="about-sponsor-img">
+          <%= image_tag('about-example.jpg') %>
+        </div>
+        <div class="about-sponsor-p">
+          <p class="about-fd">лакофарбова продукція DUFA (Німеччина)</p>
+        </div>
+      </div>
+      <!-- /About - sponsors list -->
+
+      <!-- About - sponsors list -->
+      <div class="about-sponsor">
+        <div class="about-sponsor-img">
+          <%= image_tag('about-example.jpg') %>
+        </div>
+        <div class="about-sponsor-p">
+          <p class="about-fd">комплектуючі для гіпсокартонних систем ПРОФІЛЬ УКРАЇНИ</p>
+        </div>
+      </div>
+      <!-- /About - sponsors list -->
+      <p class="about-fd">Завдяки широкому асортименту та значним товарним запасам ми можемо забезпечити потреби у будівельних матеріалах усіх наших клієнтів.</p>
+    </div>
+
+
+    <!-- Spec descr -->
+      <div class="g4 alpha spec-img">
+        <%= image_tag('spec-example.png') %>
+      </div>
+
+      <div class="g8 omega spec-descr">
+        <h2>Кваліфіковані спеціалісти відділу продажу</h2>
+        <p class="about-fd">Кваліфіковані спеціалісти відділу продажу завжди нададуть консультацію щодо необхідного товару, його складників, властивостей та безпеки. Вони допоможуть Вам у питаннях вибору матеріалів, формуванні асортименту та комплектації об’єкта. Весь товар, що реалізовується у ТМ «Десятка» має відповідні санітарні сертифікати та заключення.</p>
+      </div>
+    <!-- /Spec descr -->
+  </div>
+<!-- /About section -->
+
+<!-- Footer render -->
+<%= render :partial => "partials/footer" %>
+<!-- /Footer render -->

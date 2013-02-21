@@ -54,6 +54,74 @@ body{
 }
 
 
-#hd-wrapper, #banner-wrapper, #info-wrapper, .shadow-bottom{
+#hd-wrapper, #banner-wrapper, #info-wrapper, .shadow-bottom, #about-wrapper, .pd-me{
   padding-bottom: 30px;
+}
+
+
+#footer-wrapper{
+  background: url(footer-bg.jpg) repeat-x transparent;
+}
+
+#footer-wrapper h2{
+  color: #bf291f;
+  font-weight: 300;
+  margin: 0 0 0.83em 0;
+}
+
+
+#footer-wrapper .contact-info-row p.title, #footer-wrapper .contact-info-row p.copyrights, #footer-wrapper .contact-info-row p.footer-title{
+  color: #b2b2b2;
+  font-weight: 300;
+  font-size: 0.85em;
+}
+
+#footer-wrapper .contact-info-row p.title{
+  position: relative;
+  top: 18px;
+}
+
+#footer-wrapper .contact-info-row p.copyrights{
+  font-weight: 400;
+}
+
+#footer-wrapper .contact-info-row p{
+  margin: 0;
+  pading: 0;
+}
+
+#footer-wrapper .contact-info-row p.sub-title{
+  color: #676767;
+  font-weight: 300;
+  font-size: 0.65em;
+  font-style: italic;
+}
+
+.me-color{
+  padding-left: 30px;
+  color: #bf291f;
+  font-weight: 300;
+}
+
+.me2{
+  padding-left: 65px;
+}
+
+.me3{
+  padding-left: 89px;
+}
+
+#footer-wrapper .g4{
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.title a{
+  color: #b2b2b2;
+  text-decoration: none;
+  border-bottom: 1px solid #b2b2b2;
+}
+
+.title a:hover{
+  border-bottom: 1px solid #b2b2b2;
 }
