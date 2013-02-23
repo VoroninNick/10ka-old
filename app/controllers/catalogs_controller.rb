@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class CatalogsController < ApplicationController
   # GET /catalogs
   # GET /catalogs.json

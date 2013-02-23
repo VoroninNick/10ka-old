@@ -1,5 +1,9 @@
+# -*- encoding : utf-8 -*-
 class Sponsor < ActiveRecord::Base
   attr_accessible :description, :link, :name, :sponsor
+
+  attr_accessor :delete_sponsor
+  before_validation { self.sponsor.clear if self.delete_sponsor == '1' }
 
   # Validate name presence and minimum lenght 2 chars
   validates :name, :presence => true, :length => { :minimum => 2 }

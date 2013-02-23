@@ -1,5 +1,9 @@
+# -*- encoding : utf-8 -*-
 class Banner < ActiveRecord::Base
   attr_accessible :banner, :description, :name
+
+  attr_accessor :delete_banner
+  before_validation { self.banner.clear if self.delete_banner == '1' }
 
   # Validate name presence and minimum lenght 2 chars
   validates :name, :presence => true, :length => { :minimum => 2 }

@@ -2,10 +2,10 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.11'
 gem 'jquery-rails'
-gem 'typus'
-gem 'russian'
+gem 'rails-i18n'
 gem 'paperclip'
 gem 'yaml_db'
+gem 'turbolinks'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
@@ -23,6 +23,7 @@ end
 group :production do
   gem 'mysql2'
   gem 'dalli'
-  #gem 'memcached'
 end
 
+gem 'rails_admin', :github => 'sferik/rails_admin'
+gem 'devise'

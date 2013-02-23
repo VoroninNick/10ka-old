@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class CreateSponsors < ActiveRecord::Migration
   def change
     create_table :sponsors do |t|
