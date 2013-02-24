@@ -6,6 +6,7 @@ App10k::Application.routes.draw do
   match 'about'                             => 'page#about'
   match 'contact'                           => 'contact#new', :as => 'contact', :via => :get
   match 'contact'                           => 'contact#create', :as => 'contact', :via => :post
+  match 'catalogs'                          => 'catalogs#index', :via => :get
   match 'catalog/:id'                       => 'catalogs#show', :via => :get
   match 'catalog/parent/:id'                => 'catalogs#show_parent', :via => :get
   match 'catalog/parent/child/:id'          => 'catalogs#show_child', :via => :get

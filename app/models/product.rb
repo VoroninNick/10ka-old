@@ -5,6 +5,8 @@ class Product < ActiveRecord::Base
   validates :name, presence: true
   validates :slug, uniqueness: true, presence: true
 
+  before_validation :generate_slug_for_product
+
   attr_accessor :delete_avatar
   before_validation { self.avatar.clear if self.delete_avatar == '1' }
 
@@ -27,4 +29,9 @@ class Product < ActiveRecord::Base
   def to_param
     slug
   end
+
+  def generate_slug_for_product
+    self.slug ||= name.parameterize
+  end
+
 end

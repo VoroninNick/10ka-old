@@ -1,8 +1,11 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.11'
+gem 'rails_admin', :github => 'sferik/rails_admin'
+gem 'devise'
 gem 'jquery-rails'
 gem 'rails-i18n'
+gem 'russian'
 gem 'paperclip'
 gem 'yaml_db'
 gem 'turbolinks'
@@ -24,6 +27,3 @@ group :production do
   gem 'mysql2'
   gem 'dalli'
 end
-
-gem 'rails_admin', :github => 'sferik/rails_admin'
-gem 'devise'
