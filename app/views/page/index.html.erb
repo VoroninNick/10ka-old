@@ -1,3 +1,16 @@
+<pre>
+  <code>
+
+    <% get_catalogs.each do |catalog| %>
+      <%= catalog.name %><%= catalog.id %>
+      <% get_parents(catalog.id).each do |parent| %>
+        <%= parent.name %>
+      <% end %>
+    <% end %>
+
+  </code>
+</pre>
+
 <!-- Header render -->
 <%= render :partial => "partials/head" %>
 <!-- /Header render -->
