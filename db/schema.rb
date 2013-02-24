@@ -1,4 +1,4 @@
-# -*- encoding : utf-8 -*-
+# encoding: UTF-8
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130223172845) do
+ActiveRecord::Schema.define(:version => 20130224210604) do
 
   create_table "articles", :force => true do |t|
     t.string   "name"
@@ -36,21 +36,30 @@ ActiveRecord::Schema.define(:version => 20130223172845) do
     t.text     "description"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
+    t.string   "slug"
   end
+
+  add_index "catalogs", ["slug"], :name => "index_catalogs_on_slug"
 
   create_table "child_catalogs", :force => true do |t|
     t.string   "name"
     t.integer  "parent_catalog_id"
     t.datetime "created_at",        :null => false
     t.datetime "updated_at",        :null => false
+    t.string   "slug"
   end
+
+  add_index "child_catalogs", ["slug"], :name => "index_child_catalogs_on_slug"
 
   create_table "parent_catalogs", :force => true do |t|
     t.string   "name"
     t.integer  "catalog_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.string   "slug"
   end
+
+  add_index "parent_catalogs", ["slug"], :name => "index_parent_catalogs_on_slug"
 
   create_table "products", :force => true do |t|
     t.string   "name"
@@ -62,7 +71,10 @@ ActiveRecord::Schema.define(:version => 20130223172845) do
     t.datetime "avatar_updated_at"
     t.datetime "created_at",          :null => false
     t.datetime "updated_at",          :null => false
+    t.string   "slug"
   end
+
+  add_index "products", ["slug"], :name => "index_products_on_slug"
 
   create_table "sponsors", :force => true do |t|
     t.string   "name"

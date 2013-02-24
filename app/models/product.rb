@@ -1,6 +1,9 @@
 # -*- encoding : utf-8 -*-
 class Product < ActiveRecord::Base
-  attr_accessible :description, :name, :avatar, :child_catalog_id
+  attr_accessible :description, :name, :avatar, :child_catalog_id, :slug
+
+  validates :name, presence: true
+  validates :slug, uniqueness: true, presence: true
 
   attr_accessor :delete_avatar
   before_validation { self.avatar.clear if self.delete_avatar == '1' }
@@ -20,4 +23,8 @@ class Product < ActiveRecord::Base
   validates_attachment_presence :avatar
   validates_attachment_size :avatar, :less_than => 2.megabytes
   validates_attachment_content_type :avatar, :content_type => %w{'image/jpeg' 'image/png'}
+
+  def to_param
+    slug
+  end
 end
