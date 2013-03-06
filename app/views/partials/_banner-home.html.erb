@@ -44,6 +44,9 @@
         {
             slider.options.slideWidth=1250;
         }
+	else if($('.banner-holder').width()==1112){
+	    slider.options.sliderWidth=1030;
+	}
         else if($('.banner-holder').width()==892)
         {
             slider.options.slideWidth=817;
@@ -54,6 +57,13 @@
               {
                  slider.slider.css({width:'892px'});
                    slider.options.slideWidth=817;
+                  //slider.options.
+                  slider.initPosition();
+              }
+	      else if($('.banner-holder').width()==1112)
+              {
+                  slider.slider.css({width:'1112px'});
+                  slider.options.slideWidth=1030;
                   //slider.options.
                   slider.initPosition();
               }
