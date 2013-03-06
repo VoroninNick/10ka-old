@@ -11,14 +11,21 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130224210604) do
+ActiveRecord::Schema.define(:version => 20130304121324) do
 
   create_table "articles", :force => true do |t|
     t.string   "name"
     t.text     "description"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.datetime "created_at",          :null => false
+    t.datetime "updated_at",          :null => false
+    t.string   "slug"
+    t.string   "avatar_file_name"
+    t.string   "avatar_content_type"
+    t.integer  "avatar_file_size"
+    t.datetime "avatar_updated_at"
   end
+
+  add_index "articles", ["slug"], :name => "index_articles_on_slug"
 
   create_table "banners", :force => true do |t|
     t.string   "name"
@@ -34,11 +41,13 @@ ActiveRecord::Schema.define(:version => 20130224210604) do
   create_table "catalogs", :force => true do |t|
     t.string   "name"
     t.text     "description"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
     t.string   "slug"
+    t.string   "home_position_id"
   end
 
+  add_index "catalogs", ["home_position_id"], :name => "index_catalogs_on_home_position_id"
   add_index "catalogs", ["slug"], :name => "index_catalogs_on_slug"
 
   create_table "child_catalogs", :force => true do |t|
@@ -50,6 +59,29 @@ ActiveRecord::Schema.define(:version => 20130224210604) do
   end
 
   add_index "child_catalogs", ["slug"], :name => "index_child_catalogs_on_slug"
+
+  create_table "ckeditor_assets", :force => true do |t|
+    t.string   "data_file_name",                  :null => false
+    t.string   "data_content_type"
+    t.integer  "data_file_size"
+    t.integer  "assetable_id"
+    t.string   "assetable_type",    :limit => 30
+    t.string   "type",              :limit => 30
+    t.integer  "width"
+    t.integer  "height"
+    t.datetime "created_at",                      :null => false
+    t.datetime "updated_at",                      :null => false
+  end
+
+  add_index "ckeditor_assets", ["assetable_type", "assetable_id"], :name => "idx_ckeditor_assetable"
+  add_index "ckeditor_assets", ["assetable_type", "type", "assetable_id"], :name => "idx_ckeditor_assetable_type"
+
+  create_table "home_positions", :force => true do |t|
+    t.string   "name"
+    t.integer  "catalog_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "parent_catalogs", :force => true do |t|
     t.string   "name"

@@ -1,6 +1,6 @@
 # -*- encoding : utf-8 -*-
 class Sponsor < ActiveRecord::Base
-  attr_accessible :description, :link, :name, :sponsor
+  attr_accessible :description, :link, :name, :sponsor, :delete_sponsor
 
   attr_accessor :delete_sponsor
   before_validation { self.sponsor.clear if self.delete_sponsor == '1' }
@@ -12,11 +12,7 @@ class Sponsor < ActiveRecord::Base
   # Paperclip image attachments
   has_attached_file :sponsor, :styles => { :thumb => '150x150>' },
                   :url  => '/assets/sponsor/:id/:style/:basename.:extension',
-                  :path => ':rails_root/public/assets/sponsor/:id/:style/:basename.:extension'
-
-  # Validate sponsor presence
-	validates_attachment_presence :sponsor
-	validates_attachment_size :sponsor, :less_than => 1.megabytes
-	validates_attachment_content_type :sponsor, :content_type => %w{'image/png'}
+                  :path => ':rails_root/public/assets/sponsor/:id/:style/:basename.:extension',
+                  :hash_secret => '3858f62230ac3c915f300c664312c63f'
 
 end

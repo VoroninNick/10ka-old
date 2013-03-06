@@ -15,6 +15,7 @@ class ChildCatalog < ActiveRecord::Base
   end
 
   def generate_slug_for_c_catalog
-    self.slug ||= name.parameterize
+    name_slugged = name + parent_catalog.slug
+    self.slug ||= name_slugged.parameterize
   end
 end

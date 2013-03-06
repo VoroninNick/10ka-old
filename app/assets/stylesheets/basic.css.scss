@@ -4,6 +4,13 @@
   box-sizing: border-box;
 }
 
+::selection {
+  background: #bf291f;
+  color: #fff;
+  text-shadow: none;
+  font-weight: 300;
+}
+
 .animate{
   -webkit-transition: 0.45s ease-out all;
   -moz-transition: 0.45s ease-out all;

@@ -8,76 +8,16 @@
     <h1>Каталог продукції</h1>
   </div>
   <div class="catalog-block g4 alpha">
-    <div class="catalog-item" id="main-cat-1" data-category-name="" data-category-id="">
-      <a class="catalog-show-more animate" >Сухі суміші<span data-opened="false">+</span></a>
-      <ul class="catalog-menu" id="menu-cat-1">
-        <li><a href="#">Шпаклівки сухі <span>+</span></a></li>
-        <li><a href="#">Шпаклівки готові <span>+</span></a></li>
-        <li><a href="#">Супутні матеріали <span>+</span></a></li>
-        <li><a href="#">Більше <span>+</span></a></li>
-        <li><a href="#">Меньше <span>+</span></a></li>
-      </ul>
-    </div>
-    <div class="catalog-item" id="main-cat-2" data-category-name="" data-category-id="">
-      <a class="catalog-show-more animate" >Сухі суміші<span data-opened="false">+</span></a>
-      <ul class="catalog-menu" id="menu-cat-2">
-        <li><a href="#">Шпаклівки сухі <span>+</span></a></li>
-        <li><a href="#">Шпаклівки готові <span>+</span></a></li>
-        <li><a href="#">Супутні матеріали <span>+</span></a></li>
-        <li><a href="#">Більше <span>+</span></a></li>
-        <li><a href="#">Меньше <span>+</span></a></li>
-      </ul>
-    </div>
-    <div class="catalog-item " id="main-cat-3" data-category-name="" data-category-id="">
-      <a class="catalog-show-more animate" >Сухі суміші<span data-opened="false">+</span></a>
-      <ul class="catalog-menu" id="menu-cat-3">
-        <li><a href="#">Шпаклівки сухі <span>+</span></a></li>
-        <li><a href="#">Шпаклівки готові <span>+</span></a></li>
-        <li><a href="#">Супутні матеріали <span>+</span></a></li>
-        <li><a href="#">Більше <span>+</span></a></li>
-        <li><a href="#">Меньше <span>+</span></a></li>
-      </ul>
-    </div>
-    <div class="catalog-item " id="main-cat-4" data-category-name="" data-category-id="">
-      <a class="catalog-show-more animate" >Сухі суміші<span data-opened="false">+</span></a>
-      <ul class="catalog-menu" id="menu-cat-4">
-        <li><a href="#">Шпаклівки сухі <span>+</span></a></li>
-        <li><a href="#">Шпаклівки готові <span>+</span></a></li>
-        <li><a href="#">Супутні матеріали <span>+</span></a></li>
-        <li><a href="#">Більше <span>+</span></a></li>
-        <li><a href="#">Меньше <span>+</span></a></li>
-      </ul>
-    </div>
-    <div class="catalog-item " id="main-cat-5" data-category-name="" data-category-id="">
-      <a class="catalog-show-more animate" >Сухі суміші<span data-opened="false">+</span></a>
-      <ul class="catalog-menu" id="menu-cat-5">
-        <li><a href="#">Шпаклівки сухі <span>+</span></a></li>
-        <li><a href="#">Шпаклівки готові <span>+</span></a></li>
-        <li><a href="#">Супутні матеріали <span>+</span></a></li>
-        <li><a href="#">Більше <span>+</span></a></li>
-        <li><a href="#">Меньше <span>+</span></a></li>
-      </ul>
-    </div>
-    <div class="catalog-item " id="main-cat-6" data-category-name="" data-category-id="">
-      <a class="catalog-show-more animate" >Сухі суміші<span data-opened="false">+</span></a>
-      <ul class="catalog-menu" id="menu-cat-6">
-        <li><a href="#">Шпаклівки сухі <span>+</span></a></li>
-        <li><a href="#">Шпаклівки готові <span>+</span></a></li>
-        <li><a href="#">Супутні матеріали <span>+</span></a></li>
-        <li><a href="#">Більше <span>+</span></a></li>
-        <li><a href="#">Меньше <span>+</span></a></li>
-      </ul>
-    </div>
-    <div class="catalog-item " id="main-cat-7" data-category-name="" data-category-id="">
-      <a class="catalog-show-more animate" >Сухі суміші<span data-opened="false">+</span></a>
-      <ul class="catalog-menu" id="menu-cat-7">
-        <li><a href="#">Шпаклівки сухі <span>+</span></a></li>
-        <li><a href="#">Шпаклівки готові <span>+</span></a></li>
-        <li><a href="#">Супутні матеріали <span>+</span></a></li>
-        <li><a href="#">Більше <span>+</span></a></li>
-        <li><a href="#">Меньше <span>+</span></a></li>
-      </ul>
-    </div>
+    <% fetch_all_catalog.each do |catalog_section| %>
+      <div class="catalog-item" id="main-cat-<%= catalog_section.id %>" data-category-name="<%= catalog_section.slug %>" data-category-id="<%= catalog_section.id %>">
+        <a class="catalog-show-more animate" ><%= catalog_section.name %><span data-opened="false">+</span></a>
+        <ul class="catalog-menu" id="menu-cat-<%= catalog_section.id %>">
+          <% catalog_section.parent_catalogs.each do |parent_section| %>
+            <li><a href="<%= parent_section.slug %>"><%= parent_section.name %><span>+</span></a></li>
+          <% end %>
+        </ul>
+      </div><!-- Catalog Item -->
+    <% end %>
   </div><!-- Catalog wrap stuff G4 -->
   <div class="g8 catalog-page-format omega">
     <h1>Сухі будівельні суміші імпортного та вітчизняного виробництва</h1>

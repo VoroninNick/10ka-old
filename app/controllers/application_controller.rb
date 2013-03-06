@@ -2,7 +2,7 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
 
-  helper_method :fetch_sponsors, :fetch_banners, :get_catalogs, :get_parents
+  helper_method :fetch_sponsors, :fetch_banners, :fetch_all_catalog, :get_left_catalogs, :get_center_catalogs, :get_right_catalogs
 
   def fetch_sponsors
     @fetch_sponsors ||= Sponsor.all
@@ -12,18 +12,19 @@ class ApplicationController < ActionController::Base
     @fetch_banners ||= Banner.all
   end
 
-  def get_childs
-    @catalog ||= Catalog.all
-    @parent ||= ParentCatalog.find_all_by_catalog_id(@catalog)
-    @child ||= ChildCatalog.find_all_by_parent_catalog_id(@parent)
+  def get_left_catalogs
+    @catalog_first ||= HomePosition.find(1)
   end
 
-  def get_parents(catalog_ids)
-    #@catalog ||= Catalog.all
-    @parent ||= ParentCatalog.find_all_by_catalog_id(catalog_ids)
+  def get_center_catalogs
+    @catalog_middle ||= HomePosition.find(2)
   end
 
-  def get_catalogs
-    @catalog ||= Catalog.all
+  def get_right_catalogs
+    @catalog_last ||= HomePosition.find(3)
+  end
+
+  def fetch_all_catalog
+    @catalogs ||= Catalog.all
   end
 end

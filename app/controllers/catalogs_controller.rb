@@ -1,6 +1,8 @@
 # -*- encoding : utf-8 -*-
 class CatalogsController < ApplicationController
 
+  #caches_page :index
+
   def index
     @catalogs ||= Catalog.all
   end
