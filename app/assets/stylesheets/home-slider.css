@@ -32,5 +32,9 @@ div.home-slider div.slide span.title
     left:-41px;
     transform: rotate(270deg);
     transform-origin: 21px 0px 0px;
+    -ms-transform:rotate(270deg);
+    -moz-transform:rotate(270deg);
+    -webkit-transform:rotate(270deg);
+    -o-transform:rotate(270deg);
     text-align: center;
 }
