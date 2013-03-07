@@ -9,6 +9,7 @@ function Slider (slider)
     that.options={
         stepDelay:10,
         step:5,
+        plusTitleWidth:11,
         titleWidth:29,
         slideWidth:1035,
         position:2,
@@ -124,20 +125,20 @@ function Slider (slider)
 
                     //var new_dd_left =(i-1)*41;
 
-                    elements[elements.length]=that.slides.eq(i);
+                    that.slides.eq(i).animate({left:'+='+(that.options.slideWidth-that.options.titleWidth-that.options.plusTitleWidth)},500);
                 }
 
 
 
-                var timer=new Timer();
-                timer.delay=1000/5;
-                timer.iterations_limit=5;
+                //var timer=new Timer();
+                //timer.delay=1000/5;
+                //timer.iterations_limit=5;
 
-                timer.arg=that;
-                timer.handler=function(){
-                    that.moveLeftBy(elements,(that.options.slideWidth-40)/5);
-                };
-                timer.start();
+                //timer.arg=that;
+                //timer.handler=function(){
+                //    that.moveLeftBy(elements,(that.options.slideWidth-40)/5);
+                //};
+                //timer.start();
             }
             else if(required_index>that.activeIndex) // next  required
             {
@@ -145,24 +146,24 @@ function Slider (slider)
                 for(var i=that.activeIndex+1;i<=required_index;i++)
                 {
 
-                    elements[elements.length]=that.slides.eq(i);
-
+                    //elements[elements.length]=that.slides.eq(i);
+                    that.slides.eq(i).animate({left:'-='+(that.options.slideWidth-that.options.titleWidth-that.options.plusTitleWidth)},500);
 
                 }
 
 
-                var timer=new Timer();
-                timer.delay=500/5;
-                timer.iterations_limit=5;
+                //var timer=new Timer();
+                //timer.delay=500/5;
+                //timer.iterations_limit=5;
 
-                timer.arg=that;
-                timer.handler=function(){
+                //timer.arg=that;
+                //timer.handler=function(){
                     //alert(that.options.slideWidth);
-                    that.moveLeftBy(elements,(that.options.slideWidth-40)*-1/5);
-                };
+                //    that.moveLeftBy(elements,(that.options.slideWidth-40)*-1/5);
+                //};
 
                 //timer.handler.call();
-                timer.start();
+                //timer.start();
             }
 
 
