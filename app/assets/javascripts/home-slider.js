@@ -14,7 +14,8 @@ function Slider (slider)
         slideWidth:1035,
         position:2,
         allowAuto:true,
-        timeout:10000
+        timeout:10000,
+        size:function(){}
 
     };
     that.images=[];
@@ -142,7 +143,6 @@ function Slider (slider)
             }
             else if(required_index>that.activeIndex) // next  required
             {
-                var elements=[];
                 for(var i=that.activeIndex+1;i<=required_index;i++)
                 {
 
