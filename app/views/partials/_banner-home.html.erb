@@ -2,78 +2,65 @@
 <!-- Banners -->
 <div id="banner-wrapper" class="f-height">
   <div class="g12 banner-holder">
-    <div class="home-slider">
-
-        <div class="slide">
-            <span class="title">banner_one</span>
-          <a href="">
-            <img src='/assets/banner.jpg' />
-          </a>
-        </div>
-
-        <div class="slide">
-            <span class="title">banner_two</span>
-            <a href="">
-                <%= image_tag('banner.jpg') %>
-            </a>
-
-        </div>
-
-        <div class="slide">
-            <span class="title">banner_three</span>
-          <a href="">
-            <%= image_tag('banner.jpg') %>
-          </a>
-        </div>
-
-        <div class="slide">
-            <span class="title">banner_four</span>
-          <a href="">
-            <%= image_tag('banner.jpg') %>
-          </a>
-        </div>
-
-    </div>
+    <div class="skin-slidedeck" style="">
+      <dl class="slidedeck" style="">
+        <dt class="iePNG">slide_one</dt>
+        <dd class="iePNG"><a href=""><img alt="slide_one" src="/assets/banner.jpg" title="Килими" /></a></dd>
+        <dt class="iePNG">slide_two</dt>
+        <dd class="iePNG"><a href=""><img alt="slide_two" src="/assets/banner.jpg" title="Керамічна плитка і сантехніка" /></a></dd>
+        <dt class="iePNG">slide_three</dt>
+        <dd class="iePNG"><a href=""><img alt="slide_three" src="/assets/banner.jpg" title="Світильники" /></a></dd>
+        <dt class="iePNG">slide_four</dt>
+        <dd class="iePNG"><a href=""><img alt="slide_four" src="/assets/banner.jpg" title="Декори" /></a></dd>
+      </dl>
+      </div>
   </div>
 </div>
 <!-- /Banners -->
 <script type="text/javascript">
     $(document).ready(function(){
-        var slider=Slider('div.home-slider');
-        if($('.banner-holder').width()==1332)
+        var slider=Slider4('dl.slidedeck');
+        var docWidth=$(document).width();
+        if(docWidth>=1200 && docWidth<1440)
         {
-            slider.options.slideWidth=1250;
+            //slider.options.slideWidth=1120-3*41;
+            //alert('1200');
         }
-	else if($('.banner-holder').width()==1112){
-	    slider.options.sliderWidth=1030;
-	}
-        else if($('.banner-holder').width()==892)
+
+        else if(docWidth>=1440 && docWidth<2020)
         {
-            slider.options.slideWidth=817;
+            //slider.options.slideWidth=1340-3*41;
+            //alert('1440');
+        }
+        else if(docWidth>=2020 )
+        {
+            //slider.options.slideWidth=1680-3*41;
+            //alert('1680');
         }
         slider.initPosition();
-        $('.banner-holder').resize(function(){
+        /*$('.banner-holder').resize(function(){
               if($('.banner-holder').width()==892)
               {
-                 slider.slider.css({width:'892px'});
+                 slider.dl.css({width:'892px'});
                    slider.options.slideWidth=817;
                   //slider.options.
                   slider.initPosition();
               }
 	      else if($('.banner-holder').width()==1112)
               {
-                  slider.slider.css({width:'1112px'});
-                  slider.options.slideWidth=1030;
+                  slider.dl.css({width:'1112px'});
+                  slider.options.slideWidth=1035;
                   //slider.options.
                   slider.initPosition();
               }
             else if($('.banner-holder').width()==1332)
               {
-                  slider.slider.css({width:'1332px'});
+                  slider.dl.css({width:'1332px'});
                   slider.options.slideWidth=1250;
                   //slider.options.
                   slider.initPosition();
               }
       });
+      */
     });
 </script>

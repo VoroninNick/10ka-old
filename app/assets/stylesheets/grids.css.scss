@@ -120,6 +120,11 @@ body {
   margin-right: 30px;
 }
 
+div.skin-slidedeck
+  {
+  width: 900px;
+  height: 360px;
+}
 
 @media (min-width: 1200px) {
 
@@ -244,6 +249,11 @@ body {
     width:1120px;
     margin-right: 40px;
     margin-left: 40px;
+  }
+  div.skin-slidedeck
+  {
+       width: 1120px;
+    height: 380px;
   }
 
 }
@@ -370,6 +380,11 @@ body {
     margin-left: 50px;
     margin-right: 50px;
   }
+  div.skin-slidedeck
+    {
+    width: 1340px;
+    height: 400px;
+  }
 
 }
 
@@ -495,6 +510,11 @@ body {
     width:1680px;
     margin-left: 60px;
     margin-right: 60px;
+  }
+  div.skin-slidedeck
+    {
+    width: 1680px;
+    height: 420px;
   }
 
 }
