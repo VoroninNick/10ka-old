@@ -116,11 +116,14 @@ body {
 
 .container .g12 {
   width:900px;
-  height: 318px;
+
   margin-left: 30px;
   margin-right: 30px;
 }
-
+ .banner-holder
+   {
+   height: 318px;
+ }
 div.skin-slidedeck
   {
   width: 900px;
@@ -406,7 +409,7 @@ div#home-slider div.slide
     width: 1245px;
     height: 392px;
   }
-   div.g12
+   div.banner-holder
     {
     width: 1340px;
     height: 400px;
@@ -542,7 +545,7 @@ div#home-slider div.slide
     width: 1672px;
     height: 420px;
   }
-  .g12
+  .banner-holder
     {
     height: 412px;;
   }
