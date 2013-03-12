@@ -1,5 +1,5 @@
 
-function Slider (dl)
+function Slider2 (dl)
 {
 
     var that=this;

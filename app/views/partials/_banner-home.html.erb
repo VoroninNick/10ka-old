@@ -2,24 +2,29 @@
 <!-- Banners -->
 <div id="banner-wrapper" class="f-height">
   <div class="g12 banner-holder">
-    <div class="skin-slidedeck" style="">
-      <dl class="slidedeck" style="">
-        <dt class="iePNG">slide_one</dt>
-        <dd class="iePNG"><a href=""><img alt="slide_one" src="/assets/banner.jpg" title="Килими" /></a></dd>
-        <dt class="iePNG">slide_two</dt>
-        <dd class="iePNG"><a href=""><img alt="slide_two" src="/assets/banner.jpg" title="Керамічна плитка і сантехніка" /></a></dd>
-        <dt class="iePNG">slide_three</dt>
-        <dd class="iePNG"><a href=""><img alt="slide_three" src="/assets/banner.jpg" title="Світильники" /></a></dd>
-        <dt class="iePNG">slide_four</dt>
-        <dd class="iePNG"><a href=""><img alt="slide_four" src="/assets/banner.jpg" title="Декори" /></a></dd>
-      </dl>
-      </div>
+
+    <div id="home-slider">
+      <div class="slide"><span class="title">Килими</span><a href=""><img alt="Килими" src="/assets/banner.jpg" title="Килими" /></a></div>
+      <div class="slide"><span class="title">Керамічна плитка і сантехніка</span><a href=""><img alt="Керамічна плитка і сантехніка" src="/assets/banner.jpg" title="Керамічна плитка і сантехніка" /></a></div>
+      <div class="slide"><span class="title">Світильники</span><a href=""><img alt="Світильники" src="/assets/banner.jpg" title="Світильники" /></a></div>
+      <div class="slide"><span class="title">Декори</span><a href=""><img alt="Декори" src="/assets/banner.jpg" title="Декори" /></a></div>
+    </div>
   </div>
 </div>
 <!-- /Banners -->
 <script type="text/javascript">
+    browser= (function(){
+        var N= navigator.appName, ua= navigator.userAgent, tem;
+        var M= ua.match(/(opera|chrome|safari|firefox|msie)\/?\s*(\.?\d+(\.\d+)*)/i);
+        if(M && (tem= ua.match(/version\/([\.\d]+)/i))!= null) M[2]= tem[1];
+        //M= M? [M[1], M[2]]: [N, navigator.appVersion,'-?'];
+        M={name:M[1],version:M[2]};
+        return M;
+    })();
+
     $(document).ready(function(){
-        var slider=Slider4('dl.slidedeck');
+           $('body').addClass(browser.name.toLowerCase());
+        var slider=HomeSlider('div#home-slider');
         var docWidth=$(document).width();
         if(docWidth>=1200 && docWidth<1440)
         {
@@ -37,7 +42,7 @@
             //slider.options.slideWidth=1680-3*41;
             //alert('1680');
         }
-        slider.initPosition();
+        //slider.initPosition();
         /*$('.banner-holder').resize(function(){
               if($('.banner-holder').width()==892)
               {
