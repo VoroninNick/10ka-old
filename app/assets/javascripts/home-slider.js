@@ -7,19 +7,22 @@
     that.activeIndex=0;
     that.slides_count=0;
     that.options={
-        titleWidth:29,
-        slideWidth:1120-3*29,
+        titleIndent:0,
+        titleWidth:88,
+        slideWidth:1120-3*88,
         position:1,
         allowAuto:true,
         timeout:5000,
         speed:1000
 
-    };
+};
     that.images=[];
     that.slides=[];
     that.headers=[];
     that.slider=$(slider);
     that.timer_id=false;
+    that.sliderHeight=that.slider.get(0).offsetHeight;
+    that.sliderWidth=that.slider.get(0).offsetWidth;
 
     // Convert a css px value to int.
     that.ConvertCssPxToInt=function(cssPxValueText) {
@@ -47,25 +50,93 @@
 
         return convertedValue;
     };
+     this.constructor=function(required_index)
+     {
+         //alert('constructor');
+         that.slides.each(function(index,slide)
+         {
+             slide=$(slide);
+             if(index>required_index+1)
+             {
+                 slide.find('span.title').addClass('orange_border');
 
+             }
+
+             //if(index==that.activeIndex && that.activeIndex>0)
+             //{
+             //    that
+             //}
+
+             if(that.activeIndex>=index) // prev, active
+             {
+                 slide.css({left:(index)*that.options.titleWidth+'px'});
+             }
+             else if(that.activeIndex<index) // next
+             {
+                 slide.css({left:(index-1)*that.options.titleWidth+that.options.slideWidth+'px'});
+             }
+             slide.css({
+                 width:that.sliderWidth,
+                 height:that.sliderHeight
+             });
+             slide.find('img').css({
+                 width:that.sliderWidth,
+                 height:that.sliderHeight
+             });
+         });
+     }
+    this.destructor=function(required_index)
+    {      //alert('destructor');
+        that.slides.each(function(index,slide)
+        {
+            slide=$(slide);
+            if(index>that.activeIndex)
+            {
+                slide.find('span.title').removeClass('orange_border');
+
+            }
+            //if(index==that.activeIndex && that.activeIndex>0)
+            //{
+            //    that
+            //}
+
+            if(that.activeIndex>=index) // prev, active
+            {
+                slide.css({left:(index)*that.options.titleWidth+'px'});
+            }
+            else if(that.activeIndex<index) // next
+            {
+                slide.css({left:(index-1)*that.options.titleWidth+that.options.slideWidth+'px'});
+            }
+            slide.css({
+                width:that.sliderWidth,
+                height:that.sliderHeight
+            });
+            slide.find('img').css({
+                width:that.sliderWidth,
+                height:that.sliderHeight
+            });
+        });
+    }
     this.next=function()
     {
         if(that.activeIndex+1==that.slides.length)//last
         {
-            that.showSlide(1);
+            that.showSlide(1,that.constructor,that.destructor);
         }
         else                                        //next
         {
-            that.showSlide(that.activeIndex+2);
+            that.showSlide(that.activeIndex+2,that.constructor,that.destructor);
         }
     };
     this.init= function()
     {
+        //alert(that.sliderHeight+'x'+that.sliderWidth);
         that.slides=that.slider.find('div.slide');
         that.slides_count=that.slides.length;
         that.activeIndex=that.options.position-1;
 
-
+          that.constructor(that.activeIndex);
 
         that.slides.each(function(index,slide)
         {
@@ -97,15 +168,28 @@
        {
            that.timer_id=setInterval(that.next,that.options.timeout);
        }
+        that.slider.resize(function()
+        {
+            that.initPosition();
+        });
+        this.bindClickHandler();
     };
     this.initPosition=function()
     {
         var sliderWidth=that.slider.css('width');
+        //alert('sw:'+sliderWidth+';tsw:'+that.sliderWidth);
         sliderWidth=that.ConvertCssPxToInt(sliderWidth);
         that.options.slideWidth=sliderWidth-(that.slides.length-1)*that.options.titleWidth;
+
+
         that.slides.each(function(index,slide)
         {
             slide=$(slide);
+
+            //if(index==that.activeIndex && that.activeIndex>0)
+            //{
+            //    that
+            //}
 
             if(that.activeIndex>=index) // prev, active
             {
@@ -115,13 +199,22 @@
             {
                 slide.css({left:(index-1)*that.options.titleWidth+that.options.slideWidth+'px'});
             }
+            slide.css({
+                width:that.sliderWidth,
+                height:that.sliderHeight
+            });
+            slide.find('img').css({
+                width:that.sliderWidth,
+                height:that.sliderHeight
+            });
+            slide.find('span').css({
+                width:that.sliderHeight,
+                height:that.options.titleWidth
+            });
         });
     };
-    this.init();
-    that.slider.resize(function()
-    {
-        that.initPosition();
-    });
+
+
     this.bindClickHandler=function()
     {
         that.slides.each(function(index,slide)
@@ -134,7 +227,7 @@
                 {
                     var clicked_title=$(this);
                     var new_index=clicked_title.parent().index();
-                    that.showSlide(new_index+1);
+                    that.showSlide(new_index+1,that.constructor,that.destructor);
                     if(that.timer_id!==false)
                         clearInterval(that.timer_id);
                     that.timer_id=setInterval(that.next,that.options.timeout);
@@ -143,9 +236,9 @@
         });
     };
 
-    this.bindClickHandler();
 
-    this.showSlide= function(pos)
+
+    this.showSlide= function(pos,constructor,destructor)
     {
         var required_index=pos-1;
         if(that.activeIndex!=required_index)
@@ -157,12 +250,16 @@
             active_slide.removeClass('active');
             active_slide.next().removeClass('next');
             active_slide.prev().removeClass('previous');
+            if(destructor)
+                destructor(required_index);
 
             var required_slide=that.slides.eq(required_index);
             required_slide=$(required_slide);
             required_slide.addClass('active');
             required_slide.next().addClass('next');
             required_slide.prev().addClass('previous');
+            if(constructor)
+                constructor(required_index);
 
             if(required_index<=that.activeIndex) // prev  required
             {
@@ -199,7 +296,7 @@
 
 
 
-
+    //this.init();
 
 
     return this;

@@ -1,7 +1,7 @@
 div#home-slider
 {
     overflow: hidden;
-    position: absolute;
+    position: relative;
     left:0px;
     top:0px;
 }
@@ -12,53 +12,75 @@ div#home-slider div.slide
     top:0px;
     z-index: 2;
 }
+div#home-slider div.slide.active
+{
+
+}
 div#home-slider div.slide span.title
 {
-    /* IE 8 */
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
-
-    /* IE 5-7 */
-    filter: alpha(opacity=30);
-
-    /* Netscape */
-    -moz-opacity: 0.3;
-
-    /* Safari 1.x */
-    -khtml-opacity: 0.3;
-
-    /* Good browsers */
-    opacity: 0.3;
 
 
-    background: black;
-    color:white;
+    border-top:groove white 1px;
+    background: #7d7e7d; /* Old browsers */
+    background: -moz-linear-gradient(left,  #7d7e7d 4%, #0e0e0e 89%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right top, color-stop(4%,#7d7e7d), color-stop(89%,#0e0e0e)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(left,  #7d7e7d 4%,#0e0e0e 89%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(left,  #7d7e7d 4%,#0e0e0e 89%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(left,  #7d7e7d 4%,#0e0e0e 89%); /* IE10+ */
+    background: linear-gradient(to right,  #7d7e7d 4%,#0e0e0e 89%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7d7e7d', endColorstr='#0e0e0e',GradientType=1 ); /* IE6-9 */
+
+
+
+
+    color:#f4a500;
     position: absolute;
     display: block;
-    font-size: 16px;
+    font-size: 24px;
     z-index: 3;
     margin-left: 20px;
 
 
-    width: 380px;
-    padding-top: 5px;
-    padding-bottom: 5px;
+
+
+    height:88px;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    padding-left: 39px;
 
     -moz-transform:rotate(270deg);
     -webkit-transform:rotate(270deg);
     -o-transform:rotate(270deg);
     -ms-transform:rotate(270deg);
-    transform-origin: 21px 0px 0px;
-    text-align: center;
+    transform-origin: 0px 0px 0px;
+    text-align: left;
+    vertical-align: middle;
+
+}
+div#home-slider div.slide.active span.title
+{
+     background: rgba(0,0,0,0.5);
+    color:#ff0101;
+
+
+
+
+}
+div#home-slider div.slide span.title.orange_border
+{
+    border-top: groove #f4a500 1px;
 }
 
 .chrome div#home-slider span.title
 , .opera div#home-slider span.title
 {
-    left: -200px;
-    top:175px;
+    left: -153px;
+    top:132px;
 }
 .firefox div#home-slider span.title
 {
     left: -41px;
     top:360px;
+
 }
+

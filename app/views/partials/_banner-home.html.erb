@@ -1,14 +1,15 @@
 
 <!-- Banners -->
 <div id="banner-wrapper" class="f-height">
-  <div class="g12 banner-holder">
+  <div id="" class="g12 banner-holder" >
 
-    <div id="home-slider">
-      <div class="slide"><span class="title">Килими</span><a href=""><img alt="Килими" src="/assets/banner.jpg" title="Килими" /></a></div>
-      <div class="slide"><span class="title">Керамічна плитка і сантехніка</span><a href=""><img alt="Керамічна плитка і сантехніка" src="/assets/1.jpg" title="Керамічна плитка і сантехніка" /></a></div>
-      <div class="slide"><span class="title">Світильники</span><a href=""><img alt="Світильники" src="/assets/2.jpg" title="Світильники" /></a></div>
-      <div class="slide"><span class="title">Декори</span><a href=""><img alt="Декори" src="/assets/3.jpg" title="Декори" /></a></div>
-    </div>
+    <div id="home-slider" style="left: 100px">
+      <div class="slide"><span class="title">Фасади</span><a href=""><img alt="Фасади" src="/assets/banner.jpg" title="Фасади" /></a></div>
+      <div class="slide"><span class="title">Підлоги</span><a href=""><img alt="Підлоги" src="/assets/1.jpg" title="Підлоги" /></a></div>
+      <div class="slide"><span class="title">Внутрішні роботи</span><a href=""><img alt="Внутрішні роботи" src="/assets/2.jpg" title="Внутрішні роботи" /></a></div>
+      <div class="slide"><span class="title">Гіпсокартон</span><a href=""><img alt="Гіпсокартон" src="/assets/3.jpg" title="Гіпсокартон" /></a></div>
+     </div>
+
   </div>
 </div>
 <!-- /Banners -->
@@ -25,6 +26,7 @@
     $(document).ready(function(){
            $('body').addClass(browser.name.toLowerCase());
         var slider=HomeSlider('div#home-slider');
+        slider.init();
         var docWidth=$(document).width();
         if(docWidth>=1200 && docWidth<1440)
         {
