@@ -11,7 +11,7 @@
         titleWidth:88,
         slideWidth:1120-3*88,
         position:1,
-        allowAuto:true,
+        allowAuto:false,
         timeout:5000,
         speed:1000
 
@@ -23,6 +23,8 @@
     that.timer_id=false;
     that.sliderHeight=that.slider.get(0).offsetHeight;
     that.sliderWidth=that.slider.get(0).offsetWidth;
+
+    that.magic=1;
 
     // Convert a css px value to int.
     that.ConvertCssPxToInt=function(cssPxValueText) {
@@ -61,28 +63,17 @@
                  slide.find('span.title').addClass('orange_border');
 
              }
+             else if(index<=required_index && index>0)
+             {
+                 slide.find('span.title').addClass('white_border');
+             }
 
              //if(index==that.activeIndex && that.activeIndex>0)
              //{
              //    that
              //}
 
-             if(that.activeIndex>=index) // prev, active
-             {
-                 slide.css({left:(index)*that.options.titleWidth+'px'});
-             }
-             else if(that.activeIndex<index) // next
-             {
-                 slide.css({left:(index-1)*that.options.titleWidth+that.options.slideWidth+'px'});
-             }
-             slide.css({
-                 width:that.sliderWidth,
-                 height:that.sliderHeight
-             });
-             slide.find('img').css({
-                 width:that.sliderWidth,
-                 height:that.sliderHeight
-             });
+
          });
      }
     this.destructor=function(required_index)
@@ -95,27 +86,16 @@
                 slide.find('span.title').removeClass('orange_border');
 
             }
+            else if(index<=that.activeIndex && index>0)
+            {
+                slide.find('span.title').removeClass('white_border');
+            }
             //if(index==that.activeIndex && that.activeIndex>0)
             //{
             //    that
             //}
 
-            if(that.activeIndex>=index) // prev, active
-            {
-                slide.css({left:(index)*that.options.titleWidth+'px'});
-            }
-            else if(that.activeIndex<index) // next
-            {
-                slide.css({left:(index-1)*that.options.titleWidth+that.options.slideWidth+'px'});
-            }
-            slide.css({
-                width:that.sliderWidth,
-                height:that.sliderHeight
-            });
-            slide.find('img').css({
-                width:that.sliderWidth,
-                height:that.sliderHeight
-            });
+
         });
     }
     this.next=function()
@@ -176,9 +156,9 @@
     };
     this.initPosition=function()
     {
-        var sliderWidth=that.slider.css('width');
+        //var sliderWidth=that.slider.css('width');
         //alert('sw:'+sliderWidth+';tsw:'+that.sliderWidth);
-        sliderWidth=that.ConvertCssPxToInt(sliderWidth);
+        //sliderWidth=that.ConvertCssPxToInt(sliderWidth);
         that.options.slideWidth=sliderWidth-(that.slides.length-1)*that.options.titleWidth;
 
 
@@ -193,18 +173,18 @@
 
             if(that.activeIndex>=index) // prev, active
             {
-                slide.css({left:(index)*that.options.titleWidth+'px'});
+                slide.css({left:(index)*that.options.titleWidth+that.magic +'px'});
             }
             else if(that.activeIndex<index) // next
             {
-                slide.css({left:(index-1)*that.options.titleWidth+that.options.slideWidth+'px'});
+                slide.css({left:(index-1)*that.options.titleWidth+that.options.slideWidth+that.magic+'px'});
             }
             slide.css({
-                width:that.sliderWidth,
+                width:that.sliderWidth-(that.slides.length-1)*that.options.titleWidth,
                 height:that.sliderHeight
             });
             slide.find('img').css({
-                width:that.sliderWidth,
+                width:that.sliderWidth-(that.slides.length-1)*that.options.titleWidth,
                 height:that.sliderHeight
             });
             slide.find('span').css({
@@ -228,9 +208,12 @@
                     var clicked_title=$(this);
                     var new_index=clicked_title.parent().index();
                     that.showSlide(new_index+1,that.constructor,that.destructor);
-                    if(that.timer_id!==false)
-                        clearInterval(that.timer_id);
-                    that.timer_id=setInterval(that.next,that.options.timeout);
+                    if(that.allowAuto)
+                    {
+                        if(that.timer_id!==false)
+                            clearInterval(that.timer_id);
+                        that.timer_id=setInterval(that.next,that.options.timeout);
+                    }
                 }
             });
         });
