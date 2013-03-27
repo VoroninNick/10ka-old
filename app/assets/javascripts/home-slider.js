@@ -10,8 +10,8 @@
         titleIndent:0,
         titleWidth:88,
         slideWidth:1120-3*88,
-        position:1,
-        allowAuto:true,
+        position:2,
+        allowAuto:false,
         timeout:5000,
         speed:1000
 
@@ -176,11 +176,15 @@
     };
     this.initPosition=function()
     {
-        var sliderWidth=that.slider.css('width');
+        var sliderWidth=that.slider.outerWidth();
         //alert('sw:'+sliderWidth+';tsw:'+that.sliderWidth);
-        sliderWidth=that.ConvertCssPxToInt(sliderWidth);
+        //sliderWidth=that.ConvertCssPxToInt(sliderWidth);
+        //sliderWidth=
+        that.sliderWidth=sliderWidth;
+        //alert(sliderWidth);
         that.options.slideWidth=sliderWidth-(that.slides.length-1)*that.options.titleWidth;
-
+        that.sliderHeight=that.slider.outerHeight();
+            // alert(that.sliderWidth);
 
         that.slides.each(function(index,slide)
         {
