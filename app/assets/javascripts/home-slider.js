@@ -11,7 +11,7 @@
         titleWidth:88,
         slideWidth:1120-3*88,
         position:2,
-        allowAuto:false,
+        allowAuto:true,
         timeout:5000,
         speed:1000
 
@@ -184,7 +184,7 @@
         //alert(sliderWidth);
         that.options.slideWidth=sliderWidth-(that.slides.length-1)*that.options.titleWidth;
         that.sliderHeight=that.slider.outerHeight();
-            // alert(that.sliderWidth);
+             alert(that.sliderWidth);
 
         that.slides.each(function(index,slide)
         {

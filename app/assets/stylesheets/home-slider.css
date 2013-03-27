@@ -73,15 +73,25 @@ div#home-slider div.slide span.title.orange_border
 /* 892px slider */
 .chrome div#home-slider span.title
 {
-    left:-126px;
-    top:106px;
+    left:-135px;
+    top:115px;
 }
  .opera div#home-slider span.title
 {
-    left: -153px;
-    top:132px;
+    left:-135px;
+    top:115px;
 }
 .firefox div#home-slider span.title
+{
+    left: -21px;
+    top:318px;
+    /*padding-left: 39px;*/
+
+
+}
+/* 1112px slider */
+@media (min-width: 1200px) {
+    .firefox div#home-slider span.title
 {
     left: -21px;
     top:300px;
@@ -89,9 +99,22 @@ div#home-slider div.slide span.title.orange_border
 
 
 }
-/* 1112px slider */
-@media (min-width: 1200px) {
-    
+.chrome div#home-slider span.title
+{
+    left: -127px;
+    top:106px;
+    /*padding-left: 39px;*/
+
+
+}
+.opera div#home-slider span.title
+{
+    left: -127px;
+    top:106px;
+    /*padding-left: 39px;*/
+
+
+}
 }
 
 /* 1332px slider */
@@ -104,6 +127,22 @@ div#home-slider div.slide span.title.orange_border
 
 
 }
+.chrome div#home-slider span.title
+{
+    left: -153px;
+    top:132px;
+    /*padding-left: 39px;*/
+
+
+}
+.opera div#home-slider span.title
+{
+    left: -153px;
+    top:132px;
+    /*padding-left: 39px;*/
+
+
+}
 }
 /* 1672px slider */
 @media (min-width: 2020px) {
@@ -111,6 +150,22 @@ div#home-slider div.slide span.title.orange_border
 {
     left: -21px;
     top:360px;
+    /*padding-left: 39px;*/
+
+
+}
+.chrome div#home-slider span.title
+{
+    left: -156px;
+    top:136px;
+    /*padding-left: 39px;*/
+
+
+}
+.opera div#home-slider span.title
+{
+    left: -156px;
+    top:136px;
     /*padding-left: 39px;*/
 
 
