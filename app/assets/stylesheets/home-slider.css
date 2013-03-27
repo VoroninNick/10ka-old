@@ -72,15 +72,20 @@ div#home-slider div.slide span.title.orange_border
 }
 
 .chrome div#home-slider span.title
-, .opera div#home-slider span.title
 {
-    left: -153px;
-    top:132px;
+    left:-126px;
+    top:106px;
+}
+ .opera div#home-slider span.title
+{
+    left: -126px;
+    top:106px;
 }
 .firefox div#home-slider span.title
 {
-    left: -41px;
-    top:360px;
+    left: -21px;
+    top:300px;
+    /*padding-left: 39px;*/
 
 }
 
