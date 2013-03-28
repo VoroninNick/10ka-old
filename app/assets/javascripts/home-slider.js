@@ -11,7 +11,7 @@
         titleWidth:88,
         slideWidth:1120-3*88,
         position:2,
-        allowAuto:true,
+        allowAuto:false,
         timeout:5000,
         speed:1000
 
@@ -69,7 +69,7 @@
 
              if(that.activeIndex>=index) // prev, active
              {
-                 slide.css({left:(index)*that.options.titleWidth+'px'});
+                 slide.css({left:((index)*that.options.titleWidth)+'px'});
              }
              else if(that.activeIndex<index) // next
              {
@@ -184,7 +184,7 @@
         //alert(sliderWidth);
         that.options.slideWidth=sliderWidth-(that.slides.length-1)*that.options.titleWidth;
         that.sliderHeight=that.slider.outerHeight();
-             alert(that.sliderWidth);
+             console.log('slider width:'+that.sliderWidth);
 
         that.slides.each(function(index,slide)
         {
@@ -234,7 +234,8 @@
                     that.showSlide(new_index+1,that.constructor,that.destructor);
                     if(that.timer_id!==false)
                         clearInterval(that.timer_id);
-                    that.timer_id=setInterval(that.next,that.options.timeout);
+                    if(that.options.allowAuto)
+                        that.timer_id=setInterval(that.next,that.options.timeout);
                 }
             });
         });

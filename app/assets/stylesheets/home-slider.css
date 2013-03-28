@@ -19,8 +19,9 @@ div#home-slider div.slide.active
 div#home-slider div.slide span.title
 {
 
+    cursor: pointer;
+    /*border-top:groove white 1px;*/ /* white border for titles */
 
-    border-top:groove white 1px;
     background: #7d7e7d; /* Old browsers */
     background: -moz-linear-gradient(left,  #7d7e7d 4%, #0e0e0e 89%); /* FF3.6+ */
     background: -webkit-gradient(linear, left top, right top, color-stop(4%,#7d7e7d), color-stop(89%,#0e0e0e)); /* Chrome,Safari4+ */
@@ -61,20 +62,21 @@ div#home-slider div.slide.active span.title
 {
      background: rgba(0,0,0,0.5);
     color:#ff0101;
-
-
+    border-top:none;
+    
 
 
 }
-div#home-slider div.slide span.title.orange_border
-{
-    border-top: groove #f4a500 1px;
-}
+
 /* 892px slider */
 .chrome div#home-slider span.title
 {
     left:-135px;
     top:115px;
+}
+.chrome div#home-slider div.slide.active span.title
+{
+    left:-134px;
 }
  .opera div#home-slider span.title
 {
@@ -83,50 +85,96 @@ div#home-slider div.slide span.title.orange_border
 }
 .firefox div#home-slider span.title
 {
-    left: -21px;
+    left: -19px;
     top:318px;
-    /*padding-left: 39px;*/
-
-
+}
+.firefox div#home-slider div.slide:first-child span.title
+{
+    left: -20px;
+}
+.firefox div#home-slider div.slide span.title.orange_border
+{
+    border-top: groove #f4a500 1px;
+    left:-20px;
+}
+.firefox div#home-slider div.slide.active span.title
+{
+    left: -19px;
+}
+.firefox div#home-slider div.slide.next span.title
+{
+    left: -20px;
+    border-top:none;
 }
 /* 1112px slider */
 @media (min-width: 1200px) {
-    .firefox div#home-slider span.title
+
+.firefox div#home-slider span.title
 {
-    left: -21px;
+    left: -19px;
     top:300px;
-    /*padding-left: 39px;*/
-
-
 }
+.firefox div#home-slider div.slide:first-child span.title
+{
+    left: -20px;
+}
+.firefox div#home-slider div.slide span.title.orange_border
+{
+    border-top: groove #f4a500 1px;
+    left:-20px;
+}
+.firefox div#home-slider div.slide.active span.title
+{
+    left: -19px;
+}
+.firefox div#home-slider div.slide.next span.title
+{
+    left: -20px;
+    border-top:none;
+}
+
+
 .chrome div#home-slider span.title
 {
     left: -127px;
     top:106px;
-    /*padding-left: 39px;*/
-
-
 }
 .opera div#home-slider span.title
 {
     left: -127px;
     top:106px;
-    /*padding-left: 39px;*/
-
-
 }
 }
 
 /* 1332px slider */
 @media (min-width: 1440px) {
-    .firefox div#home-slider span.title
+
+.firefox div#home-slider span.title
 {
-    left: -21px;
+    left: -19px;
     top:352px;
-    /*padding-left: 39px;*/
-
-
 }
+.firefox div#home-slider div.slide:first-child span.title
+{
+    left: -20px;
+}
+.firefox div#home-slider div.slide span.title.orange_border
+{
+    border-top: groove #f4a500 1px;
+    left:-20px;
+}
+.firefox div#home-slider div.slide.active span.title
+{
+    left: -19px;
+}
+.firefox div#home-slider div.slide.next span.title
+{
+    left: -20px;
+    border-top:none;
+}
+
+
+
 .chrome div#home-slider span.title
 {
     left: -153px;
@@ -146,14 +194,34 @@ div#home-slider div.slide span.title.orange_border
 }
 /* 1672px slider */
 @media (min-width: 2020px) {
-    .firefox div#home-slider span.title
+
+.firefox div#home-slider span.title
 {
-    left: -21px;
+    left: -19px;
     top:360px;
-    /*padding-left: 39px;*/
-
-
 }
+.firefox div#home-slider div.slide:first-child span.title
+{
+    left: -20px;
+}
+.firefox div#home-slider div.slide span.title.orange_border
+{
+    border-top: groove #f4a500 1px;
+    left:-20px;
+}
+.firefox div#home-slider div.slide.active span.title
+{
+    left: -19px;
+}
+.firefox div#home-slider div.slide.next span.title
+{
+    left: -20px;
+    border-top:none;
+}
+
+
+
+
 .chrome div#home-slider span.title
 {
     left: -156px;
@@ -172,3 +240,8 @@ div#home-slider div.slide span.title.orange_border
 }
 }
 
+/* temp */
+.banner-holder
+{
+    background: green;
+}
