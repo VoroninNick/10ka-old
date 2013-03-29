@@ -10,9 +10,10 @@
  *
  *= require_self
  *= require page
- *= require header
  *= require basic
+ *= require header
  *= require normalize
+ *= require mobile
  *= require grids
  *= require contact
  *= require about

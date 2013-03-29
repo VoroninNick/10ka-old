@@ -14,39 +14,23 @@ div#home-slider div.slide
 }
 div#home-slider div.slide.active
 {
-
+    
 }
 div#home-slider div.slide span.title
 {
 
     cursor: pointer;
-    /*border-top:groove white 1px;*/ /* white border for titles */
-
-    /*background: #7d7e7d;*/ /* Old browsers */
-    /*background: -moz-linear-gradient(left,  #7d7e7d 4%, #0e0e0e 89%);*/ /* FF3.6+ */
-    /*background: -webkit-gradient(linear, left top, right top, color-stop(4%,#7d7e7d), color-stop(89%,#0e0e0e));*/ /* Chrome,Safari4+ */
-    /*background: -webkit-linear-gradient(left,  #7d7e7d 4%,#0e0e0e 89%);*/ /* Chrome10+,Safari5.1+ */
-    /*background: -o-linear-gradient(left,  #7d7e7d 4%,#0e0e0e 89%);*/ /* Opera 11.10+ */
-    /*background: -ms-linear-gradient(left,  #7d7e7d 4%,#0e0e0e 89%);*/ /* IE10+ */
-    /*background: linear-gradient(to right,  #7d7e7d 4%,#0e0e0e 89%);*/ /* W3C */
-    /*filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7d7e7d', endColorstr='#0e0e0e',GradientType=1 );*/ /* IE6-9 */
-
-
-
-
-    color:#f4a500;
+color:#f4a500;
     position: absolute;
     display: block;
-    font-size: 24px;
+    
     z-index: 3;
     margin-left: 20px;
 
 
 
 
-    height:88px;
-    padding-top: 32px;
-    padding-bottom: 32px;
+    
     padding-left: 39px;
 
     -moz-transform:rotate(270deg);
@@ -80,8 +64,101 @@ div#home-slider div.slide.active span.title
 
 
 }
+/* 600px slider */
+
+div#home-slider div.slide span.title
+    {
+        font-size: 20px;
+        height:66px;
+    padding-top: 17px;
+    padding-bottom: 17px;
+    }
+
+.firefox div#home-slider span.title
+{
+    left: -19px;
+    top:352px;
+}
+.firefox div#home-slider div.slide:first-child span.title
+{
+    left: -20px;
+}
+.firefox div#home-slider div.slide span.title.orange_border
+{
+    border-top: groove #f4a500 1px;
+    left:-20px;
+}
+.firefox div#home-slider div.slide.active span.title
+{
+    left: -19px;
+}
+.firefox div#home-slider div.slide.next span.title
+{
+    left: -20px;
+    border-top:none;
+}
+
+
+
+.chrome div#home-slider span.title
+{
+    left: -151px;
+    top:132px;
+}
+.chrome div#home-slider div.slide:first-child span.title
+{
+    left: -152px;
+}
+.chrome div#home-slider div.slide span.title.orange_border
+{
+    border-top: groove #f4a500 1px;
+    left:-152px;
+}
+.chrome div#home-slider div.slide.active span.title
+{
+    left: -151px;
+}
+.chrome div#home-slider div.slide.next span.title
+{
+    left: -152px;
+    border-top:none;
+}
+
+
+
+.opera div#home-slider span.title
+{
+    left: -151px;
+    top:132px;
+}
+.opera div#home-slider div.slide:first-child span.title
+{
+    left: -152px;
+}
+.opera div#home-slider div.slide span.title.orange_border
+{
+    border-top: groove #f4a500 1px;
+    left:-152px;
+}
+.opera div#home-slider div.slide.active span.title
+{
+    left: -151px;
+}
+.opera div#home-slider div.slide.next span.title
+{
+    left: -152px;
+    border-top:none;
+}
 
 /* 892px slider */
+@media(min-width: 960px){
+    div#home-slider div.slide span.title
+    {
+        font-size: 24px;
+        height:88px;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    }
 .chrome div#home-slider span.title
 {
     left:-134px;

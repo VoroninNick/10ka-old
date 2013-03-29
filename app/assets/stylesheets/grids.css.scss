@@ -1,4 +1,6 @@
 
+@media (min-width: 960px)
+{
 
 body {
   min-width: 960px;
@@ -126,9 +128,20 @@ body {
    width:100%;
  }
 
-
-
-
+/* items configuration */
+div.g4.alpha.main-descr-img
+{
+    display: inherit;
+}
+  div.main-descr-area
+ {
+  margin-left: 0px;
+ }
+  div#catalog-wrapper div.catalog-block
+ {
+    width:290px;
+ }
+}
 
 @media (min-width: 1200px) {
 
@@ -259,6 +272,7 @@ body {
        /*width: 840px;*/
     height: 300px;
   }
+
 
 }
 
@@ -394,6 +408,12 @@ body {
     /*width: 1080px;*/
     height: 352px;
   }
+
+  /* custom obbjects */
+   div#catalog-wrapper div.catalog-block
+ {
+    width:345px;
+ }
 
 }
 

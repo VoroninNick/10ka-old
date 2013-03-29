@@ -1,0 +1,51 @@
+
+<!-- Shadow area -->
+  <div class="shadow-top"></div>
+  <!-- /Shadow area -->
+  <!-- Catalog area -->
+  <div id="catalog-wrapper" class="f-height">
+    <div class="catalog-block g4 alpha">
+        <div class="catalog-item" id="main-cat-1" data-category-name="<%= catalog_first_section.slug %>" data-category-id="<%= catalog_first_section.id %>">
+          <a class="catalog-show-more animate" >1<span data-opened="false">+</span></a>
+          <ul class="catalog-menu" id="menu-cat-1">
+            <% catalog_first_section.parent_catalogs.each do |parent_first_section| %>
+            <li><a href="#"><%= parent_first_section.name %><span>+</span></a></li>
+            <% end %>
+          </ul>
+        </div><!-- Catalog Item -->
+        <% end %>
+        <% end %>
+    </div><!-- Catalog wrap stuff -->
+
+    <div class="catalog-block g4">
+
+          <div class="catalog-item" id="main-cat-<%= catalog_middle_section.id %>" data-category-name="<%= catalog_middle_section.slug %>" data-category-id="<%= catalog_middle_section.id %>">
+            <a class="catalog-show-more animate" ><%= catalog_middle_section.name %><span data-opened="false">+</span></a>
+            <ul class="catalog-menu" id="menu-cat-<%= catalog_middle_section.id %>">
+              <% catalog_middle_section.parent_catalogs.each do |parent_middle_section| %>
+                <li><a href="#"><%= parent_middle_section.name %><span>+</span></a></li>
+              <% end %>
+            </ul>
+          </div><!-- Catalog Item -->
+        <% end %>
+        <% end %>
+    </div><!-- Catalog wrap stuff -->
+    <div class="catalog-block g4 omega">
+        <% cache do %>
+        <% get_right_catalogs.catalogs.each do |catalog_last_section| %>
+          <div class="catalog-item" id="main-cat-<%= catalog_last_section.id %>" data-category-name="<%= catalog_last_section.slug %>" data-category-id="<%= catalog_last_section.id %>">
+            <a class="catalog-show-more animate" ><%= catalog_last_section.name %><span data-opened="false">+</span></a>
+            <ul class="catalog-menu" id="menu-cat-<%= catalog_last_section.id %>">
+              <% catalog_last_section.parent_catalogs.each do |parent_last_section| %>
+                <li><a href="#"><%= parent_last_section.name %><span>+</span></a></li>
+              <% end %>
+            </ul>
+          </div><!-- Catalog Item -->
+        <% end %>
+        <% end %>
+    </div><!-- Catalog wrap stuff -->
+  </div>
+  <!-- /Catalog area -->
+  <!-- Shadow area -->
+  <div class="shadow-bottom"></div>
+  <!-- /Shadow area -->

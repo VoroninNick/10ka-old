@@ -6,8 +6,30 @@
       <%= link_to(image_tag('logo.png', :alt => ''), root_path) %>
     <% end %>
   </div><!-- span4 -->
-
+  <div class="omega mobile-menu-button">
+    <img src="/assets/mobile-menu-button.jpg" alt="show menu"/>
+  </div>
   <div class="g8 omega">
     <%= render :partial => "partials/menu" %>
   </div><!-- span8 -->
 </div>
+
+<script type="text/javascript">
+  var $mobile_menu_button=$('.mobile-menu-button');
+  var $menu=$('div#hd-wrapper nav');
+  if($mobile_menu_button.filter(':visible').length>0)
+    $menu.hide();
+    $('.mobile-menu-button').click(function(){
+      
+      if($menu.filter(':visible').length>0)
+        $menu.hide();
+      else
+        $menu.show();
+    });
+    $('ul.header-nav li a').click(function(){
+      $(this).parent().addClass('click')
+      //.delay(5000)
+      //.removeClass('click');
+
+    });
+  </script>

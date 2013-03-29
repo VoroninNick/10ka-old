@@ -8,7 +8,7 @@
     that.slides_count=0;
     that.options={
         titleIndent:0,
-        titleWidth:88,
+        titleWidth:55,
         slideWidth:1120-3*88,
         position:2,
         allowAuto:false,
