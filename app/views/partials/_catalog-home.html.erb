@@ -1,11 +1,10 @@
-
 <!-- Shadow area -->
   <div class="shadow-top"></div>
   <!-- /Shadow area -->
   <!-- Catalog area -->
   <div id="catalog-wrapper" class="f-height">
     <div class="catalog-block g4 alpha">
-        <% cache do %>
+        <%# cache do %>
         <% get_left_catalogs.catalogs.each do |catalog_first_section| %>
         <div class="catalog-item" id="main-cat-<%= catalog_first_section.id %>" data-category-name="<%= catalog_first_section.slug %>" data-category-id="<%= catalog_first_section.id %>">
           <a class="catalog-show-more animate" ><%= catalog_first_section.name %><span data-opened="false">+</span></a>
@@ -16,11 +15,11 @@
           </ul>
         </div><!-- Catalog Item -->
         <% end %>
-        <% end %>
+        <%# end %>
     </div><!-- Catalog wrap stuff -->
 
     <div class="catalog-block g4">
-        <% cache do %>
+        <%# cache do %>
         <% get_center_catalogs.catalogs.each do |catalog_middle_section| %>
           <div class="catalog-item" id="main-cat-<%= catalog_middle_section.id %>" data-category-name="<%= catalog_middle_section.slug %>" data-category-id="<%= catalog_middle_section.id %>">
             <a class="catalog-show-more animate" ><%= catalog_middle_section.name %><span data-opened="false">+</span></a>
@@ -31,10 +30,10 @@
             </ul>
           </div><!-- Catalog Item -->
         <% end %>
-        <% end %>
+        <%# end %>
     </div><!-- Catalog wrap stuff -->
     <div class="catalog-block g4 omega">
-        <% cache do %>
+        <%# cache do %>
         <% get_right_catalogs.catalogs.each do |catalog_last_section| %>
           <div class="catalog-item" id="main-cat-<%= catalog_last_section.id %>" data-category-name="<%= catalog_last_section.slug %>" data-category-id="<%= catalog_last_section.id %>">
             <a class="catalog-show-more animate" ><%= catalog_last_section.name %><span data-opened="false">+</span></a>
@@ -45,7 +44,7 @@
             </ul>
           </div><!-- Catalog Item -->
         <% end %>
-        <% end %>
+        <%# end %>
     </div><!-- Catalog wrap stuff -->
   </div>
   <!-- /Catalog area -->
