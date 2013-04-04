@@ -100,25 +100,25 @@ div#home-slider div.slide span.title
 
 .chrome div#home-slider span.title
 {
-    left: -151px;
-    top:132px;
+    left: -162px;
+    top:143px;
 }
 .chrome div#home-slider div.slide:first-child span.title
 {
-    left: -152px;
+    left: -163px;
 }
 .chrome div#home-slider div.slide span.title.orange_border
 {
     border-top: groove #f4a500 1px;
-    left:-152px;
+    left:-163px;
 }
 .chrome div#home-slider div.slide.active span.title
 {
-    left: -151px;
+    left: -162px;
 }
 .chrome div#home-slider div.slide.next span.title
 {
-    left: -152px;
+    left: -163px;
     border-top:none;
 }
 
@@ -126,25 +126,25 @@ div#home-slider div.slide span.title
 
 .opera div#home-slider span.title
 {
-    left: -151px;
-    top:132px;
+    left: -162px;
+    top:143px;
 }
 .opera div#home-slider div.slide:first-child span.title
 {
-    left: -152px;
+    left: -163px;
 }
 .opera div#home-slider div.slide span.title.orange_border
 {
     border-top: groove #f4a500 1px;
-    left:-152px;
+    left:-163px;
 }
 .opera div#home-slider div.slide.active span.title
 {
-    left: -151px;
+    left: -162px;
 }
 .opera div#home-slider div.slide.next span.title
 {
-    left: -152px;
+    left: -163px;
     border-top:none;
 }
 
