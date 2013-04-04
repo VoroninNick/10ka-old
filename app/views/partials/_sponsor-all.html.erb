@@ -3,13 +3,13 @@
 <!-- /Shadow area -->
 <!-- Catalog area -->
 <div id="sponsor-wrapper" class="f-height">
-  <% cache do %>
+  <%# cache do %>
     <% fetch_sponsors.each do |sponsor_item| %>
       <div class="g2 <%= cycle('alpha', '', '', '', '', 'omega') %>">
         <%= link_to( image_tag(sponsor_item.sponsor.url, :alt => sponsor_item.description), sponsor_item.link ) %>
       </div>
     <% end %>
-  <% end %>
+  <%# end %>
 </div>
 <!-- /Catalog area -->
 <!-- Shadow area -->
