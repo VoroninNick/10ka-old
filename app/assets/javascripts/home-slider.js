@@ -76,11 +76,11 @@
                  slide.css({left:(index-1)*that.options.titleWidth+that.options.slideWidth+'px'});
              }
              slide.css({
-                 width:that.sliderWidth,
+                 width:that.options.sliderWidth,
                  height:that.sliderHeight
              });
              slide.find('img').css({
-                 width:that.sliderWidth,
+                 width:that.options.sliderWidth,
                  height:that.sliderHeight
              });
          });
@@ -109,11 +109,11 @@
                 slide.css({left:(index-1)*that.options.titleWidth+that.options.slideWidth+'px'});
             }
             slide.css({
-                width:that.sliderWidth,
+                width:that.options.slideWidth,
                 height:that.sliderHeight
             });
             slide.find('img').css({
-                width:that.sliderWidth,
+                width:that.options.slideWidth,
                 height:that.sliderHeight
             });
         });
@@ -197,7 +197,7 @@ that.initPosition();
         that.sliderHeight=that.slider.outerHeight();
         //if(that.sliderHeight>$(window).height())
         //    that.sliderHeight=$(window).height();
-             console.log('slider width:'+that.sliderWidth+';sliderHeight:'+that.sliderHeight);
+        console.log('slider width:'+that.sliderWidth+';sliderHeight:'+that.sliderHeight+'slideWidth:'+that.options.slideWidth);
 
         that.slides.each(function(index,slide)
         {
@@ -217,18 +217,18 @@ that.initPosition();
                 slide.css({left:(index-1)*that.options.titleWidth+that.options.slideWidth+'px'});
             }
             slide.css({
-                width:that.sliderWidth,
-                height:that.sliderHeight
+                width:that.options.slideWidth+'px',
+                height:that.sliderHeight+'px'
             });
             slide.find('img').css({
-                width:that.sliderWidth,
-                height:that.sliderHeight
+                width:that.options.slideWidth+'px',
+                height:that.sliderHeight+'px'
             });
             slide.find('span').css({
-                width:that.sliderHeight,
-                height:that.options.titleWidth
+                width:that.sliderHeight+'px',
+                height:that.options.titleWidth+'px'
             })/*.position({top:0})*/;
-
+            console.log('2>>>>>>>>slider width:'+that.sliderWidth+';sliderHeight:'+that.sliderHeight+'slideWidth:'+that.options.slideWidth);
 
         });
     };
