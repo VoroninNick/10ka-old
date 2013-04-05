@@ -1,18 +1,15 @@
-
-@media(min-width: 300px;max-width: 609px)
+@media(min-width: 610px;max-width: 959px)
 {
   html,body
   {
     overflow-x: hidden;
-    width:100%;
   }
-  body
+  #wrapper
   {
-    min-width: 300px;
-
+    width: 610px;
   }
 }
-@media(max-width: 609px){ 
+@media(min-width: 610px;max-width: 959px){
   html,body
   {
     /*overflow-x:hidden;*/ 
@@ -27,8 +24,6 @@
     margin-left: auto;
     margin-right: auto;
     width: 100%;
-    padding-left: 15px;
-    padding-right: 15px;
   }
 
 /* Grid >> Global
@@ -110,7 +105,7 @@
 }
 
 .container .g6 {
-  width:100%;
+  width:435px;
 }
 
 .container .g7 {
@@ -118,8 +113,7 @@
 }
 
 .container .g8 {
-  /*width:610px;*/
-  width:100%;
+  width:610px;
 }
 
 .container .g9 {
@@ -135,18 +129,13 @@
 }
 
 .container .g12 {
-  width:100%;
+  width:900px;
 
-  /*margin-left:4px;*/
+  margin-left:4px;
   /*margin-left: 30px;
   margin-right: 30px;*/
 }
 
-div#banner-wrapper
-{
-  width:100%;
-  padding: 4px;
-}
 /* custom objects */
  div#home-slider {
    height: 352px;
@@ -156,7 +145,6 @@ div#banner-wrapper
  .banner-holder {
     margin-left: 0;
     margin-right: 0;
-    width:100%;
  }
 
  div.g4.alpha.main-descr-img {
@@ -167,13 +155,8 @@ div#banner-wrapper
  }
 .news-item .article-header,
 .news-item .image-cont, div#catalog-wrapper div.catalog-block {
-    width:100%;
+    width:536px;
     
- }
- .news-item
- {
-  margin-left: 0;
-  margin-right: 0;
  }
  /*.news-item .image-cont img
  {
@@ -183,13 +166,8 @@ div#banner-wrapper
   height: 108px;
   width: 100%;
  }
- div#catalog-wrapper
- {
-
- }
   div#catalog-wrapper div.catalog-block   {
-    margin-left: 0;
-    width: 100%;
+    margin-left: 30px;
   }
 
  ul.header-nav li  {
@@ -275,39 +253,20 @@ div#banner-wrapper
   padding-bottom: 0;
  }
  #articles-wrapper .g12 {
-  margin-left:0;
+  margin-left:30px;
  }
-
  .news-item {
-     margin-left: 0;
+     margin-left: 30px;
  }
  .contact-info-row.work {
   float:left;
-  width:100%;
-  margin-left: 0px;
+  width:250px;
+  margin-left: 45px;
   margin-right: 0;
   padding-top: 0px;
-  padding-left:15px;
-  padding-right: 15px;
  }
- .contact-info-row.work img {
-  left:-30px;
- }
- #pn-pt
- {
-  font-size: 18px;
- }
- #pn-pt span.me-color, #sb span.me-color
- {
-  left:100%;
-  margin-left: -200px;
-  position: absolute;
-  font-size: 20px;
-  padding-left: 0;
- }
-
  .contact-info-row.contacts {
-
+    float: right;
     margin-left: 0;
     margin-right: 0;
     padding-top: 0px;
@@ -357,18 +316,6 @@ width:100%;
 */
 
  }
- #info-wrapper #about
- {
-  margin-left: 0;
-  padding-left: 15px;
-  padding-right: 15px;  
- }
-
- #info-wrapper #about .af-description
- {
-    width:100%;
- }
-
  
 
 }
