@@ -301,25 +301,26 @@ width:100%;
  .contact-info-row.copyright div#developed-by p.title  {
   font-size: 12px;
 
-
  }
 
 .contact-info-row.copyright div#developed-by  {
   position: absolute;
   left:30px;
   /*margin-top: 190px;*/
-  width:390px;
+  width:300px;
   top:225px;
 
 
  }
-.contact-info-row.copyright p.copyrights  {
+#footer-wrapper .contact-info-row.copyright p.copyrights  {
     position: absolute;
   
-  right:30px;
+  /*right:30px;*/
+  left:100%;
+  margin-left: -200px;
   top:260px;
 
-  width:200px;
+  width:170px;
   /*margin-right: 111px;*/
  } 
  .contact-info-row.copyright  {/*

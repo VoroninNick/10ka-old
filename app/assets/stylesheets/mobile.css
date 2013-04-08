@@ -40,9 +40,8 @@ html
     margin-left: auto;
     margin-right: auto;
     width: 100%;
-    padding-left: 15px;
-    padding-right: 15px;
   }
+
 
 /* Grid >> Global
 ----------------------------------------------------------------------------------------------------*/
@@ -204,13 +203,16 @@ div#banner-wrapper
     margin-left: 0;
     width: 100%;
   }
-
- ul.header-nav li  {
+  ul.header-nav
+  {
+    
+  }
+ nav ul.header-nav li  {
   width:100%;
 
-  -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
-  border-radius: 5px;
+  -moz-border-radius: 0;  
+  -webkit-border-radius: 0;
+  border-radius: 0;
   -moz-background-clip: padding;
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
@@ -225,15 +227,19 @@ div#banner-wrapper
   background-image: linear-gradient(bottom, #fdad00 0%, #fdef00 100%);
 
 
-  font-size: 30px;
-  font-weight: bold;
+  font-size: 22px;
+  font-weight: bolder;
   text-decoration: none;
-  padding: 10px 20px;
+  padding-left:35px;
+  padding-right: 35px;
+  padding-top:10px;
+  padding-bottom: 10px;
   color: #646464;
   text-shadow: 0 1px 0 rgba(255,255,255,.46);
 
   display: block;
   cursor: pointer;
+  height:61px;
  }
  
  ul.header-nav li.click  {
@@ -255,14 +261,17 @@ div#banner-wrapper
   background-image: linear-gradient(bottom, #FD3232 0%, #FD6432 100%);
  }
  
- ul.header-nav li a {
+ nav ul.header-nav li a {
   display:block;
     width: 100%;
     text-align: center;
     border-left:white 1px solid;
     border-right:white 1px solid;
-    font-size: 30px;
-  font-weight: bold;
+    font-size: 22px;
+  font-weight: 600;
+  height: 100%;
+  padding-top: 7px;
+  padding-bottom: 7px;
  }
 
  div.mobile-menu-button {
@@ -283,9 +292,17 @@ div#banner-wrapper
  #hd-wrapper nav  {
     margin-bottom: 10px;
     margin-top: 0;
+
+    -moz-box-shadow:  0px 0px 0px 0px rgba(0,0,0,0.9);
+  -webkit-box-shadow: 0px -7px 7px -7px rgba(0,0,0,0.9);
+  box-shadow: 0px -7px 7px -7px rgba(0,0,0,0.9);
+ }
+ #hd-wrapper nav
+ {
+
  }
  #hd-wrapper  {
-  padding-bottom: 0;
+  
  }
  #articles-wrapper .g12 {
   margin-left:0;
@@ -345,6 +362,7 @@ width:100%;
   /*overflow-x:hidden;
   overflow-y:hidden;*/
   padding-bottom: 0;
+  float:clear;
  }
 
 .contact-info-row.copyright div#developed-by  {
@@ -392,6 +410,13 @@ width:100%;
     width:100%;
  }
 
- 
+ #articles-wrapper, 
+ #catalog-wrapper,
+ #sponsor-wrapper,
+ #footer-wrapper
+ {
+  padding-left: 15px;
+  padding-right: 15px;
+ }
 
 }
