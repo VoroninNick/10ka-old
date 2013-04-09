@@ -12,6 +12,7 @@
  *= require page
  *= require basic
  *= require header
+ *= require footer
  *= require normalize
  *= require grids
  *= require contact
