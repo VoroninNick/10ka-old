@@ -1,5 +1,5 @@
 <div id="hd-wrapper" class="f-height">
-  <div class="g4 alpha">
+  <div id="logo" class="g4 alpha">
     <% if current_page?(root_path) %>
       <%= image_tag('logo.png', :alt => '') %>
     <% else %>
@@ -7,7 +7,7 @@
     <% end %>
   </div><!-- span4 -->
   <div class="omega mobile-menu-button">
-    <img src="/assets/mobile-menu-button.jpg" alt="show menu"/>
+    <img src="/assets/mobile-menu-button.png" alt="show menu"/>
   </div>
   <div class="g8 omega">
     <%= render :partial => "partials/menu" %>
@@ -17,14 +17,25 @@
 <script type="text/javascript">
   var $mobile_menu_button=$('.mobile-menu-button');
   var $menu=$('div#hd-wrapper nav');
-  if($mobile_menu_button.filter(':visible').length>0)
-    $menu.hide();
+  //if($mobile_menu_button.filter(':visible').length>0)
+  //  $menu.hide();
     $('.mobile-menu-button').click(function(){
       
       if($menu.filter(':visible').length>0)
-        $menu.slideUp();
+        $menu.slideUp(400,function(){
+          $menu.removeAttr('style');
+          $menu.removeClass('expanded-menu');
+          $menu.addClass('collapsed-menu');
+
+        });
+
       else
-        $menu.slideDown();
+        $menu.slideDown(400,function(){
+          $menu.removeAttr('style');
+          $menu.removeClass('collapsed-menu');
+
+          $menu.addClass('expanded-menu');
+        });
     });
     $('ul.header-nav li a').click(function(){
       
