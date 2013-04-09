@@ -23,6 +23,12 @@ html, body {
   height: 100%;
 }
 
+a:visited,
+a:active,
+a:focus{
+  color: #b2b2b2;
+}
+
 body{
   font-family: 'Open Sans', sans-serif;
   background: url(10k-bricks-pattern.gif) repeat transparent;

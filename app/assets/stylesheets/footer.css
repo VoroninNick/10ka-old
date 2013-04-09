@@ -66,8 +66,12 @@
   margin: 0 0 0.83em 0;
 }
 
-@media(max-width:959px)
+#footer-wrapper .contact-info-row.contacts p a.tel
 {
+  color:#BF291F;
+  text-decoration: none;
+}
+@media(max-width:959px){
   #footer-wrapper .contact-info-row p.title, 
   #footer-wrapper .contact-info-row p.copyrights,
    #footer-wrapper .contact-info-row p.footer-title{
@@ -82,20 +86,34 @@
   font-style: italic;
 }
 
-	.contact-info-row.work {
+	.contact-info-row.work.g4 {
   float:left;
-  width:250px;
+  width:260px;
   margin-left: 45px;
   margin-right: 0;
   padding-top: 0px;
  }
- .contact-info-row.contacts {
-    float: right;
+ .contact-info-row.contacts.g4 {
+    /*float: right;*/
     margin-left: 0;
     margin-right: 0;
     padding-top: 0px;
+    left: 0;
+    position: relative;
+    width: auto;
+
+    /*float:left;*/
+  width: auto;/*width:100%;*/
+  margin-left: 0px;
+  margin-right: 0;
+  padding-top: 0px;
+
+
+  /*padding-left:15px;*/
+  /*padding-right: 15px;*/
  }
- .contact-info-row.copyright {
+
+ .contact-info-row.copyright.g4 {
   /*
   position: absolute;
   left:50%;
@@ -111,6 +129,7 @@ width:100%;
   /*overflow-x:hidden;
   overflow-y:hidden;*/
   padding-bottom: 0;
+  top:160px;
  }
 
  .contact-info-row.copyright div#developed-by p.title  {
@@ -123,13 +142,15 @@ width:100%;
   left:30px;
   /*margin-top: 190px;*/
   width:300px;
-  top:225px;
-
+  top:0px;
+  
 
  }
 #footer-wrapper .contact-info-row.copyright p.copyrights  {
     position: absolute;
-  
+  top:0px;
+  right:30px;
+  font-size: 16px;
   /*right:30px;*/
   /*left:100%;*/
   /*margin-left: -200px;*/
@@ -152,11 +173,19 @@ width:100%;
   padding-top: 0;
   padding-bottom: 0;
  }
+
+ .contact-info-row.contacts p#office a.tel,
+  .contact-info-row.contacts p#sale a.tel {
+
+    right:15px;
+position: absolute;
+ }
+ 
 }
 
 @media(max-width: 609px){
   #footer-wrapper{
-  background: url(footer-bg.jpg) repeat transparent;
+  background: url("footer-bg.jpg") repeat-x scroll 0 60px transparent;
 }
   div.contact-info-row.work.g4 {
   float:left;
@@ -193,9 +222,16 @@ width:100%;
   padding-top: 0px;
   padding-left:15px;
   padding-right: 15px;
+
+  /*margin-left: 0;*/
+    /*margin-right: 0;*/
+    /*padding-top: 0px;*/
+   right: 0px; /*right: 30px;*/
+  position: relative; /*position: absolute;*/
+   width: 100%; /*width: auto;*/
  }
- .contact-info-row.contacts p#office span,
-  .contact-info-row.contacts p#sale span {
+ .contact-info-row.contacts p#office a.tel,
+  .contact-info-row.contacts p#sale a.tel {
 
     right:15px;
 position: absolute;

@@ -13,8 +13,8 @@
         position:2,
         allowAuto:false,
         timeout:5000,
-        speed:1000
-
+        speed:1000,
+        displayHeaders:true
 };
     that.images=[];
     that.slides=[];
