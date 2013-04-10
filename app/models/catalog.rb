@@ -1,6 +1,6 @@
 # -*- encoding : utf-8 -*-
 class Catalog < ActiveRecord::Base
-  attr_accessible :description, :name, :slug, :parent_catalog_ids, :home_position_id
+  attr_accessible :description, :name, :parent_catalog_ids, :home_position_id, :slug
 
   validates :name, presence: true
   validates :slug, uniqueness: true, presence: true
@@ -9,6 +9,10 @@ class Catalog < ActiveRecord::Base
 
   has_many :parent_catalogs
   belongs_to :home_position
+
+  rails_admin do
+    label 'Каталог'
+  end
 
   def to_param
     slug

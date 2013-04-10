@@ -58,14 +58,25 @@
   display: none;
 }
 
+#catalog-page-wrapper div.catalog-block div.catalog-item ul.catalog-menu.visited{
+  display: block !important;
+}
+
+#catalog-page-wrapper div.catalog-block div.catalog-item ul.catalog-menu.visited li{
+  font-style: italic;
+}
+
 #catalog-page-wrapper div.catalog-block div.catalog-item ul.catalog-menu li{
   margin-bottom: 5px;
+  color: rgb(191, 41, 31);
+  font-weight: 300;
 }
 
 #catalog-page-wrapper div.catalog-block div.catalog-item ul.catalog-menu li a{
   color: #bf291f;
   font-size: 1em;
   font-weight: 300;
+  font-style: normal;
   text-decoration: underline;
 }
 

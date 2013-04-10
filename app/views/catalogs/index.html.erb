@@ -10,10 +10,10 @@
   <div class="catalog-block g4 alpha">
     <% fetch_all_catalog.each do |catalog_section| %>
       <div class="catalog-item" id="main-cat-<%= catalog_section.id %>" data-category-name="<%= catalog_section.slug %>" data-category-id="<%= catalog_section.id %>">
-        <a class="catalog-show-more animate" ><%= catalog_section.name %><span data-opened="false">+</span></a>
+        <a class="catalog-show-more animate" ><%= catalog_section.name %><span data-opened="false" id="status-<%= catalog_section.id %>">+</span></a>
         <ul class="catalog-menu" id="menu-cat-<%= catalog_section.id %>">
           <% catalog_section.parent_catalogs.each do |parent_section| %>
-            <li><a href="<%= parent_section.slug %>"><%= parent_section.name %><span>+</span></a></li>
+            <li><%= link_to parent_section.name, parent_show_path(parent_section), :title => parent_section.name %><!-- span>+</span --></li>
           <% end %>
         </ul>
       </div><!-- Catalog Item -->

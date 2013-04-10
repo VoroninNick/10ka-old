@@ -1,1 +1,45 @@
-Parent
+<!-- Header render -->
+<%= render :partial => "partials/head" %>
+<!-- /Header render -->
+
+<!-- Catalog wrapper -->
+<div id="catalog-page-wrapper" class="f-height catalog-page-index">
+  <div class="g12 pd-me">
+    <h1>Каталог продукції</h1>
+  </div>
+  <div class="catalog-block g4 alpha">
+    <% fetch_all_catalog.each do |catalog_section| %>
+      <div class="catalog-item" id="main-cat-<%= catalog_section.id %>" data-category-name="<%= catalog_section.slug %>" data-category-id="<%= catalog_section.id %>">
+        <a class="catalog-show-more animate" ><%= catalog_section.name %><span data-opened="false" id="status-<%= catalog_section.id %>"><% if catalog_section.id == @parent_catalog.catalog_id %>-<% else %>+<% end %></span></a>
+        <ul class="catalog-menu <% if catalog_section.id == @parent_catalog.catalog_id %> visited <% end %>" id="menu-cat-<%= catalog_section.id %>">
+          <% catalog_section.parent_catalogs.each do |parent_section| %>
+            <% if parent_section.id == @parent_catalog.id %>
+              <li><%= parent_section.name %></li>
+            <% else %>
+              <li><%= link_to parent_section.name, parent_show_path(parent_section), :title => parent_section.name %><!-- span>+</span --></li>
+            <% end %>
+          <% end %>
+        </ul>
+      </div><!-- Catalog Item -->
+    <% end %>
+  </div><!-- Catalog wrap stuff G4 -->
+  <div class="g8 catalog-page-format omega">
+    <h1><%= @parent_catalog.name %></h1>
+    <code>
+      <pre><%= @parent_catalog.inspect %></pre>
+    </code>
+  </div>
+
+
+
+</div>
+<!-- /Catalog wrapper -->
+<div class="pd-me f-height"></div>
+
+<!-- Sponsor render -->
+<%= render :partial => "partials/sponsor-all" %>
+<!-- Sponsor render -->
+
+<!-- Footer render -->
+<%= render :partial => "partials/footer" %>
+<!-- /Footer render -->
