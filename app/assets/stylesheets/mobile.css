@@ -3,8 +3,7 @@ html, body
   min-width: 320px;
   /*overflow: hidden;*/ 
 } 
-@media(max-width: 400px)
-{
+@media(max-width: 400px){
 
 }
 
@@ -177,6 +176,14 @@ div#banner-wrapper
  div.main-descr-area {
   margin-left: 30px;
  }
+ div.main-descr-area img {
+  margin-top: 40px;
+  margin-left: :15px;
+ }
+ div#af-description-container
+ {
+  width: 100%;
+ }
 .news-item .article-header,
 .news-item .image-cont, div#catalog-wrapper div.catalog-block {
     width:100%;
@@ -221,7 +228,7 @@ div#banner-wrapper
 
  #info-wrapper #about .af-description
  {
-    width:100%;
+    width:65%;
  }
 
  #articles-wrapper, 

@@ -58,4 +58,43 @@
       $(this).preventDefault();
       */
     });
+
+     /* var lastWindow=false;
+      $(window).resize(function(){
+        console.log('resize');
+        var handler=function(){
+          alert('resize');
+        };
+        var currentWindow={};
+        currentWindow.width=window.innerWidth;
+
+        if(window.innerWidth>=320 && window.innerWidth<610)
+        {
+          currentWindow.type='mobile';
+        }
+        else if(window.innerWidth>=610 && window.innerWidth<1200)
+        {
+          currentWindow.type='ipad';
+        }
+        else if(window.innerWidth>=1200 && window.innerWidth<1440)
+        {
+          currentWindow.type='1200';
+        }
+        else if(window.innerWidth>=1440 && window.innerWidth<2020)
+        {
+          currentWindow.type='1440';
+        }
+        else if(window.innerWidth>=2020)
+        {
+          currentWindow.type='2020';
+        }
+
+        if(lastWindow==false || lastWindow.type!=currentWindow.type)
+          {
+            handler();
+
+          }
+          lastWindow=currentWindow;
+      */
+    
   </script>

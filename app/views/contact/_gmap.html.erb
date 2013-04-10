@@ -1,0 +1,34 @@
+<div id="gmap-wrapper" class="f-height">
+  <div class="g12">
+    <h2><%= image_tag('h-img.png', :style => 'position: absolute; left: -35px;') %>Ми на Google карті:</h2>
+  </div>
+  <div id="map">
+    
+  </div>
+</div>
+<script type="text/javascript">
+
+$.ajax('http://maps.google.com/maps/api/geocode/xml?address=Городоцька%20357&sensor=false',
+	{success:function(xml){
+		fullxml=xml;
+		if($('status',xml).text()=='OK')
+		{
+
+			var lat=$('geometry location lat',xml).text();
+			var lng=$('geometry location lng',xml).text();
+			//alert('lat:'+lat+';lng:'+lng);		
+			var map=new GMaps({
+  				el: '#map',
+  				lat: lat,
+  				lng: lng
+			});
+		}
+	}
+});
+$(window).resize(function(){
+	var h=window.innerHeight;
+	$('#map').css('max-height',h);
+	console.log('h:'+h);
+})
+
+</script>

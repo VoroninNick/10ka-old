@@ -1,8 +1,16 @@
 <nav>
   <ul class="header-nav">
-    <li <% if current_page?(about_path) %> class="active" <% end %> > <%= link_to "Про компанію", about_path %></li>
-    <li <% if current_page?(catalogs_path) %> class="active underline" <% end %> > <%= link_to "Каталог", catalogs_path %></li>
-    <li <% if current_page?(articles_path) || controller.controller_name == 'articles' %> class="active underline" <% end %> > <%= link_to "Статті", articles_path %></li>
-    <li <% if current_page?(contact_path) %> class="active" <% end %> > <%= link_to "Контакти", contact_path %></li>
+    <li <% if current_page?(about_path) then %> class="active" ><span>Про компанію</span><%  else %>><%= link_to "Про компанію", about_path %><% end
+    	 %>
+    </li>
+    <li <% if current_page?(catalogs_path) then %> class="active" ><span>Каталог</span><%  else %>><%= link_to "Каталог", catalogs_path %><% end
+    	 %>
+    </li>
+    <li <% if current_page?(articles_path) then %> class="active" ><span>Статті</span><%  else %>><%= link_to "Статті", articles_path %><% end
+    	 %>
+    </li>
+    <li <% if current_page?(contact_path) then %> class="active" ><span>Контакти</span><%  else %>><%= link_to "Контакти", contact_path %><% end
+    	 %>
+    </li>
   </ul>
 </nav>

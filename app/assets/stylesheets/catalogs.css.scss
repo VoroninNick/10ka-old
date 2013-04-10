@@ -135,3 +135,17 @@
   display: initial;
 }
 
+@media(max-width:959px){
+#catalog-page-wrapper
+{
+  padding-left: 15px;
+  padding-right:15px; 
+}
+#catalog-page-wrapper .g12,
+#catalog-page-wrapper .catalog-page-format.g8
+{
+  width:100%;
+  margin-left: 0;
+  margin-right: 0;
+}
+}

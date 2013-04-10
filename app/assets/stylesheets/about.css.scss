@@ -60,3 +60,23 @@
   -webkit-box-shadow: 0 0 5px rgba(0,0,0,.37);
   box-shadow: 0 0 5px rgba(0,0,0,.37);
 }
+
+
+
+
+
+@media(max-width:959px){
+  #about-wrapper
+  {
+    padding-right: 30px;
+    padding-left:30px;
+  }
+
+  #about-wrapper .g12,
+  #about-wrapper .g8
+  {
+    width: 100%;
+    margin-right: 0;
+    margin-left: 0;
+  }
+}
