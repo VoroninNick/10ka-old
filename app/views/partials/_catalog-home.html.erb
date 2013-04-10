@@ -10,7 +10,7 @@
           <a class="catalog-show-more animate" ><%= catalog_first_section.name %><span data-opened="false" id="status-<%= catalog_first_section.id %>">+</span></a>
           <ul class="catalog-menu" id="menu-cat-<%= catalog_first_section.id %>">
             <% catalog_first_section.parent_catalogs.each do |parent_first_section| %>
-            <li><a href="#"><%= parent_first_section.name %><span>+</span></a></li>
+            <li><%= link_to parent_first_section.name, parent_show_path(parent_first_section) %><!--span>+</span--></li>
             <% end %>
           </ul>
         </div><!-- Catalog Item -->
@@ -25,7 +25,7 @@
             <a class="catalog-show-more animate" ><%= catalog_middle_section.name %><span data-opened="false" id="status-<%= catalog_middle_section.id %>">+</span></a>
             <ul class="catalog-menu" id="menu-cat-<%= catalog_middle_section.id %>">
               <% catalog_middle_section.parent_catalogs.each do |parent_middle_section| %>
-                <li><a href="#"><%= parent_middle_section.name %><span>+</span></a></li>
+                <li><%= link_to parent_middle_section.name, parent_show_path(parent_middle_section) %><!-- span>+</span --></li>
               <% end %>
             </ul>
           </div><!-- Catalog Item -->
@@ -39,7 +39,7 @@
             <a class="catalog-show-more animate" ><%= catalog_last_section.name %><span data-opened="false" id="status-<%= catalog_last_section.id %>">+</span></a>
             <ul class="catalog-menu" id="menu-cat-<%= catalog_last_section.id %>">
               <% catalog_last_section.parent_catalogs.each do |parent_last_section| %>
-                <li><a href="#"><%= parent_last_section.name %><span>+</span></a></li>
+                <li><%= link_to parent_last_section.name, parent_show_path(parent_last_section) %><!-- span>+</span ---></li>
               <% end %>
             </ul>
           </div><!-- Catalog Item -->
