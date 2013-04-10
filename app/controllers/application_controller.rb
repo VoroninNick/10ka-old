@@ -5,7 +5,7 @@ class ApplicationController < ActionController::Base
   helper_method :fetch_sponsors, :fetch_banners, :fetch_all_catalog, :get_left_catalogs, :get_center_catalogs, :get_right_catalogs
 
   def fetch_sponsors
-    @fetch_sponsors ||= Sponsor.all
+    @fetch_sponsors ||= Sponsor.last(6)
   end
 
   def fetch_banners
