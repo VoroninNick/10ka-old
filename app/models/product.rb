@@ -1,6 +1,6 @@
 # -*- encoding : utf-8 -*-
 class Product < ActiveRecord::Base
-  attr_accessible :description, :name, :avatar, :child_catalog_id, :slug
+  attr_accessible :description, :name, :avatar, :child_catalog_id, :slug, :delete_avatar
 
   validates :name, presence: true
   validates :slug, uniqueness: true, presence: true
@@ -17,14 +17,29 @@ class Product < ActiveRecord::Base
   validates :description, :presence => true, :length => { :minimum => 2 }
 
   # Paperclip image attachments
-  has_attached_file :avatar, :styles => { :thumb => '150x150>' },
+  has_attached_file :avatar, :styles => { :thumb => '180>' },
                     :url  => '/assets/product/:id/:style/:basename.:extension',
                     :path => ':rails_root/public/assets/product/:id/:style/:basename.:extension'
 
-  # Validate banner presence
-  validates_attachment_presence :avatar
-  validates_attachment_size :avatar, :less_than => 2.megabytes
-  validates_attachment_content_type :avatar, :content_type => %w{'image/jpeg' 'image/png'}
+  rails_admin do
+    label 'Товар'
+    label_plural 'Товары'
+
+    list do
+      field :name
+      field :child_catalog
+      field :avatar
+    end
+
+    edit do
+      field :name
+      field :description do
+        ckeditor true
+      end
+      field :avatar
+      field :child_catalog
+    end
+  end
 
   def to_param
     slug

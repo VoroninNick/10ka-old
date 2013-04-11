@@ -6,8 +6,8 @@
     <div class="catalog-block g4 alpha">
         <%# cache do %>
         <% get_left_catalogs.catalogs.each do |catalog_first_section| %>
-        <div class="catalog-item" id="main-cat-<%= catalog_first_section.id %>" data-category-name="<%= catalog_first_section.slug %>" data-category-id="<%= catalog_first_section.id %>">
-          <a class="catalog-show-more animate" ><%= catalog_first_section.name %><span data-opened="false" id="status-<%= catalog_first_section.id %>">+</span></a>
+        <div class="catalog-item"  data-category-name="<%= catalog_first_section.slug %>" data-category-id="<%= catalog_first_section.id %>">
+          <a class="catalog-show-more animate" id="main-cat-<%= catalog_first_section.id %>"><%= catalog_first_section.name %><span data-opened="false" id="status-<%= catalog_first_section.id %>">+</span></a>
           <ul class="catalog-menu" id="menu-cat-<%= catalog_first_section.id %>">
             <% catalog_first_section.parent_catalogs.each do |parent_first_section| %>
             <li><%= link_to parent_first_section.name, parent_show_path(parent_first_section) %><!--span>+</span--></li>
@@ -21,8 +21,8 @@
     <div class="catalog-block g4">
         <%# cache do %>
         <% get_center_catalogs.catalogs.each do |catalog_middle_section| %>
-          <div class="catalog-item" id="main-cat-<%= catalog_middle_section.id %>" data-category-name="<%= catalog_middle_section.slug %>" data-category-id="<%= catalog_middle_section.id %>">
-            <a class="catalog-show-more animate" ><%= catalog_middle_section.name %><span data-opened="false" id="status-<%= catalog_middle_section.id %>">+</span></a>
+          <div class="catalog-item"  data-category-name="<%= catalog_middle_section.slug %>" data-category-id="<%= catalog_middle_section.id %>">
+            <a class="catalog-show-more animate" id="main-cat-<%= catalog_middle_section.id %>"><%= catalog_middle_section.name %><span data-opened="false" id="status-<%= catalog_middle_section.id %>">+</span></a>
             <ul class="catalog-menu" id="menu-cat-<%= catalog_middle_section.id %>">
               <% catalog_middle_section.parent_catalogs.each do |parent_middle_section| %>
                 <li><%= link_to parent_middle_section.name, parent_show_path(parent_middle_section) %><!-- span>+</span --></li>
@@ -35,8 +35,8 @@
     <div class="catalog-block g4 omega">
         <%# cache do %>
         <% get_right_catalogs.catalogs.each do |catalog_last_section| %>
-          <div class="catalog-item" id="main-cat-<%= catalog_last_section.id %>" data-category-name="<%= catalog_last_section.slug %>" data-category-id="<%= catalog_last_section.id %>">
-            <a class="catalog-show-more animate" ><%= catalog_last_section.name %><span data-opened="false" id="status-<%= catalog_last_section.id %>">+</span></a>
+          <div class="catalog-item"  data-category-name="<%= catalog_last_section.slug %>" data-category-id="<%= catalog_last_section.id %>">
+            <a class="catalog-show-more animate" id="main-cat-<%= catalog_last_section.id %>"><%= catalog_last_section.name %><span data-opened="false" id="status-<%= catalog_last_section.id %>">+</span></a>
             <ul class="catalog-menu" id="menu-cat-<%= catalog_last_section.id %>">
               <% catalog_last_section.parent_catalogs.each do |parent_last_section| %>
                 <li><%= link_to parent_last_section.name, parent_show_path(parent_last_section) %><!-- span>+</span ---></li>

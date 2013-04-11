@@ -8,26 +8,54 @@
     <h1>Каталог продукції</h1>
   </div>
   <div class="catalog-block g4 alpha">
-    <% fetch_all_catalog.each do |catalog_section| %>
-      <div class="catalog-item" id="main-cat-<%= catalog_section.id %>" data-category-name="<%= catalog_section.slug %>" data-category-id="<%= catalog_section.id %>">
-        <a class="catalog-show-more animate" ><%= catalog_section.name %><span data-opened="false" id="status-<%= catalog_section.id %>"><% if catalog_section.id == @parent_catalog.catalog_id %>-<% else %>+<% end %></span></a>
-        <ul class="catalog-menu <% if catalog_section.id == @parent_catalog.catalog_id %> visited <% end %>" id="menu-cat-<%= catalog_section.id %>">
-          <% catalog_section.parent_catalogs.each do |parent_section| %>
-            <% if parent_section.id == @parent_catalog.id %>
-              <li><%= parent_section.name %></li>
-            <% else %>
-              <li><%= link_to parent_section.name, parent_show_path(parent_section), :title => parent_section.name %><!-- span>+</span --></li>
-            <% end %>
-          <% end %>
-        </ul>
-      </div><!-- Catalog Item -->
-    <% end %>
+    <%= render :partial => "partials/catalog_navigation" %>
   </div><!-- Catalog wrap stuff G4 -->
+  <!-- Lets count have many childs we got -->
+  <script type="text/javascript" charset="utf-8">
+    $(document).ready(function() {
+      var child_count = <%= fetch_all_child(@parent_catalog.id).count %>;
+      var child_width = child_count * 217;
+      console.log('Height of tabs is '+child_width);
+
+      $(".child-tabs").css({
+        width: child_width
+      });
+    });
+  </script>
   <div class="g8 catalog-page-format omega">
     <h1><%= @parent_catalog.name %></h1>
-    <code>
-      <pre><%= @parent_catalog.inspect %></pre>
-    </code>
+    <div class="tab-wrapper">
+      <!--<div class="tabs-left animate"> < </div>-->
+      <!--<div class="tabs-right animate"> > </div>-->
+      <div class="child-tabs">
+        <% fetch_all_child(@parent_catalog.id).each do |child_tabs| %>
+          <div class="tab-item" id="tab-<%= child_tabs.id %>" data-child-name="<%= child_tabs.name %>" data-slug="<%= child_tabs.slug %>">
+            <span><% if child_tabs.avatar.present? %><%= image_tag(child_tabs.avatar.url(:tab), :alt => child_tabs.name) %><% else %><%= child_tabs.name %><% end %></span>
+          </div>
+        <% end %>
+      </div>
+    </div>
+
+    <% fetch_all_child(@parent_catalog.id).each do |child_tab_content| %>
+      <div class="tab-content-wrapper" id="tab-content-<%= child_tab_content.id %>">
+        <%= child_tab_content.description.html_safe unless child_tab_content.description.blank? %>
+      </div>
+    <% end %>
+
+    <div id="all-products-by-childs">
+      <div class="store-section"><!-- Online store -->
+        <div class="top-border">&nbsp;</div>
+        <% @parent_catalog.child_catalogs.each do |product_item| %>
+          <% product_item.products.each do |pr| %>
+              <div class="online-item" data-id="" data-catalog-name="" data-price="">
+                <%= image_tag(pr.avatar.url(:thumb), :alt => pr.name) %>
+                <p><%= pr.name %></p>
+                <%= link_to_if pr.slug.present?, 'Детальніше', @parent_catalog.slug+'/'+product_item.slug+'/'+pr.slug, :title => pr.name, :class => 'submit-branded animate' %>
+              </div>
+          <% end %>
+        <% end %>
+      </div> <!-- /Online store -->
+    </div>
   </div>
 
 
