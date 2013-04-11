@@ -1,4 +1,5 @@
 $(document).ready(function() {
+
     $('#main-cat-1').click(function() {
         if(!$('#menu-cat-1').hasClass("visited")){
             $('#menu-cat-1').slideToggle('slow', function() {
