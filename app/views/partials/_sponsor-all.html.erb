@@ -5,8 +5,14 @@
 <div id="sponsor-wrapper" class="f-height">
   <%# cache do %>
     <% fetch_sponsors.each do |sponsor_item| %>
-      <div class="g2 <%= cycle('alpha', '', '', '', '', 'omega') %>">
-        <%= link_to( image_tag(sponsor_item.sponsor.url, :alt => sponsor_item.description), sponsor_item.link ) %>
+      <div style="background:green;height:150px;" class="g2 <%= cycle('alpha', '', '', '', '', 'omega') %>">
+        <%= link_to( image_tag(sponsor_item.sponsor.url, :alt => sponsor_item.description, :style => 'display:none'), sponsor_item.link ) %>
+      </div>
+    <% end %>
+
+    <% fetch_sponsors.each do |sponsor_item| %>
+      <div style="background:green;height:150px;" class="g2 <%= cycle('', '', 'omega', '', '', '') %>">
+        <%= link_to( image_tag(sponsor_item.sponsor.url, :alt => sponsor_item.description, :style => 'display:none'), sponsor_item.link ) %>
       </div>
     <% end %>
   <%# end %>
@@ -15,3 +21,77 @@
 <!-- Shadow area -->
 <div class="shadow-bottom"></div>
 <!-- /Shadow area -->
+
+<script type="text/javascript">
+	var $sponsorWrapper=$('#sponsor-wrapper');
+	var initClasses=function(){
+		if($sponsorWrapper.width()==570)
+		{
+			$sponsorWrapper.find('div.g2').each(function(index,item){
+				var $item=$(item);
+				if(index%3==0){
+					if(!$item.hasClass('alpha'))
+						$item.addClass('alpha');
+				}
+				
+				else if(index%3==2)
+				{
+					if(!$item.hasClass('omega'))
+						$item.addClass('omega');
+				}
+				else
+				{
+					if($item.hasClass('alpha'))
+					{
+						$item.removeClass('alpha');
+					}
+					else
+					{
+						if($item.hasClass('omega')){
+						$item.removeClass('omega');
+					}
+					}
+				}
+
+				if(index>=3){
+					$item.css({'margin-top':'20px'});
+				}
+		});
+		}
+		else if($sponsorWrapper.width()<=552)
+		{
+			$sponsorWrapper.find('div.g2').each(function(index,item){
+				var $item=$(item);
+				if(index%2==0){
+					if(!$item.hasClass('alpha'))
+						$item.addClass('alpha');
+				}
+				
+				else if(index%2==1)
+				{
+					if(!$item.hasClass('omega'))
+						$item.addClass('omega');
+				}
+				else
+				{
+					if($item.hasClass('alpha'))
+					{
+						$item.removeClass('alpha');
+					}
+					else
+					{
+						if($item.hasClass('omega')){
+						$item.removeClass('omega');
+					}
+					}
+				}
+
+				if(index>=2){
+					$item.css({'margin-top':'20px'});
+				}
+		});
+		}
+	};
+	$sponsorWrapper.resize(initClasses);
+	initClasses();
+</script>

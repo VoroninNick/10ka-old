@@ -22,7 +22,7 @@
 
 #footer-wrapper .contact-info-row p{
   margin: 0;
-  pading: 0;
+  padding: 0;
 }
 
 
@@ -56,6 +56,8 @@
   border-bottom: 1px solid #b2b2b2;
 }
 }
+
+/* for all */
 #footer-wrapper{
   background: url(footer-bg.jpg) repeat-x transparent;
 }
