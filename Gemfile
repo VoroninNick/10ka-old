@@ -13,6 +13,7 @@ gem 'fancybox-rails', :github => 'vikewoods/fancybox-rails'
 gem 'flexslider', :github => 'vikewoods/Flexslider-2-Rails-Gem'
 gem 'rubyception'
 gem 'ckeditor'
+#gem 'will_paginate', '~> 3.0'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
