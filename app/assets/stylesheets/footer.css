@@ -14,6 +14,7 @@
 #footer-wrapper .contact-info-row p.title{
   position: relative;
   top: 18px;
+
 }
 
 #footer-wrapper .contact-info-row p.copyrights{
@@ -24,6 +25,10 @@
   margin: 0;
   padding: 0;
 }
+
+ .contact-info-row.copyright div#developed-by p.title  {
+  float:left;
+ }
 
 
 
@@ -136,7 +141,7 @@ width:100%;
 
  .contact-info-row.copyright div#developed-by p.title  {
   font-size: 12px;
-
+  float:left;
  }
 
 .contact-info-row.copyright div#developed-by  {

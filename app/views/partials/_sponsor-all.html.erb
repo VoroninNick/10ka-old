@@ -5,13 +5,13 @@
 <div id="sponsor-wrapper" class="f-height">
   <%# cache do %>
     <% fetch_sponsors.each do |sponsor_item| %>
-      <div style="background:green;height:150px;" class="g2 <%= cycle('alpha', '', '', '', '', 'omega') %>">
+      <div style="background:green;height:150px;display:none" class="g2 <%= cycle('alpha', '', '', '', '', 'omega') %>">
         <%= link_to( image_tag(sponsor_item.sponsor.url, :alt => sponsor_item.description, :style => 'display:none'), sponsor_item.link ) %>
       </div>
     <% end %>
 
     <% fetch_sponsors.each do |sponsor_item| %>
-      <div style="background:green;height:150px;" class="g2 <%= cycle('', '', 'omega', '', '', '') %>">
+      <div style="background:green;height:150px;display:none" class="g2 <%= cycle('', '', 'omega', '', '', '') %>">
         <%= link_to( image_tag(sponsor_item.sponsor.url, :alt => sponsor_item.description, :style => 'display:none'), sponsor_item.link ) %>
       </div>
     <% end %>

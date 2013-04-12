@@ -1,10 +1,13 @@
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
 <div id="gmap-wrapper" class="f-height">
   <div class="g12">
     <h2><%= image_tag('h-img.png', :style => 'position: absolute; left: -35px;') %>Ми на Google карті:</h2>
   </div>
+  <div id="map-container">
   <div id="map">
     
   </div>
+</div>
 </div>
 <script type="text/javascript">
 
@@ -14,16 +17,42 @@ $.ajax('http://maps.google.com/maps/api/geocode/xml?address=Городоцька
 		if($('status',xml).text()=='OK')
 		{
 
+
 			var lat=$('geometry location lat',xml).text();
 			var lng=$('geometry location lng',xml).text();
 			//alert('lat:'+lat+';lng:'+lng);		
-			var map=new GMaps({
+			/*var map=new GMaps({
   				el: '#map',
   				lat: lat,
   				lng: lng
 			});
+
+			var myLatlng = new google.maps.LatLng(lat, lng);
+
+			var marker = new google.maps.Marker({
+   			 	position: myLatlng,
+    			map: map,
+    			title:"Hello World!" 
+			});*/
+			
+				var myLatlng = new google.maps.LatLng(lat, lng);
+				var myOptions = {
+        			zoom: 15,
+        			center: myLatlng,
+        			mapTypeId: google.maps.MapTypeId.ROADMAP
+    			};
+    			var map = new google.maps.Map(document.getElementById("map"), myOptions);
+
+    			var marker = new google.maps.Marker({
+    				position: myLatlng,
+    				map: map,
+    				title:"Гуртівня будівельних товарів \"Десятка\"" 
+				}); 
+}
+//initialize();
+			/**/
 		}
-	}
+	
 });
 $(window).resize(function(){
 	var h=window.innerHeight;
