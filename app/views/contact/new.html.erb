@@ -33,7 +33,11 @@
 <!-- /Gmap render -->
 
 <!-- Form render -->
+
 <%= form_for @message, :url => contact_path do |form| %>
+    <div class="g12">
+      <h2><%= image_tag('h-img.png', :style => 'position: absolute; left: -35px;') %>Зворотній зв'язок:</h2>
+    </div>
     <div class="g5 alpha">
       <div class="row-input">
         <%= form.text_field :name %>
