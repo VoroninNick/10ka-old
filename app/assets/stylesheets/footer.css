@@ -14,6 +14,7 @@
 #footer-wrapper .contact-info-row p.title{
   position: relative;
   top: 18px;
+
 }
 
 #footer-wrapper .contact-info-row p.copyrights{
@@ -22,8 +23,12 @@
 
 #footer-wrapper .contact-info-row p{
   margin: 0;
-  pading: 0;
+  padding: 0;
 }
+
+ .contact-info-row.copyright div#developed-by p.title  {
+  float:left;
+ }
 
 
 
@@ -56,6 +61,8 @@
   border-bottom: 1px solid #b2b2b2;
 }
 }
+
+/* for all */
 #footer-wrapper{
   background: url(footer-bg.jpg) repeat-x transparent;
 }
@@ -134,7 +141,7 @@ width:100%;
 
  .contact-info-row.copyright div#developed-by p.title  {
   font-size: 12px;
-
+  float:left;
  }
 
 .contact-info-row.copyright div#developed-by  {
@@ -151,6 +158,7 @@ width:100%;
   top:0px;
   right:30px;
   font-size: 16px;
+  width:120px;
   /*right:30px;*/
   /*left:100%;*/
   /*margin-left: -200px;*/

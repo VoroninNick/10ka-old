@@ -52,10 +52,14 @@ nav ul.header-nav li.underline:hover a:hover{
 }
 
 nav ul.header-nav li.active{
+<<<<<<< HEAD
+
   -moz-border-radius: 5px;
-  /*
   -webkit-border-radius: 5px;
   border-radius: 5px;
+=======
+  /*
+>>>>>>> 0caf70f8c985e629efe146ddd226a81357b7b7a8
   -moz-background-clip: padding;
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
