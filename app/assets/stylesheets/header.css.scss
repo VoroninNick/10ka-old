@@ -52,7 +52,7 @@ nav ul.header-nav li.underline:hover a:hover{
 }
 
 nav ul.header-nav li.active{
-  
+  /*
   -moz-background-clip: padding;
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
@@ -65,7 +65,7 @@ nav ul.header-nav li.active{
   background-image: -o-linear-gradient(bottom, #fdad00 0%, #fdef00 100%);
   background-image: -webkit-linear-gradient(bottom, #fdad00 0%, #fdef00 100%);
   background-image: linear-gradient(bottom, #fdad00 0%, #fdef00 100%);
-
+*/
   cursor: auto;
 }
 
@@ -90,6 +90,7 @@ ul.header-nav li  {
   width:100%;
 
 /**/
+/*
   -moz-background-clip: padding;
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
@@ -113,7 +114,7 @@ ul.header-nav li  {
 
   display: block;
   cursor: pointer;
-
+*/
 
 
 
