@@ -13,11 +13,13 @@ class CatalogsController < ApplicationController
   end
 
   # GET /catalog/parent/1
-  # GET /catalog/parent/1.json
+  # GET /catalog/parent/1.json <- Given all Child categories by a parent id
   # GET /catalog/parent/1.xml
   def show_parent
     @parent_catalog ||= ParentCatalog.find_by_slug!(params[:id])
-    respond_with(@parent_catalog)
+    @get_child_json ||= ChildCatalog.find_all_by_parent_catalog_id(@parent_catalog.id)
+    @get_child_json_last ||= @get_child_json.last
+    respond_with(@get_child_json)
   end
 
   # GET /catalog/parent/child/1
