@@ -1,0 +1,15 @@
+@media(min-width:1200px){
+  #gmap-wrapper,
+  form#new_message,
+  div#contact-wrapper,
+  div#sponsor-wrapper,
+  div#footer-wrapper
+  {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  form#new_message  .g7.omega{
+    width:628px;
+  }
+}

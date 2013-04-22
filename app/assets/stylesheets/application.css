@@ -25,4 +25,16 @@
  *= require mobile
  *= require home-slider
  *= require tabs
+ 
+ *= require media-queries/max_1199px
+ *= require media-queries/max_959px
+ *= require media-queries/max_609px
+ *= require media-queries/max_535px
+ *= require media-queries/max_455px
+
+ *= require media-queries/min_610px
+ *= require media-queries/min_960px
+ *= require media-queries/min_1200px
+ *= require media-queries/min_1440px
+ *= require media-queries/min_2020px
  */

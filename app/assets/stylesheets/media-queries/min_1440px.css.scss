@@ -1,0 +1,36 @@
+@media(min-width: 1440px){
+  /* contact start */
+  #gmap-wrapper,
+  form#new_message,
+  div#contact-wrapper,
+  div#sponsor-wrapper,
+  div#footer-wrapper
+  {
+    padding-left: 45px;
+    padding-right: 45px;
+  }
+  #contact-wrapper .contact-info-row.g4,
+  #contact-wrapper .contact-info-row.g4.alpha,
+  #contact-wrapper .contact-info-row.g4.omega
+  {
+    width: 400px;
+    margin-left: 35px;
+  }
+  #gmap-wrapper .g12
+  {
+
+  }
+  .container form#new_message div.g7.omega
+{
+  margin-left: 30px;
+  margin-right: 0;
+  width:770px;
+}
+.container form#new_message div.g5.omega
+{
+  width:620px;
+}
+
+/* contact end */
+
+}
