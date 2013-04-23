@@ -76,6 +76,75 @@
       </ul>
     </div><!-- Catalog Item -->
   <% end %>
-<% elsif current_page?(product_show_path) %>
-
+<% elsif current_page?(product_show_path) %> <!-- Product render part -->
+  <% fetch_all_catalog.each do |catalog_section| %>
+    <%#= catalog_section.inspect %>
+    <div class="catalog-item"  data-category-name="<%= catalog_section.slug %>" data-category-id="<%= catalog_section.id %>">
+      <a class="catalog-show-more animate" id="main-cat-<%= catalog_section.id %>"><%= catalog_section.name %><span data-opened="false" id="status-<%= catalog_section.id %>"><% if catalog_section.id == parent_name_breadcrumb(child_name_breadcrumb(@product.child_catalog_id)).catalog_id %>-<% else %>+<% end %></span></a>
+      <ul class="catalog-menu <% if catalog_section.id == parent_name_breadcrumb(child_name_breadcrumb(@product.child_catalog_id)).catalog_id %> visited <% end %>" id="menu-cat-<%= catalog_section.id %>">
+        <% catalog_section.parent_catalogs.each do |parent_section| %>
+          <% if parent_section.id == parent_name_breadcrumb(child_name_breadcrumb(@product.child_catalog_id)).id %>
+            <li><%= parent_section.name %><span data-opened="false" id="sub-status-<%= parent_section.id %>" class="sub-menu-status">+</span>
+              <% if parent_section.child_catalogs.present? %>
+                <script type="text/javascript" charset="utf-8">
+                  $(document).ready(function() {
+                    $('.sub-status-ul-<%= parent_name_breadcrumb(child_name_breadcrumb(@product.child_catalog_id)).id %>').show();
+                    $("#sub-status-<%= parent_name_breadcrumb(child_name_breadcrumb(@product.child_catalog_id)).id %>").text("-");
+                    $("#sub-status-<%= parent_section.id %>").click(function(){
+                      $('.sub-status-ul-<%= parent_section.id %>').slideToggle('slow', function() {
+                        // Animation complete.
+                      });
+                      $(this).each(function (i) {
+                        if($(this).text() != "-"){
+                          $(this).text("-");
+                        }else{
+                          $(this).text("+");
+                        }
+                      });
+                    });
+                  });
+                </script>
+                <ul class="sub-status-ul-<%= parent_section.id %>">
+                  <% parent_section.child_catalogs.each do |child_li| %>
+                    <li><%= link_to child_li.name, '', :class => 'sub-'+child_li.slug, :title => child_li.name %></li>
+                  <% end %>
+                </ul>
+              <% end %>
+            </li>
+          <% else %>
+            <% if parent_section.child_catalogs.present? %>
+              <script type="text/javascript" charset="utf-8">
+                $(document).ready(function() {
+                  $('.sub-status-ul-<%= parent_name_breadcrumb(child_name_breadcrumb(@product.child_catalog_id)).id %>').show();
+                  $("#sub-status-<%= parent_name_breadcrumb(child_name_breadcrumb(@product.child_catalog_id)).id %>").text("-");
+                  $("#sub-status-<%= parent_section.id %>").click(function(){
+                    $('.sub-status-ul-<%= parent_section.id %>').slideToggle('slow', function() {
+                      // Animation complete.
+                    });
+                    $(this).each(function (i) {
+                      if($(this).text() != "-"){
+                        $(this).text("-");
+                      }else{
+                        $(this).text("+");
+                      }
+                    });
+                  });
+                });
+              </script>
+              <li><%= link_to parent_section.name, parent_show_path(parent_section), :title => parent_section.name %><% if count_childs(parent_name_breadcrumb(child_name_breadcrumb(@product.child_catalog_id)).id) > 0 %><span class="sub-menu-status" data-opened="false" id="sub-status-<%= parent_section.id %>">+</span>
+                  <ul class="sub-status-ul-<%= parent_section.id %>">
+                    <% parent_section.child_catalogs.each do |child_li_next| %>
+                      <li><%= link_to child_li_next.name, '', :class => 'sub-'+child_li_next.slug, :title => child_li_next.name %></li>
+                    <% end %>
+                  </ul>
+                <% end %>
+              </li>
+            <% else %>
+              <li><%= link_to parent_section.name, parent_show_path(parent_section), :title => parent_section.name %></li>
+            <% end %>
+          <% end %>
+        <% end %>
+      </ul>
+    </div><!-- Catalog Item -->
+  <% end %>
 <% end %>
