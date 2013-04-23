@@ -25,6 +25,8 @@
  *= require mobile
  *= require home-slider
  *= require tabs
+ *= require products_page
+ *= require breadcrumbs
  
  *= require media-queries/max_1199px
  *= require media-queries/max_959px

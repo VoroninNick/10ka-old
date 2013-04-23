@@ -1,1 +1,31 @@
-Product
+<!-- Header render -->
+<%= render :partial => "partials/head" %>
+<!-- /Header render -->
+
+<div id="product-page" class="f-height product-index-page">
+  <div class="g12 pd-me">
+    <h1><%= link_to 'Каталог продукції', catalog_main_path %></h1>
+    <h2><%= @product.name %></h2>
+  </div>
+  <!-- Breadcrumbs render -->
+  <%= render :partial => "partials/prod_breadcrumbs" %>
+  <!-- Breadcrumbs render -->
+  <div class="clearfix"></div>
+
+  <div class="g6 main-product-avatar alpha">
+    <%= image_tag @product.avatar.url, :alt => @product.name %>
+  </div>
+</div>
+
+<%= parent_name_breadcrumb(child_name_breadcrumb(@product.child_catalog_id)).inspect %>
+<%= @product.inspect %>
+
+<div class="pd-me f-height"></div>
+
+<!-- Sponsor render -->
+<%= render :partial => "partials/sponsor-all" %>
+<!-- Sponsor render -->
+
+<!-- Footer render -->
+<%= render :partial => "partials/footer" %>
+<!-- /Footer render -->

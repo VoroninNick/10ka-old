@@ -9,7 +9,7 @@
 
     "childs_of_this_parent": {
      <% @get_child_json.each do |pc| %>
-      <%= pc.id %>: {
+      "<%= pc.id %>": {
         "parent_catalog_id": <%= pc.parent_catalog_id %>,
         "child_catalog_id": <%= pc.id.as_json %>,
         "child_catalog_url": "<%= child_show_url(pc).as_json %>",
