@@ -2,7 +2,7 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
 
-  helper_method :fetch_sponsors, :fetch_banners, :fetch_all_catalog, :get_left_catalogs, :get_center_catalogs, :get_right_catalogs, :fetch_all_child, :fetch_all_products, :count_childs
+  helper_method :fetch_sponsors, :fetch_banners, :fetch_all_catalog, :get_left_catalogs, :get_center_catalogs, :get_right_catalogs, :fetch_all_child, :fetch_all_products, :count_childs, :child_name_breadcrumb, :parent_name_breadcrumb, :catalog_name_breadcrumb
 
   def fetch_sponsors
     @fetch_sponsors ||= Sponsor.last(6)
@@ -38,5 +38,17 @@ class ApplicationController < ActionController::Base
 
   def count_childs(ids)
     @count ||= ChildCatalog.find_all_by_parent_catalog_id(ids).count
+  end
+
+  def child_name_breadcrumb(id)
+    @child_name_breadcrumb ||= ChildCatalog.find(id)
+  end
+
+  def parent_name_breadcrumb(id)
+    @parent_name_breadcrumb ||= ParentCatalog.find(id)
+  end
+
+  def catalog_name_breadcrumb(id)
+    @catalog_name_breadcrumb ||= Catalog.find(id)
   end
 end
