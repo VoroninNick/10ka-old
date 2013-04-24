@@ -26,16 +26,17 @@
   <div id="catalog-parent" class="g8 catalog-page-format omega">
     <h1><%= @parent_catalog.name %></h1>
     <div id="tab-control">
+    <div class="tab-wrapper">
       <!--<div class="tabs-left animate"> < </div>-->
       <!--<div class="tabs-right animate"> > </div>-->
-      <div class="tabs">
+      <div class="child-tabs">
         <% fetch_all_child(@parent_catalog.id).each do |child_tabs| %>
           <div class="tab-item" id="tab-<%= child_tabs.id %>" data-child-name="<%= child_tabs.name %>" data-slug="<%= child_tabs.slug %>">
-            
-            <% if child_tabs.avatar.present? %><%= link_to (image_tag(child_tabs.avatar.url(:tab), :alt => child_tabs.name)) %><% else %><%= link_to child_tabs.name %><% end %>
+            <span><% if child_tabs.avatar.present? %><%= image_tag(child_tabs.avatar.url(:tab), :alt => child_tabs.name) %><% else %><%= child_tabs.name %><% end %></span>
           </div>
         <% end %>
       </div>
+    </div>
     
     <div id="tabcontents">
 
