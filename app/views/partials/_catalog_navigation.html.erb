@@ -9,6 +9,17 @@
       </ul>
     </div><!-- Catalog Item -->
   <% end %>
+<% elsif current_page?(catalog_show_path) %>
+  <% fetch_all_catalog.each do |catalog_section| %>
+    <div class="catalog-item"  data-category-name="<%= catalog_section.slug %>" data-category-id="<%= catalog_section.id %>">
+      <a class="catalog-show-more animate" id="main-cat-<%= catalog_section.id %>"><%= catalog_section.name %><span data-opened="false" id="status-<%= catalog_section.id %>"><% if catalog_section.id == @catalog.id %>-<% else %>+<% end %></span></a>
+      <ul class="catalog-menu <% if catalog_section.id == @catalog.id %> visited <% end %>" id="menu-cat-<%= catalog_section.id %>">
+        <% catalog_section.parent_catalogs.each do |parent_section| %>
+          <li><%= link_to parent_section.name, parent_show_path(parent_section), :title => parent_section.name %><!-- span>+</span --></li>
+        <% end %>
+      </ul>
+    </div><!-- Catalog Item -->
+  <% end %>
 <% elsif current_page?(parent_show_path) %>
   <% fetch_all_catalog.each do |catalog_section| %>
     <%#= catalog_section.inspect %>
