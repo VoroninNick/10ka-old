@@ -188,4 +188,23 @@ ul.header-nav
  }
 
  /* header end */
+
+
+ /* sponsor start */
+ $page_indent:15px;
+
+  #sponsor-wrapper{
+    width: 100%;
+    margin-left:0;
+    margin-right:0;
+
+  }
+
+  #sponsor-wrapper .g2{
+    margin-left: $page_indent;
+    margin-right: 0;
+    overflow: hidden;
+    border:red 2px solid;
+  }
+ /* sponsor end */
 }

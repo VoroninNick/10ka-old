@@ -2,7 +2,6 @@
   #gmap-wrapper,
   form#new_message,
   div#contact-wrapper,
-  div#sponsor-wrapper,
   div#footer-wrapper
   {
     padding-left: 30px;
@@ -12,4 +11,10 @@
   form#new_message  .g7.omega{
     width:628px;
   }
+
+  /* sponsor start */
+  #sponsor-wrapper .g2{
+    margin-left: 34.28px;
+  }
+  /* sponsor end */
 }

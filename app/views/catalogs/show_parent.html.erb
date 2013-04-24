@@ -22,8 +22,10 @@
       });
     });
   </script>
-  <div class="g8 catalog-page-format omega">
+  <div id="catalog-content">
+  <div id="catalog-parent" class="g8 catalog-page-format omega">
     <h1><%= @parent_catalog.name %></h1>
+    <div id="tab-control">
     <div class="tab-wrapper">
       <!--<div class="tabs-left animate"> < </div>-->
       <!--<div class="tabs-right animate"> > </div>-->
@@ -35,30 +37,35 @@
         <% end %>
       </div>
     </div>
-
-    <% fetch_all_child(@parent_catalog.id).each do |child_tab_content| %>
+    
+    <div id="tabcontents">
+      <% fetch_all_child(@parent_catalog.id).each do |child_tab_content| %>
       <div class="tab-content-wrapper" id="tab-content-<%= child_tab_content.id %>">
+        <%= child_tab_content.inspect %>
         <%= child_tab_content.description.html_safe unless child_tab_content.description.blank? %>
-      </div>
-    <% end %>
 
-    <div id="all-products-by-childs">
+      <div id="all-products-by-childs">
       <div class="store-section"><!-- Online store -->
         <div class="top-border">&nbsp;</div>
-        <% @parent_catalog.child_catalogs.each do |product_item| %>
-          <% product_item.products.each do |pr| %>
+        <%# @parent_catalog.child_catalogs.each do |product_item| %>
+          <% fetch_all_products(child_tab_content.id).each do |pr| %>
               <div class="online-item" data-id="" data-catalog-name="" data-price="">
                 <%= image_tag(pr.avatar.url(:thumb), :alt => pr.name) %>
                 <p><%= pr.name %></p>
-                <%= link_to_if pr.slug.present?, 'Детальніше', @parent_catalog.slug+'/'+product_item.slug+'/'+pr.slug, :title => pr.name, :class => 'submit-branded animate' %>
+                <%#= link_to_if pr.slug.present?, 'Детальніше', @parent_catalog.slug+'/'+product_item.slug+'/'+pr.slug, :title => pr.name, :class => 'submit-branded animate' %>
               </div>
           <% end %>
-        <% end %>
+        <%# end %>
       </div> <!-- /Online store -->
-    </div>
+    </div> <!-- /products -->
+      </div>
+    <% end %>
+  </div>
+</div><!-- /tab-control -->
+    
   </div>
 
-
+</div> <!-- / div#catalog-content -->
 
 </div>
 <!-- /Catalog wrapper -->

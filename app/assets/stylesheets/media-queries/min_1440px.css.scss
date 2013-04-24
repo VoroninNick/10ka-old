@@ -3,7 +3,6 @@
   #gmap-wrapper,
   form#new_message,
   div#contact-wrapper,
-  div#sponsor-wrapper,
   div#footer-wrapper
   {
     padding-left: 45px;
@@ -32,5 +31,14 @@
 }
 
 /* contact end */
+
+
+/* sponsor start */
+
+#sponsor-wrapper .g2{
+    margin-left: 42.85px;
+  }
+
+/* sponsor end */
 
 }

@@ -44,7 +44,7 @@
         <%= form.label "вфвфи" %>
       </div>
       <div class="row-input">
-        <%= form.text_field :email %>
+        <%= form.text_field :email, :data => { :'validation' => "validate_email" } %>
         <%= form.label :email %>
       </div>
       <div class="row-input">

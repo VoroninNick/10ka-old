@@ -1,4 +1,4 @@
-[
+
   {
     "parent_catalog_info": {
       "parent_catalog_id" : <%= @parent_catalog.id.as_json  %>,
@@ -9,20 +9,23 @@
 
     "childs_of_this_parent": {
      <% @get_child_json.each do |pc| %>
-      "<%= pc.id %>": {
+     
+      "par": { 
         "parent_catalog_id": <%= pc.parent_catalog_id %>,
         "child_catalog_id": <%= pc.id.as_json %>,
         "child_catalog_url": "<%= child_show_url(pc).as_json %>",
         "child_catalog_name": "<%= pc.name.as_json %>",
         "child_avatar_url": "<%= pc.avatar.url(:tab).as_json %>",
+        "child_description": "<%= pc.description.gsub(/"/, "\\\"").html_safe.to_json  unless pc.description.blank? %>" %><% if pc.products.present? %>,<% else %><% end %>
         <% pc.products.each do |child_products| %>
           "products": {
             "product_id": "<%= child_products.id %>",
             "product_name": "<%= child_products.name %>"
-          }
+          } 
         <% end %>
       } <% if pc.id == @get_child_json_last.id %><% else %>,<% end %>
      <% end %>
     }
   }
-]
+
+
