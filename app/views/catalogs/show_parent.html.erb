@@ -39,27 +39,23 @@
     </div>
     
     <div id="tabcontents">
-      <% fetch_all_child(@parent_catalog.id).each do |child_tab_content| %>
-      <div class="tab-content-wrapper" id="tab-content-<%= child_tab_content.id %>">
-        <%= child_tab_content.inspect %>
-        <%= child_tab_content.description.html_safe unless child_tab_content.description.blank? %>
+
+      <div class="tab-content-wrapper" id="tab-content-<%= get_first_child(@parent_catalog.id).id %>">
+        <%= get_first_child(@parent_catalog.id).description.html_safe unless get_first_child(@parent_catalog.id).description.blank? %>
 
       <div id="all-products-by-childs">
       <div class="store-section"><!-- Online store -->
         <div class="top-border">&nbsp;</div>
-        <%# @parent_catalog.child_catalogs.each do |product_item| %>
-          <% fetch_all_products(child_tab_content.id).each do |pr| %>
+          <% fetch_all_products(get_first_child(@parent_catalog.id).id).each do |pr| %>
               <div class="online-item" data-id="" data-catalog-name="" data-price="">
                 <%= image_tag(pr.avatar.url(:thumb), :alt => pr.name) %>
                 <p><%= pr.name %></p>
-                <%#= link_to_if pr.slug.present?, 'Детальніше', @parent_catalog.slug+'/'+product_item.slug+'/'+pr.slug, :title => pr.name, :class => 'submit-branded animate' %>
+                <%= link_to 'Детальніше', catalog_main_path+'/'+parent_slug(get_first_child(@parent_catalog.id).id)+'/'+get_first_child(@parent_catalog.id).slug+'/'+pr.slug, :title => pr.name, :class => 'submit-branded animate' %>
               </div>
           <% end %>
-        <%# end %>
       </div> <!-- /Online store -->
-    </div> <!-- /products -->
-      </div>
-    <% end %>
+      </div> <!-- /products -->
+    </div>
   </div>
 </div><!-- /tab-control -->
     
