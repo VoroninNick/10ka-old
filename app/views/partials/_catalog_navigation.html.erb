@@ -21,6 +21,8 @@
               <% if parent_section.child_catalogs.present? %>
                 <script type="text/javascript" charset="utf-8">
                   $(document).ready(function() {
+                    $("#sub-status-<%= @parent_catalog.id %>").text("-");
+                    $('.sub-status-ul-<%= @parent_catalog.id %>').show();
                     $("#sub-status-<%= parent_section.id %>").click(function(){
                       $('.sub-status-ul-<%= parent_section.id %>').slideToggle('slow', function() {
                         // Animation complete.
