@@ -1,6 +1,6 @@
 # -*- encoding : utf-8 -*-
 class CatalogsController < ApplicationController
-  respond_to :html, :json, :xml
+  respond_to :html, :xml
 
   def index
     @catalogs ||= Catalog.all
@@ -17,9 +17,9 @@ class CatalogsController < ApplicationController
   # GET /catalog/parent/1.xml
   def show_parent
     @parent_catalog ||= ParentCatalog.find_by_slug!(params[:id])
-    @get_child_json ||= ChildCatalog.find_all_by_parent_catalog_id(@parent_catalog.id)
-    @get_child_json_last ||= @get_child_json.last
-    respond_with(@get_child_json)
+    #@get_child_json ||= ChildCatalog.find_all_by_parent_catalog_id(@parent_catalog.id)
+    #@get_child_json_last ||= @get_child_json.last
+    respond_with(@parent_catalog)
   end
 
   # GET /catalog/parent/child/1
