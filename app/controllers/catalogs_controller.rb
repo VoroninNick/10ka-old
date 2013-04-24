@@ -17,7 +17,7 @@ class CatalogsController < ApplicationController
   # GET /catalog/parent/1.xml
   def show_parent
     @parent_catalog ||= ParentCatalog.find_by_slug!(params[:id])
-    #@get_child_json ||= ChildCatalog.find_all_by_parent_catalog_id(@parent_catalog.id)
+    @get_child_xml ||= ChildCatalog.find_all_by_parent_catalog_id(@parent_catalog.id)
     #@get_child_json_last ||= @get_child_json.last
     respond_with(@parent_catalog)
   end
