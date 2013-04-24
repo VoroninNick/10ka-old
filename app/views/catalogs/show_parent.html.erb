@@ -31,8 +31,12 @@
       <div class="tabs">
         <% fetch_all_child(@parent_catalog.id).each do |child_tabs| %>
           <div class="tab-item" id="tab-<%= child_tabs.id %>" data-child-name="<%= child_tabs.name %>" data-slug="<%= child_tabs.slug %>">
-            
-            <% if child_tabs.avatar.present? %><%= link_to (image_tag(child_tabs.avatar.url(:tab), :alt => child_tabs.name)) %><% else %><%= link_to child_tabs.name %><% end %>
+            <% link_child = catalog_main_path+'/'+@parent_catalog.catalog.slug+'/'+@parent_catalog.slug+'/'+child_tabs.slug %>
+            <% if child_tabs.avatar.present? %>
+              <%= link_to (image_tag(child_tabs.avatar.url(:tab), :alt => child_tabs.name)), link_child %>
+              <% else %>
+              <%= link_to child_tabs.name, link_child %>
+            <% end %>
           </div>
         <% end %>
       </div>

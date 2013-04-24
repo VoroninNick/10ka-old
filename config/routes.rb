@@ -12,7 +12,7 @@ App10k::Application.routes.draw do
   match 'catalog'                                                   => 'catalogs#index', :via => :get, :as => 'catalog_main'
   match 'catalog/:id'                                               => 'catalogs#show', :via => :get, :as => 'catalog_show'
   match 'catalog/:catalog_id/:id'                                   => 'catalogs#show_parent', :via => :get, :as => 'parent_show'
-  match 'catalog/:catalog_id/:parent_id/:id'                        => 'catalogs#show_child', :via => :get, :as => 'child_show'
-  match 'catalog/:catalog_id/:parent_id/:child_catalog_id/:id'      => 'catalogs#show_product', :via => :get, :as => 'product_show'
+  match 'catalog/:catalog_id/:parent_catalog_id/:id'                        => 'catalogs#show_child', :via => :get, :as => 'child_show'
+  match 'catalog/:catalog_id/:parent_catalog_id/:child_catalog_id/:id'      => 'catalogs#show_product', :via => :get, :as => 'product_show'
   root :to                                                          => 'page#index'
 end
