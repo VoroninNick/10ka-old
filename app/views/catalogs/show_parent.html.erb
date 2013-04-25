@@ -96,7 +96,7 @@
 
                 // add url handler
 
-                window.history.pushState('child','',url);
+                
           }
         });
         }
@@ -106,6 +106,7 @@
           //consol
           if(event.state=='child'){
             openChild(url);
+
           }
         };
         $('#tab-control .tabs .tab-item a').click(function(event){
@@ -113,6 +114,7 @@
           var uri=$(this).uri();
           var required_uri=uri.pathname();
           openChild(required_uri);
+          window.history.pushState('child','',required_uri);
         });
         $('div.catalog-block div.catalog-item>ul>li>ul>li>a').click(function(event){
           event.preventDefault();
@@ -120,6 +122,7 @@
           var required_uri=uri.pathname();
           //alert(required_uri);
           openChild(required_uri);
+          window.history.pushState('child','',required_uri);
         });
 </script>
 
