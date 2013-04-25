@@ -1,40 +1,21 @@
 (function( $ ){
-  var methods = {
-    settings:{},
-    activeTab:{tabName,tabIndex}
-    init : function( options ) { 
-      var settings = $.extend( {
-        'location'         : 'top',
-        'background-color' : 'blue'
-        }, options);
-      this.settings=settings;
-      var $activeTab=$('active');
-      this.activeTab
-    },
-    activateTab : function( ) {
-      // IS
-    }
-  };
 
-  $.fn.tabcontrol = function( method ) {
-    
-    // Method calling logic
-    if ( methods[method] ) {
-      return methods[ method ].apply( this, Array.prototype.slice.call( arguments, 1 ));
-    } else if ( typeof method === 'object' || ! method ) {
-      return methods.init.apply( this, arguments );
-    } else {
-      $.error( 'Method ' +  method + ' does not exist on jQuery.tooltip' );
-    }    
-    
-  };
+  $.fn.tabcontrol = function( options ) {  
 
+    // Create some defaults, extending them with any options that were provided
+    var settings = $.extend( {
+    }, options);
+
+
+
+    return this.each(function() {        
+
+      // Tooltip plugin code here
+      var that=this;
+
+      that.tabcontrol=$(that);
+      that.tabs=[];
+    });
+
+  };
 })( jQuery );
-
-// calls the init method
-$('div').tooltip(); 
-
-// calls the init method
-$('div').tooltip({
-  foo : 'bar'
-});

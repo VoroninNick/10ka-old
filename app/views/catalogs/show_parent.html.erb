@@ -68,6 +68,62 @@
 
 </div>
 <!-- /Catalog wrapper -->
+
+<script type="text/javascript">
+        function openChild(url){
+
+          var $tab=$('#tab-control .tabs .tab-item a[href*="'+'url'+'"]').parent();
+          var $tabs=$tab.parent().find('.tab-item');
+          console.log('required:'+url);
+          $.ajax({
+            url:url+'.xml',
+            dataType:'xml',
+            success:function(xml){
+              var $xml=$(xml);
+              var description=$('child-catalog description',$xml).text();
+              if(description!='')
+                $('#tab-control #tabcontents .tab-content-wrapper').html(description);
+              else
+                $('#tab-control #tabcontents .tab-content-wrapper').html('page is empty');
+                //var $catalog_content=$('div#catalog-content');
+                //var $catalog_parent=$catalog_content.find('div#catalog-parent');                 
+
+                $tabs.filter('.active').removeClass('active');
+                $tab.addClass('active');
+
+                $('div.catalog-block').find('a.active').removeClass('active');
+                $('div.catalog-block').find('a[href*="'+url+'"]').addClass('active');
+
+                // add url handler
+
+                window.history.pushState('child','',url);
+          }
+        });
+        }
+        window.onpopstate = function(event) {
+          console.log("location: " + document.location + ", state: " + JSON.stringify(event.state)+';window.location.pathname:'+window.location.pathname);
+          var url=window.location.pathname;
+          //consol
+          if(event.state=='child'){
+            openChild(url);
+          }
+        };
+        $('#tab-control .tabs .tab-item a').click(function(event){
+          event.preventDefault();
+          var uri=$(this).uri();
+          var required_uri=uri.pathname();
+          openChild(required_uri);
+        });
+        $('div.catalog-block div.catalog-item>ul>li>ul>li>a').click(function(event){
+          event.preventDefault();
+          var uri=$(this).uri();
+          var required_uri=uri.pathname();
+          //alert(required_uri);
+          openChild(required_uri);
+        });
+</script>
+
+
 <div class="pd-me f-height"></div>
 
 <!-- Sponsor render -->

@@ -193,7 +193,7 @@ $(document).ready(function(){
     pathname_array.shift();
     if(pathname_array[0]=='catalog'){
       console.log('location:'+'catalog');
-      $('.catalog-item>ul li a').click(function(event){
+      $('.catalog-item>ul>li>a').click(function(event){
         event.preventDefault();
         //this.css('background','red');
         //alert('hello');
@@ -211,9 +211,10 @@ $(document).ready(function(){
               alert(index);
               var $catalog_content=$('div#catalog-content');
               var $catalog_parent=$catalog_content.find('div#catalog-parent');
-              if($catalog_parent.length==1){ //if exists
-                catalog_parent.find('tab-wrapper')
-              }
+              //if($catalog_parent.length==1){ //if exists
+              //  catalog_parent.find('tab-wrapper')
+
+              //}
             });
           }
         });
