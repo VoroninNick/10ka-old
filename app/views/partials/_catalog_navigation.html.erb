@@ -167,8 +167,10 @@
 
 
 <script type="text/javascript">
+function getCatalogLocation(){
+  return $('#catalog_content').attr('class');
+}
 $(document).ready(function(){
-
 $('div.catalog-block div.catalog-item>ul>li').each(function(){
   var $li=$(this);
   var url=$li.find('a').get(0).href+'.xml';
@@ -213,6 +215,7 @@ $('div.catalog-block div.catalog-item>ul>li').each(function(){
 
 
           $("#sub-status-"+parent_id).text("+");
+          $('#sub-status-ul-'+parent_id).attr('style','display:none;');
           //$('.sub-status-ul-'+parent_id).show();
           $("#sub-status-"+parent_id).click(function(){
             $('.sub-status-ul-'+parent_id).slideToggle('slow', function() {

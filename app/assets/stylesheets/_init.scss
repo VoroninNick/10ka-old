@@ -1,0 +1,29 @@
+
+
+$block-margins: 40px;
+$block-footer-margins: 60px;
+$text-block-antialaising: subpixel-antialiased;
+@import "media-grid/normalize_browsers";
+@import "media-grid/init_grid_system";
+
+//@import "media-grid/@960px";
+//@import "media-grid/@1200px";
+//@import "media-grid/@1440px";
+//@import "media-grid/@1600px";
+//@import "media-grid/@1920px";
+@import "media-grid/@fluid-low";
+@import "font-system/typo";
+
+
+//@import "layout";
+//@import "pages";
+//@import "devise";
+@import "custom";
+//@imort "catalogs";
+
+//@import "media-queries/min_610px";
+//@import "media-queries/min_960px";
+//@import "media-queries/min_1200px";
+//@import "media-queries/min_1440px";
+
+@import "header";
