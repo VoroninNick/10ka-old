@@ -34,28 +34,34 @@
 
 <!-- Form render -->
 
-<%= form_for @message, :url => contact_path do |form| %>
+<%= form_for @message, :url => contact_path, :html => { :id => 'contact_us' } do |form| %>
     <div class="g12">
       <h2><%= image_tag('h-img.png', :style => 'position: absolute; left: -35px;') %>Зворотній зв'язок:</h2>
     </div>
-    <div class="g5 alpha">
+    <div id="validate_name" class="g5 alpha">
       <div class="row-input">
-        <%= form.text_field :name %>
-        <%= form.label "вфвфи" %>
+        <%= form.text_field :name,  :data => { :'validation' => "validate_min_length length3", 
+          :'validation-error-msg' => " Name length must be minimum 3 characters" } %>
+        <%= form.label "Ім'я" %>
+        <span id="validate_name"></span>
       </div>
-      <div class="row-input">
-        <%= form.text_field :email, :data => { :'validation' => "validate_email" } %>
-        <%= form.label :email %>
+      <div id="validate_email" class="row-input">
+        <%= form.text_field :email, :data => { :'validation' => "validate_email", 
+          :'validation-error-msg' => " Email must be correct" } %>
+        <%= form.label "Електронна пошта"  %>
+        <span id="validate_email"></span>
       </div>
-      <div class="row-input">
-        <%= form.text_field :phone %>
-        <%= form.label :phone %>
+      <div id="validate_phone" class="row-input">
+        <%= form.text_field :phone, :data => { :'validation' => "validate_phone", 
+          :'validation-error-msg' => "Phone must be correct" } %>
+        <%= form.label "Телефон" %>
+        <span id="validate_phone"></span>
       </div>
     </div>
     <div class="g7 omega">
       <div class="row-input">
         <%= form.text_area :body %>
-        <%= form.label :body %>
+        <%= form.label "Повідомлення" %>
       </div>
 
     </div>
@@ -65,6 +71,21 @@
 
 <% end %>
 <!-- /Form render -->
+<script type="text/javascript">
+  var validationSettings = {
+                errorMessagePosition : 'top',
+            };
+
+            $('#contact_us')
+                .submit(function() {
+                    if ($(this).validate(false, validationSettings))
+                        alert('Valid!');
+
+                    return false;
+                })
+                .validateOnBlur(false, validationSettings)
+                .showHelpOnFocus();
+</script>
 
 <!-- Sponsor render -->
 <%= render :partial => "partials/sponsor-all" %>
