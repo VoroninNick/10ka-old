@@ -5,6 +5,13 @@ div.mobile-menu-button {
 #hd-wrapper{
   background: url(header-bg.jpg) repeat-x;
 }
+div#logo{
+  float: left;
+  overflow: hidden;
+}
+#hd-wrapper div#menu{
+  float:right;
+}
 
 
 #hd-wrapper nav{

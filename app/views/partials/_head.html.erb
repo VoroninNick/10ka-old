@@ -1,15 +1,15 @@
-<div id="hd-wrapper" class="f-height g12">
-  <div id="logo" class="g4 alpha">
+<div id="hd-wrapper" class="page-indent container">
+  <div id="logo" class="alpha">
     <% if current_page?(root_path) %>
       <%= image_tag('logo.png', :alt => '') %>
     <% else %>
       <%= link_to(image_tag('logo.png', :alt => ''), root_path) %>
     <% end %>
   </div><!-- span4 -->
-  <div class="mobile-menu-button">
+  <div class="omega mobile-menu-button">
     <img src="/assets/mobile-menu-button.png" alt="show menu"/>
   </div>
-  <div class="g8 omega">
+  <div id="menu" class="omega">
     <%= render :partial => "partials/menu" %>
   </div><!-- span8 -->
 </div>

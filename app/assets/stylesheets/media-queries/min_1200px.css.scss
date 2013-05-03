@@ -1,6 +1,6 @@
 @media(min-width:1200px){
   #gmap-wrapper,
-  form#new_message,
+  form#contact_us,
   div#contact-wrapper,
   div#footer-wrapper
   {
@@ -8,13 +8,18 @@
     padding-right: 30px;
   }
 
-  form#new_message  .g7.omega{
-    width:628px;
+  div.container form#contact_us div.g7.omega{
+    width:657px;
+
+  }
+
+  div.container form#contact_us div.g7.omega textarea{
+      height:250px;
   }
 
   /* sponsor start */
   #sponsor-wrapper .g2{
-    margin-left: 34.28px;
+    /*margin-left: 34.28px;*/
   }
   /* sponsor end */
 }

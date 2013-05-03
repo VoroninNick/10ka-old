@@ -3,7 +3,7 @@
 <!-- /Header render -->
 
 <!-- Info render -->
-<div id="contact-wrapper" class="f-height">
+<div id="contact-wrapper" class="f-height padding-holder">
   <div class="g12">
     <h1>Контактна інформація</h1>
   </div>
@@ -11,19 +11,19 @@
     <h2><%= image_tag('h-img.png', :style => 'position: absolute; left: -35px;') %>Адреса:</h2>
     <p class="title">вул. Городоцька, 357</p>
     <p class="title">м. Львів, Україна, 79068</p>
-    <p class="sub-title">GPS: 49° 48° 757°  Пн. Ш.   23° 58°  671°  Сх. Д.</p>
+    <p class="sub-title">GPS: 49° 48° 757° Пн. Ш. 23° 58° 671° Сх. Д.</p>
   </div>
   <div class="g4 contact-info-row">
     <h2><%= image_tag('h-img.png', :style => 'position: absolute; left: -35px;') %>Графік роботи:</h2>
-    <p class="title">Пн—Пт: 	<span class="times">09:00 &mdash; 18:00</span></p>
-    <p id="sb" class="title">Сб:      <span class="times part2">09:00 &mdash; 14:00</span></p>
+    <p class="title">Пн—Пт: <span class="times">09:00 &mdash; 18:00</span></p>
+    <p id="sb" class="title">Сб: <span class="times part2">09:00 &mdash; 14:00</span></p>
     <p class="sub-title"><i>На складі обід з 13:00 до 14:00</i></p>
   </div>
   <div class="g4 contact-info-row omega">
     <h2><%= image_tag('h-img.png', :style => 'position: absolute; left: -35px;') %>Телефони:</h2>
-    <p class="title">офіс:		<span class="times part3">+38 (032) 244 00 00</span></p>
-    <p class="title">продаж:		<span class="times">+38 (032) 244 00 15</span></p>
-    <p class="title">факс:		<span class="times part4">+38 (032) 244 00 09</span></p>
+    <p class="title">офіс: <span class="times part3">+38 (032) 244 00 00</span></p>
+    <p class="title">продаж: <span class="times">+38 (032) 244 00 15</span></p>
+    <p class="title">факс: <span class="times part4">+38 (032) 244 00 09</span></p>
   </div>
 </div>
 <!-- /Info render -->
@@ -38,21 +38,21 @@
     <div class="g12">
       <h2><%= image_tag('h-img.png', :style => 'position: absolute; left: -35px;') %>Зворотній зв'язок:</h2>
     </div>
-    <div id="validate_name" class="g5 alpha">
-      <div class="row-input">
-        <%= form.text_field :name,  :data => { :'validation' => "validate_min_length length3", 
+    <div id="fields"  class="g5 alpha">
+      <div id="validate_name" class="row-input">
+        <%= form.text_field :name, :data => { :'validation' => "validate_min_length length3",
           :'validation-error-msg' => " Name length must be minimum 3 characters" } %>
         <%= form.label "Ім'я" %>
         <span id="validate_name"></span>
       </div>
       <div id="validate_email" class="row-input">
-        <%= form.text_field :email, :data => { :'validation' => "validate_email", 
+        <%= form.text_field :email, :data => { :'validation' => "validate_email",
           :'validation-error-msg' => " Email must be correct" } %>
-        <%= form.label "Електронна пошта"  %>
+        <%= form.label "Електронна пошта" %>
         <span id="validate_email"></span>
       </div>
       <div id="validate_phone" class="row-input">
-        <%= form.text_field :phone, :data => { :'validation' => "validate_phone", 
+        <%= form.text_field :phone, :data => { :'validation' => "validate_phone",
           :'validation-error-msg' => "Phone must be correct" } %>
         <%= form.label "Телефон" %>
         <span id="validate_phone"></span>
@@ -60,7 +60,8 @@
     </div>
     <div class="g7 omega">
       <div class="row-input">
-        <%= form.text_area :body %>
+        <%= form.text_area :body, :data => { :'validation' => "required",
+          :'validation-error-msg' => "This field is required" } %>
         <%= form.label "Повідомлення" %>
       </div>
 

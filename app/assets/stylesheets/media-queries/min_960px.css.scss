@@ -64,15 +64,15 @@
 /* footer end */
 
 /* contact start */
-.container form#new_message div.g7.omega
+.container form#contact_us div.g7.omega
 {
   /*margin-left: 30px;*/
   margin-right: 0;
-  width:628px;
+  /*width:628px;*/
 }
-.container form#new_message div.g5.omega
+.container form#contact_us div.g5.omega
 {
-  width:310px;
+  /*width:310px;*/
 }
 
 .submit-branded{
@@ -80,12 +80,12 @@
 }
 
   #gmap-wrapper,
-  form#new_message,
+  form#contact_us,
   div#contact-wrapper,
   div#footer-wrapper
   {
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 45px;
+    padding-right: 45px;
   }
 /* contact end */
 
@@ -93,7 +93,8 @@
 
 /* sponsor start */
 #sponsor-wrapper .g2{
-    margin-left: 25.71px;
+    /*margin-left: 25.71px;*/
+
   }
 /* sponsor end */
 }

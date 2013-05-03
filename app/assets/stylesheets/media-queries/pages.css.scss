@@ -1,3 +1,126 @@
+/* page "about us" */
+
+#about-wrapper{
+  h1{
+    color: #838383;
+    font-weight: 400;
+  }
+
+  .fd h1{
+    color: #bf291f;
+    font-weight: 300;
+    line-height: 1.2em;
+  }
+
+  .fd .about-sd{
+    color: #666;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 0.9em;
+    width: 60%;
+  }
+
+  .fd .about-fd, .spec-descr .about-fd{
+    color: #666;
+    font-weight: 300;
+    font-size: 1.1em;
+  }
+
+  .about-sponsor{
+    width: inherit;
+    padding-bottom: 15px;
+    height: 100px;
+  }
+
+  .about-sponsor-img{
+    float: left;
+    width: 25%;
+    margin-right: 5%;
+  }
+
+  .about-sponsor-p{
+    float: left;
+    width: 70%;
+  }
+
+  .spec-descr h2{
+    color: #bf291f;
+    font-weight: 300;
+    margin-top: 0;
+  }
+
+  .spec-img{
+    text-align: center;
+  }
+
+  .spec-img img{
+    border: 4px solid #fff;
+    -moz-box-shadow: 0 0 5px rgba(0,0,0,.37);
+    -webkit-box-shadow: 0 0 5px rgba(0,0,0,.37);
+    box-shadow: 0 0 5px rgba(0,0,0,.37);
+  }
+}
+/* end page "about us" */
+
+/* page "articles" */
+#article-banner-wrapper{
+  border: 4px solid white;
+  -moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.37);
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.37);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.37);
+  height: 400px;
+  overflow: hidden;
+}
+
+#articles-wrapper .shadow-bottom{
+  clear: both;
+}
+
+#article-banner-wrapper .item{
+  overflow: hidden;
+}
+
+#article-banner-wrapper .item img{
+  float: left;
+}
+
+#article-banner-wrapper .item .article-slide-descr{
+  height: 392px;
+  width: 600px;
+  float: right;
+
+  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEwMCAxMDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxsaW5lYXJHcmFkaWVudCBpZD0iaGF0MCIgZ3JhZGllbnRVbml0cz0ib2JqZWN0Qm91bmRpbmdCb3giIHgxPSI1MCUiIHkxPSIxMDAlIiB4Mj0iNTAlIiB5Mj0iLTEuNDIxMDg1NDcxNTIwMmUtMTQlIj4KPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzE4MTgxOCIgc3RvcC1vcGFjaXR5PSIxIi8+CjxzdG9wIG9mZnNldD0iNDglIiBzdG9wLWNvbG9yPSIjM2EzYTNhIiBzdG9wLW9wYWNpdHk9IjEiLz4KPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjMTgxODE4IiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgPC9saW5lYXJHcmFkaWVudD4KCjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIiBmaWxsPSJ1cmwoI2hhdDApIiAvPgo8L3N2Zz4=);
+  background-image: -moz-linear-gradient(bottom, #181818 0%, #3a3a3a 47.83%, #181818 100%);
+  background-image: -o-linear-gradient(bottom, #181818 0%, #3a3a3a 47.83%, #181818 100%);
+  background-image: -webkit-linear-gradient(bottom, #181818 0%, #3a3a3a 47.83%, #181818 100%);
+  background-image: linear-gradient(bottom, #181818 0%, #3a3a3a 47.83%, #181818 100%);
+
+  padding: 10px 50px;
+  position: absolute;
+  right: 4px;
+}
+
+#article-banner-wrapper .item .article-slide-descr .submit-branded{
+  width: 200px;
+}
+
+#article-banner-wrapper .item .article-slide-descr .article-h{
+  font-weight: 400;
+  font-size: 1.70em;
+  line-height: 1.15em;
+  color: #ffffff;
+}
+
+#article-banner-wrapper .item .article-slide-descr .article-p{
+  font-weight: 300;
+  font-size: 1.25em;
+  color: #ffffff;
+}
+
+/* end page "articles" */
+
+/* page "contact" */
+
 #contact-wrapper{
 
 }
@@ -244,65 +367,13 @@ form#contact_us .row-input input
 }
 
 
-/*
-@media(max-width:959px){
-  form#contact_us div.g5,
-  form#contact_us div.g5.alpha,
-  form#contact_us div.g5.omega,
-  .container form#contact_us div.g7.omega
-  {
-    margin-left: 0;
-    margin-right:0;
-    width:100%;
-  }
-}
-*/
-/*
-@media(min-width: 960px){
-  .container form#contact_us div.g7.omega
-{
-  
-  margin-right: 0;
-  width:628px;
-}
-
-.container form#contact_us div.g5.omega
-{
-  width:310px;
-}
-
-.submit-branded{
-  
-}
-}
-*/
-
   form#contact_us,
   div#footer-wrapper
   {
     padding-left: 15px;
     padding-right: 15px;
   }
-  /*
-@media(min-width:960px){
-  #gmap-wrapper,
-  form#contact_us,
-  div#contact-wrapper,
-  div#sponsor-wrapper,
-  div#footer-wrapper
-  {
-    padding-left: 30px;
-    padding-right: 30px;
-  }
-}*/
 
-
-
-
-
-/*
-form end
-*/
 
 
 form#contact_us span.jquery_form_error_message{
@@ -321,3 +392,5 @@ form#contact_us span.jquery_form_error_message{
   margin-right: 0;
   width:58%;
 }
+
+/* end page "contact" */

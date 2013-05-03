@@ -1,0 +1,53 @@
+
+/* for all */
+#footer-wrapper{
+  background: url(footer-bg.jpg) repeat-x transparent;
+}
+
+#footer-wrapper h2{
+  color: #bf291f;
+  font-weight: 300;
+  margin: 0 0 0.83em 0;
+}
+
+#footer-wrapper .contact-info-row.contacts p a.tel
+{
+  color:#BF291F;
+  text-decoration: none;
+}
+
+
+/* sponsor start */
+.coontainer div#sponsor-wrapper{
+  background: url(catalog-main-bg.jpg) repeat;
+  padding: 50px 0 25px 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  height:auto;
+  padding-bottom: 25px;
+  padding-top: 50px;
+  width:100%;
+}
+
+#sponsor-wrapper .g2{
+	overflow: hidden;
+	border:2px blue solid;
+	margin-left: 1%;
+	margin-right: 1%;
+	/*display:table;
+	max-height:150px;
+	max-width:150px;*/
+	height:150px;
+	/*width:14.667%;*/
+}
+
+#sponsor-wrapper .g2 .img{
+	margin-left:auto;
+	margin-left:auto;
+	
+	/*display:table-cell;
+	vertical-align:center;*/
+}
+/* sponsor end */
+
+
