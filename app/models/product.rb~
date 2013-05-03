@@ -1,6 +1,6 @@
 # -*- encoding : utf-8 -*-
 class Product < ActiveRecord::Base
-  attr_accessible :description, :name, :avatar, :child_catalog_id, :slug, :delete_avatar, :parent_catalog_id
+  attr_accessible :description, :name, :avatar, :child_catalog_id, :slug, :delete_avatar
 
   validates :name, presence: true
   validates :slug, uniqueness: true, presence: true
