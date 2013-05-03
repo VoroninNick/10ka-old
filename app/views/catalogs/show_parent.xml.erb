@@ -5,7 +5,7 @@
       <catalog_id><%= @parent_catalog.catalog_id  %></catalog_id>
       <parent_catalog_name> <%= @parent_catalog.name %></parent_catalog_name>
       <parent_catalog_url> <%= link_to_parent %> </parent_catalog_url>
-      <descripton>html source rendered by ck-editor</description>
+      <description><%= @parent_catalog.description %></description>
     </parent_catalog_info>
 
     <childs_of_this_parent>
@@ -16,19 +16,22 @@
         <child_catalog_id> <%= pc.id %></child_catalog_id>
         <child_catalog_url> <%= link_to_child %></child_catalog_url>
         <child_catalog_name> <%= pc.name %></child_catalog_name>
-        <child_avatar_url><%= pc.avatar.url(:tab) %></child_avatar_url>
-        <child_description><%= pc.description  unless pc.description.blank? %></child_description>
-        <% pc.products.each do |child_products| %>
-          <products>
-        <% link_to_prod = catalog_main_path+'/'+@parent_catalog.catalog.slug+'/'+@parent_catalog.slug+'/'+pc.slug+'/'+child_products.slug %>
-            <product_id> <%= child_products.id %></product_id>
-            <product_name><%= child_products.name %></product_name>
-            <product_link><%= link_to_prod %></product_link>
-          </products> 
-        <% end %>
       </child> 
      <% end %>
     </childs_of_this_parent>
+
+    <all_products>
+    <% all_pr = @parent_catalog.child_catalogs %>
+    <% all_pr.each do |cc| %>
+    <% cc.products.each do |pr| %>
+      <product_id><%= pr.id %></product_id>
+      <product_name><%= pr.name %></product_name>
+      <product_avatar><%= pr.avatar.url %></product_avatar>
+      <product_description><%= pr.description %></product_description>
+      <product_slug><%= pr.slug %></product_slug>
+    <% end %>
+    <% end %>
+    </all_products>
   </responce>
 
 
