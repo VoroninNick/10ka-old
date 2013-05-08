@@ -29,6 +29,7 @@ class Product < ActiveRecord::Base
     list do
       field :name
       field :child_catalog
+      field :parent_catalog
       field :avatar
     end
 

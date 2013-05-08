@@ -28,7 +28,7 @@
       <product_name><%= pr.name %></product_name>
       <product_avatar><%= pr.avatar.url %></product_avatar>
       <product_description><%= pr.description %></product_description>
-      <product_slug><%= pr.slug %></product_slug>
+      <product_slug><%= cc.slug+'/'+pr.slug %></product_slug>
     <% end %>
     <% end %>
     </all_products>
