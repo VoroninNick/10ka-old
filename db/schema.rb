@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130411134059) do
+ActiveRecord::Schema.define(:version => 20130503145332) do
 
   create_table "articles", :force => true do |t|
     t.string   "name"
@@ -91,9 +91,10 @@ ActiveRecord::Schema.define(:version => 20130411134059) do
   create_table "parent_catalogs", :force => true do |t|
     t.string   "name"
     t.integer  "catalog_id"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
     t.string   "slug"
+    t.text     "description"
   end
 
   add_index "parent_catalogs", ["slug"], :name => "index_parent_catalogs_on_slug"

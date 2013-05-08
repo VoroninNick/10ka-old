@@ -25,16 +25,32 @@
 
 
 
-#banner-wrapper div.banner-holder{
+div#home-slider-wrapper{
   border: 4px solid #fff;
   -moz-box-shadow: 0 0 5px rgba(0,0,0,.37);
   -webkit-box-shadow: 0 0 5px rgba(0,0,0,.37);
   box-shadow: 0 0 5px rgba(0,0,0,.37);
   /*height: 408px;*/
   overflow: hidden;
+
+  @media(min-width:320px){
+    height: 326px;
+  }
+  @media(min-width:960px){
+    height: 326px;
+  }
+  @media(min-width:1200px){
+    height: 308px;
+  }
+  @media(min-width:1440px){
+    height: 360px;
+  }
+  @media(min-width:2020px){
+    height: 368px;
+  }
 }
 
-#banner-wrapper div.banner-holder img{
+div#some-slider-wrapper img{
   width: 100%;
 }
 
@@ -50,7 +66,7 @@
 
 #catalog-wrapper div.catalog-block div.catalog-item{
   padding-bottom: 25px;
-  width: inherit;
+  //width: inherit;
 }
 
 #catalog-wrapper div.catalog-block div.catalog-item a.catalog-show-more{
@@ -186,14 +202,6 @@
 {
 
 }
-#sponsor-wrapper div.g2.alpha{
-  margin-left: 0;
-  margin-right: 18px;
-}
-#sponsor-wrapper div.g2.omega{
-  margin-right: 0;
-  margin-left: 18px;
-}
 
 @media(max-width:1199px){
   .container #sponsor-wrapper div.g2,
@@ -214,8 +222,7 @@
     height:395px;
   }
 
-  .container #sponsor-wrapper div.g2,
-  .container #sponsor-wrapper div.g2.alpha{
+  .container #sponsor-wrapper div.g2,{
     border:1px solid red;
     width:150px;
     overflow: hidden;  
@@ -229,11 +236,6 @@
   .container #sponsor-wrapper div.g2
   {
   }
-  .container #sponsor-wrapper div.g2.alpha
-  {
-    margin-left: auto;
-    margin-right: auto;
-  }
 
 
   .container #sponsor-wrapper div.g2
@@ -245,16 +247,6 @@
 
 @media(max-width:609px){
 
-  .container #sponsor-wrapper div.g2.alpha{
-  }
-  .container #sponsor-wrapper div.g2.alpha{
-    margin-right: 20px;
-    margin-left: 0;
-  }
-  .container #sponsor-wrapper div.g2.omega{
-    margin-left: 0;
-    margin-right:0;
-  }
   .container #sponsor-wrapper .g2 a
   {
     width:100%;

@@ -9,40 +9,6 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
- *= require page
- *= require basic
- *= header
- *= footer
- *= require normalize
- *= require grids2
- *= contact
- *= about
- *= require catalogs
- *= articles
- *= require flexslider
- *= require fancybox
- *= pad
- *= mobile
- *= require home-slider
- *= require tabs
- *= require products_page
- *= require breadcrumbs
- 
-*= media-queries/fluid
-
- *= media-queries/max_1199px
- *= media-queries/max_959px
- *= media-queries/max_609px
- *= media-queries/max_535px
- *= media-queries/max_455px
-
- *= media-queries/min_610px
- *= media-queries/min_960px
- *= media-queries/min_1200px
- *= media-queries/min_1440px
- *= media-queries/min_2020px
- 
- *= require media-queries/pages
- *= require media-queries/layout
+ *= require _init
 
  */

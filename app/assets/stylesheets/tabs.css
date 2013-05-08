@@ -58,6 +58,9 @@
 
 }
 
+.tab-item.active{
+  border:3px black solid;
+}
 .tab-item a,
 .tab-item span{
   text-align: center;

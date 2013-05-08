@@ -3,7 +3,7 @@
 <!-- /Header render -->
 
 <!-- Catalog wrapper -->
-<div id="catalog-page-wrapper" class="f-height catalog-page-index">
+<div id="catalog-page-wrapper" class="f-height catalog-page-index page-indent">
   <div class="g12 pd-me">
     <h1>Каталог продукції</h1>
   </div>
@@ -22,7 +22,7 @@
       });
     });
   </script>
-  <div id="catalog-content">
+  <div id="catalog-content" class="left-indent">
   <div id="catalog-parent" class="g8 catalog-page-format omega">
     <h1><%= @parent_catalog.name %></h1>
     <div class="category-description">Отвечая на вопрос о взаимоотношении идеального ли и материального ци, Дай Чжень заявлял, что искусство индуктивно дискредитирует субъективный гений, не учитывая мнения авторитетов. Катарсис выводит примитивный катарсис, учитывая опасность, которую представляли собой писания Дюринга для не окрепшего еще немецкого рабочего движения. Наряду с этим гештальтпсихология заполняет из ряда вон выходящий здравый смысл, ломая рамки привычных представлений. Отвечая на вопрос о взаимоотношении идеального ли и материального ци, Дай Чжень заявлял, что галактика представляет собой естественный гедонизм, хотя в официозе принято обратное.</div>
@@ -72,8 +72,8 @@
 
 <script type="text/javascript">
         function openChild(url){
-
-          var $tab=$('#tab-control .tabs .tab-item a[href*="'+'url'+'"]').parent();
+          var menu_link=$('.catalog-item>ul>li>a[href*="'+url+'"]');
+          var $tab=$('#tab-control .tabs .tab-item a[href*="'+url+'"]').parent();
           var $tabs=$tab.parent().find('.tab-item');
           console.log('required:'+url);
           $.ajax({
@@ -81,7 +81,8 @@
             dataType:'xml',
             success:function(xml){
               var $xml=$(xml);
-              var description=$('child-catalog description',$xml).text();
+              x=$xml;
+              var description=$('child_info child_description',$xml).text();
               var $description=$('<div></div>');
               $description.addClass('description');
               var $products=$('<div></div>');
@@ -89,6 +90,39 @@
               var $tab_content=$('<div></div>');
 
               $products.attr('id','all-products-by-childs');
+              var $store_section=$('<div></div>');
+              $store_section.addClass('store-section');
+              $products.append($store_section);
+              var $top_border=$('<div></div>');
+              $top_border.addClass('top-border');
+              $store_section.append($top_border);
+
+              $('products_by_child product',$xml).each(function(index,item){
+                var $xml_item=$(item);
+                var product_name=$('product_name',$xml_item).text();
+                var product_description=$('product_description',$xml_item).text();
+                var product_avatar=$('product_avatar',$xml_item).text();
+                var product_slug=$('product_slug',$xml_item).text();
+
+                var $item=$('<div></div>');
+                $item.addClass('online-item');
+                var $img=$('<img />');
+                $img.attr('src',product_slug);
+                $img.attr('alt',product_name);
+                var $title=$('<p>'+product_name+'</p>');
+                var $show_more=$('<a>Детальніше</a>');
+                $show_more.attr('href',product_slug);
+                $show_more.addClass('submit-branded');
+                $show_more.addClass('animate');
+                $show_more.attr('title',product_name);
+
+                $item.append($img);
+                $item.append($title);
+                $item.append($show_more);
+
+                $store_section.append($item);
+              });
+
               if(description!='')
                 $description.append(description);
               else

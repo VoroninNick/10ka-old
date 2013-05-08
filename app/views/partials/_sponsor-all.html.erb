@@ -6,7 +6,7 @@
 <div id="sponsor-wrapper" class="container">
   <%# cache do %>
     <% fetch_sponsors.each do |sponsor_item| %>
-      <div style="height:150px;" class="g2 <%= cycle('', '', '', '', '', '') %> sponsor-item">
+      <div style="height:150px;" class="g2 <%= cycle('alpha', '', 'row_2_items-alpha', 'row_3_items-alpha', 'row_2_items-alpha', '') %> sponsor-item">
         <%= link_to( image_tag(sponsor_item.sponsor.url, :alt => sponsor_item.description, :style => ''), sponsor_item.link ) %>
       </div>
     <% end %>
@@ -77,8 +77,8 @@
 		//}
 
 }
-	$(window).resize(initSize);
-	initSize();
+	//$(window).resize(initSize);
+	//initSize();
 	
 
 </script>
