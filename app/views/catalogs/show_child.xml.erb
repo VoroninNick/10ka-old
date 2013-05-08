@@ -12,7 +12,7 @@
 				<product_id><%= pr.id %></product_id>
 				<product_name><%= pr.name %></product_name>
 				<product_description><%= pr.description %></product_description>
-				<product_avatar><%= pr.avatar.url %></product_avatar>
+				<product_avatar><%= pr.avatar.url(:prod) %></product_avatar>
 				<product_slug><%= pr.slug %></product_slug>
 			</product>
 		<% end %> 

@@ -26,7 +26,7 @@
     <% cc.products.each do |pr| %>
       <product_id><%= pr.id %></product_id>
       <product_name><%= pr.name %></product_name>
-      <product_avatar><%= pr.avatar.url %></product_avatar>
+      <product_avatar><%= pr.avatar.url(:prod) %></product_avatar>
       <product_description><%= pr.description %></product_description>
       <product_slug><%= cc.slug+'/'+pr.slug %></product_slug>
     <% end %>
