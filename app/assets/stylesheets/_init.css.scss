@@ -1,0 +1,67 @@
+
+
+//*$block-margins: 40px;
+//*$block-footer-margins: 60px;
+//*$text-block-antialaising: subpixel-antialiased;
+//*@import "media-grid/normalize_browsers";
+//*@import "media-grid/init_grid_system";
+
+//@import "media-grid/@960px";
+//@import "media-grid/@1200px";
+//@import "media-grid/@1440px";
+//@import "media-grid/@1600px";
+//@import "media-grid/@1920px";
+//*@import "media-grid/@fluid-low";
+//*@import "font-system/typo";
+
+
+//@import "layout";
+//@import "pages";
+//@import "devise";
+//*@import "custom";
+//@imort "catalogs";
+
+//@import "media-queries/min_610px";
+//@import "media-queries/min_960px";
+//@import "media-queries/min_1200px";
+//@import "media-queries/min_1440px";
+
+//*@import "header";
+
+
+@import "media-grid/_init_grid_system";
+@import "page";
+@import "basic";
+// header
+// footer
+@import "normalize";
+@import "grids3";
+// contact
+// about
+@import  "catalogs";
+// articles
+@import  "flexslider";
+@import  "fancybox";
+// pad
+// mobile
+@import  "home-slider";
+@import  "tabs";
+@import  "products_page";
+@import  "breadcrumbs";
+
+// media-queries/fluid
+
+// media-queries/max_1199px
+// media-queries/max_959px
+// media-queries/max_609px
+// media-queries/max_535px
+// media-queries/max_455px
+
+// media-queries/min_610px
+// media-queries/min_960px
+// media-queries/min_1200px
+// media-queries/min_1440px
+// media-queries/min_2020px
+
+@import  "media-queries/pages";
+@import  "media-queries/layout";

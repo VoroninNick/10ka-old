@@ -170,9 +170,14 @@
 
 .online-item{
   text-align: center;
-  margin-right: 10%;
-  width: 40%;
+  margin-right: 15%;
+  width: 23%;
   float: left;
+  margin-bottom: 20px;
+}
+
+.online-item:nth-child(4){
+  margin-right: 0;
 }
 
 .online-item img{
@@ -184,7 +189,8 @@
 .online-item p{
   color: #bf291f !important;
   font-weight: 400 !important;
-  margin-top: 0 !important;
+  margin-top: 10px !important;
+  margin-bottom: 10px;
   line-height: 1.2em !important;
 }
 
@@ -194,4 +200,8 @@
 }
 .catalog-item ul li a.active{
   background: orange;
+}
+
+.category-description{
+  margin: 20px 0;
 }

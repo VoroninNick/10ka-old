@@ -1,6 +1,6 @@
 # -*- encoding : utf-8 -*-
 class Product < ActiveRecord::Base
-  attr_accessible :description, :name, :avatar, :child_catalog_id, :slug, :delete_avatar, :parent_catalog_id
+  attr_accessible :description, :name, :avatar, :child_catalog_id, :slug, :delete_avatar, :parent_catalog_id, :parent_catalog
 
   validates :name, presence: true
   validates :slug, uniqueness: true, presence: true
@@ -18,7 +18,7 @@ class Product < ActiveRecord::Base
   validates :description, :presence => true, :length => { :minimum => 2 }
 
   # Paperclip image attachments
-  has_attached_file :avatar, :styles => { :thumb => '180>' },
+  has_attached_file :avatar, :styles => { :thumb => '180>', :prod => '190x190#' },
                     :url  => '/assets/product/:id/:style/:basename.:extension',
                     :path => ':rails_root/public/assets/product/:id/:style/:basename.:extension'
 
