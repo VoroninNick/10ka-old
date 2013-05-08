@@ -29,6 +29,7 @@ class CatalogsController < ApplicationController
   def show_child
     @child_catalog ||= ChildCatalog.find_by_slug!(params[:id])
     @parent_catalog ||= ParentCatalog.find(@child_catalog.parent_catalog_id)
+    @catalog_slug ||= Catalog.find(@parent_catalog.catalog_id)
     respond_with(@child_catalog)
   end
 
