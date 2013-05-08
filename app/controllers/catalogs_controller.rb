@@ -28,6 +28,7 @@ class CatalogsController < ApplicationController
   # GET /catalog/parent/child/1.xml
   def show_child
     @child_catalog ||= ChildCatalog.find_by_slug!(params[:id])
+    @parent_catalog ||= ParentCatalog.find(@child_catalog.parent_catalog_id)
     respond_with(@child_catalog)
   end
 
