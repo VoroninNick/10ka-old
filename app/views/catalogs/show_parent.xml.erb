@@ -5,12 +5,12 @@
       <catalog_id><%= @parent_catalog.catalog_id  %></catalog_id>
       <parent_catalog_name> <%= @parent_catalog.name %></parent_catalog_name>
       <parent_catalog_url> <%= link_to_parent %> </parent_catalog_url>
-      <description><%= @parent_catalog.description %></description>
+      <description><%= @parent_catalog.description unless @parent_catalog.description.blank? %></description>
     </parent_catalog_info>
 
     <childs_of_this_parent>
      <% @get_child_xml.each do |pc| %>
-     <% link_to_child = catalog_main_path+'/'+@parent_catalog.catalog.slug+'/'+@parent_catalog.slug+'/'+pc.slug %>
+     <% link_to_child = catalog_main_path+'/'+@parent_catalog.catalog.slug+'/'+@parent_catalog.catalog.slug+'/'+@parent_catalog.slug+'/'+pc.slug %>
       <child>  
         <parent_catalog_id> <%= pc.parent_catalog_id %> </parent_catalog_id>
         <child_catalog_id> <%= pc.id %></child_catalog_id>

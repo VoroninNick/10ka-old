@@ -110,6 +110,7 @@ ActiveRecord::Schema.define(:version => 20130503145332) do
     t.datetime "created_at",          :null => false
     t.datetime "updated_at",          :null => false
     t.string   "slug"
+    t.integer  "parent_catalog_id"
   end
 
   add_index "products", ["slug"], :name => "index_products_on_slug"
