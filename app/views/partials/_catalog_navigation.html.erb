@@ -78,7 +78,7 @@
               <li><%= link_to parent_section.name, link_parent, :title => parent_section.name %><% if count_childs(@parent_catalog.id) > 0 %><span class="sub-menu-status" data-opened="false" id="sub-status-<%= parent_section.id %>">+</span>
                   <ul class="sub-status-ul-<%= parent_section.id %>">
                     <% parent_section.child_catalogs.each do |child_li_next| %>
-                      <li><%= link_to child_li_next.name, '', :class => 'sub-'+child_li_next.slug, :title => child_li_next.name %></li>
+                      <li><%= link_to child_li_next.name, catalog_main_url+'/'+catalog_section.slug+'/'+parent_section.slug+'/'+child_li_next.slug, :class => 'sub-'+child_li_next.slug, :title => child_li_next.name %></li>
                     <% end %>
                   </ul>
                 <% end %>
@@ -147,16 +147,16 @@
                   });
                 });
               </script>
-              <li><%= link_to parent_section.name, parent_show_path(parent_section), :title => parent_section.name %><% if count_childs(parent_name_breadcrumb(child_name_breadcrumb(@product.child_catalog_id)).id) > 0 %><span class="sub-menu-status" data-opened="false" id="sub-status-<%= parent_section.id %>">+</span>
+              <li><%= link_to parent_section.name, catalog_main_url+'/'+catalog_section.slug+'/'+parent_section.slug, :title => parent_section.name %><% if count_childs(parent_name_breadcrumb(child_name_breadcrumb(@product.child_catalog_id)).id) > 0 %><span class="sub-menu-status" data-opened="false" id="sub-status-<%= parent_section.id %>">+</span>
                   <ul class="sub-status-ul-<%= parent_section.id %>">
                     <% parent_section.child_catalogs.each do |child_li_next| %>
-                      <li><%= link_to child_li_next.name, '', :class => 'sub-'+child_li_next.slug, :title => child_li_next.name %></li>
+                      <li><%= link_to child_li_next.name, catalog_main_url+'/'+catalog_section.slug+'/'+parent_section.slug+'/'+child_li_next.slug, :class => 'sub-'+child_li_next.slug, :title => child_li_next.name %></li>
                     <% end %>
                   </ul>
                 <% end %>
               </li>
             <% else %>
-              <li><%= link_to parent_section.name, parent_show_path(parent_section), :title => parent_section.name %></li>
+              <li><%= link_to parent_section.name, catalog_main_url+'/'+catalog_section.slug+'/'+parent_section.slug, :title => parent_section.name %></li>
             <% end %>
           <% end %>
         <% end %>
