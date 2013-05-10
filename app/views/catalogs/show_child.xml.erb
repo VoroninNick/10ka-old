@@ -13,7 +13,7 @@
 				<product_name><%= pr.name %></product_name>
 				<product_description><%= pr.description %></product_description>
 				<product_avatar><%= pr.avatar.url(:prod) %></product_avatar>
-				<product_slug><%= @child_catalog.slug+'/'+pr.slug %></product_slug>
+				<product_slug><%= catalog_main_url+'/'+@child_catalog.parent_catalog.catalog.slug+'/'+@child_catalog.parent_catalog.slug+'/'+@child_catalog.slug+'/'+pr.slug %></product_slug>
 			</product>
 		<% end %> 
 	</products_by_child>
