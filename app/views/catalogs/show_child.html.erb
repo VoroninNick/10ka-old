@@ -35,7 +35,7 @@
       <div id="tabcontents" class="f-height">
         <div class="tab-content-wrapper" id="tab-content-<%= @child_catalog.id %>">
           <div class="category-description">
-            <%= @child_catalog.description.html_safe unless @child_catalog.description %>
+            <%= @child_catalog.description.html_safe unless @child_catalog.description.blank? %>
           </div>
           <div id="all-products-by-childs">
             <div class="store-section"><!-- Online store -->
