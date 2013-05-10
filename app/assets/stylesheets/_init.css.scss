@@ -34,20 +34,23 @@
 @import "basic";
 // header
 // footer
-@import "normalize";
-@import "grids3";
+@import "media-grid/_normalize_browsers";
+@import "media-grid/grid";
+
+@import "media-queries/layout";
+@import "media-queries/pages";
 // contact
 // about
-@import  "catalogs";
+@import  "pages/catalogs";
 // articles
 @import  "flexslider";
 @import  "fancybox";
 // pad
 // mobile
-@import  "home-slider";
-@import  "tabs";
-@import  "products_page";
-@import  "breadcrumbs";
+@import  "pages/home-slider";
+@import  "pages/tabs";
+@import  "pages/products_page";
+@import  "pages/bread-crumbs";
 
 // media-queries/fluid
 
@@ -63,5 +66,4 @@
 // media-queries/min_1440px
 // media-queries/min_2020px
 
-@import  "media-queries/pages";
-@import  "media-queries/layout";
+
