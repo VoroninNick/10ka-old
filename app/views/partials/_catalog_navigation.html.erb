@@ -122,7 +122,7 @@
                 </script>
                 <ul class="sub-status-ul-<%= parent_section.id %>">
                   <% parent_section.child_catalogs.each do |child_li| %>
-                    <li><%= link_to child_li.name, '', :class => 'sub-'+child_li.slug, :title => child_li.name %></li>
+                    <li><%= link_to child_li.name, catalog_main_url+'/'+catalog_section.slug+'/'+parent_section.slug+'/'+child_li.slug, :class => 'sub-'+child_li.slug, :title => child_li.name %></li>
                   <% end %>
                 </ul>
               <% end %>
