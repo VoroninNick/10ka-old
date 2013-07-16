@@ -1,0 +1,183 @@
+DEPRECATION WARNING: auto_flushing= is deprecated and will be removed from Rails 3.2. (called from <top (required)> at /Users/tye/Sites/rubyception/config/initializers/websocket_server.rb:5)
+Could not log "render_partial.action_view" event. NoMethodError: undefined method `<<' for nil:NilClass
+  Rendered /Users/tye/Sites/rubyception/app/views/rubyception/entries/_index.haml (1.0ms)
+Could not log "render_partial.action_view" event. NoMethodError: undefined method `<<' for nil:NilClass
+  Rendered /Users/tye/Sites/rubyception/app/views/rubyception/entries/_entry.haml (2.2ms)
+Could not log "render_partial.action_view" event. NoMethodError: undefined method `<<' for nil:NilClass
+  Rendered /Users/tye/Sites/rubyception/app/views/rubyception/backtrace_lines/_index.haml (1.7ms)
+Could not log "render_partial.action_view" event. NoMethodError: undefined method `<<' for nil:NilClass
+  Rendered /Users/tye/Sites/rubyception/app/views/rubyception/backtrace_lines/_backtrace_line.haml (1.2ms)
+Could not log "render_partial.action_view" event. NoMethodError: undefined method `<<' for nil:NilClass
+  Rendered /Users/tye/Sites/rubyception/app/views/rubyception/lines/_index.haml (0.8ms)
+Could not log "render_partial.action_view" event. NoMethodError: undefined method `<<' for nil:NilClass
+  Rendered /Users/tye/Sites/rubyception/app/views/rubyception/lines/action_controller/_write_fragment.haml (0.5ms)
+Could not log "render_partial.action_view" event. NoMethodError: undefined method `<<' for nil:NilClass
+  Rendered /Users/tye/Sites/rubyception/app/views/rubyception/lines/action_controller/_read_fragment.haml (0.5ms)
+Could not log "render_partial.action_view" event. NoMethodError: undefined method `<<' for nil:NilClass
+  Rendered /Users/tye/Sites/rubyception/app/views/rubyception/lines/action_controller/_expire_fragment.haml (0.5ms)
+Could not log "render_partial.action_view" event. NoMethodError: undefined method `<<' for nil:NilClass
+  Rendered /Users/tye/Sites/rubyception/app/views/rubyception/lines/action_controller/_exist_fragment.haml (0.5ms)
+Could not log "render_partial.action_view" event. NoMethodError: undefined method `<<' for nil:NilClass
+  Rendered /Users/tye/Sites/rubyception/app/views/rubyception/lines/action_controller/_write_page.haml (0.5ms)
+Could not log "render_partial.action_view" event. NoMethodError: undefined method `<<' for nil:NilClass
+  Rendered /Users/tye/Sites/rubyception/app/views/rubyception/lines/action_controller/_expire_page.haml (0.5ms)
+Could not log "render_partial.action_view" event. NoMethodError: undefined method `<<' for nil:NilClass
+  Rendered /Users/tye/Sites/rubyception/app/views/rubyception/lines/action_controller/_start_processing.haml (0.5ms)
+Could not log "render_partial.action_view" event. NoMethodError: undefined method `<<' for nil:NilClass
+  Rendered /Users/tye/Sites/rubyception/app/views/rubyception/lines/action_controller/_process_action.haml (0.5ms)
+Could not log "render_partial.action_view" event. NoMethodError: undefined method `<<' for nil:NilClass
+  Rendered /Users/tye/Sites/rubyception/app/views/rubyception/lines/action_controller/_send_file.haml (0.5ms)
+Could not log "render_partial.action_view" event. NoMethodError: undefined method `<<' for nil:NilClass
+  Rendered /Users/tye/Sites/rubyception/app/views/rubyception/lines/action_controller/_send_data.haml (0.5ms)
+Could not log "render_partial.action_view" event. NoMethodError: undefined method `<<' for nil:NilClass
+  Rendered /Users/tye/Sites/rubyception/app/views/rubyception/lines/action_controller/_redirect_to.haml (0.5ms)
+Could not log "render_partial.action_view" event. NoMethodError: undefined method `<<' for nil:NilClass
+  Rendered /Users/tye/Sites/rubyception/app/views/rubyception/lines/action_controller/_halted_callback.haml (0.5ms)
+Could not log "render_partial.action_view" event. NoMethodError: undefined method `<<' for nil:NilClass
+  Rendered /Users/tye/Sites/rubyception/app/views/rubyception/lines/action_view/_render_template.haml (1.5ms)
+Could not log "render_partial.action_view" event. NoMethodError: undefined method `<<' for nil:NilClass
+  Rendered /Users/tye/Sites/rubyception/app/views/rubyception/lines/action_view/_render_partial.haml (1.1ms)
+Could not log "render_partial.action_view" event. NoMethodError: undefined method `<<' for nil:NilClass
+  Rendered /Users/tye/Sites/rubyception/app/views/rubyception/lines/active_record/_sql.haml (1.3ms)
+Could not log "render_partial.action_view" event. NoMethodError: undefined method `<<' for nil:NilClass
+  Rendered /Users/tye/Sites/rubyception/app/views/rubyception/lines/active_record/_identity.haml (1.1ms)
+Could not log "render_partial.action_view" event. NoMethodError: undefined method `<<' for nil:NilClass
+  Rendered /Users/tye/Sites/rubyception/app/views/rubyception/lines/action_mailer/_receive.haml (0.5ms)
+Could not log "render_partial.action_view" event. NoMethodError: undefined method `<<' for nil:NilClass
+  Rendered /Users/tye/Sites/rubyception/app/views/rubyception/lines/action_mailer/_deliver.haml (0.5ms)
+Could not log "render_partial.action_view" event. NoMethodError: undefined method `<<' for nil:NilClass
+  Rendered /Users/tye/Sites/rubyception/app/views/rubyception/lines/active_resource/_request.haml (0.5ms)
+Could not log "render_partial.action_view" event. NoMethodError: undefined method `<<' for nil:NilClass
+  Rendered /Users/tye/Sites/rubyception/app/views/rubyception/lines/active_support/_cache_read.haml (0.5ms)
+Could not log "render_partial.action_view" event. NoMethodError: undefined method `<<' for nil:NilClass
+  Rendered /Users/tye/Sites/rubyception/app/views/rubyception/lines/active_support/_cache_generate.haml (0.5ms)
+Could not log "render_partial.action_view" event. NoMethodError: undefined method `<<' for nil:NilClass
+  Rendered /Users/tye/Sites/rubyception/app/views/rubyception/lines/active_support/_cache_fetch_hit.haml (0.5ms)
+Could not log "render_partial.action_view" event. NoMethodError: undefined method `<<' for nil:NilClass
+  Rendered /Users/tye/Sites/rubyception/app/views/rubyception/lines/active_support/_cache_write.haml (0.5ms)
+Could not log "render_partial.action_view" event. NoMethodError: undefined method `<<' for nil:NilClass
+  Rendered /Users/tye/Sites/rubyception/app/views/rubyception/lines/active_support/_cache_delete.haml (0.5ms)
+Could not log "render_partial.action_view" event. NoMethodError: undefined method `<<' for nil:NilClass
+  Rendered /Users/tye/Sites/rubyception/app/views/rubyception/lines/active_support/_cache_exist.haml (0.5ms)
+DEPRECATION WARNING: auto_flushing= is deprecated and will be removed from Rails 3.2. (called from <top (required)> at /Users/tye/Sites/rubyception/config/initializers/websocket_server.rb:5)
+Could not log "render_partial.action_view" event. NoMethodError: undefined method `<<' for nil:NilClass
+  Rendered /Users/tye/Sites/rubyception/app/views/rubyception/entries/_index.haml (0.9ms)
+Could not log "render_partial.action_view" event. NoMethodError: undefined method `<<' for nil:NilClass
+  Rendered /Users/tye/Sites/rubyception/app/views/rubyception/entries/_entry.haml (2.1ms)
+Could not log "render_partial.action_view" event. NoMethodError: undefined method `<<' for nil:NilClass
+  Rendered /Users/tye/Sites/rubyception/app/views/rubyception/backtrace_lines/_index.haml (1.7ms)
+Could not log "render_partial.action_view" event. NoMethodError: undefined method `<<' for nil:NilClass
+  Rendered /Users/tye/Sites/rubyception/app/views/rubyception/backtrace_lines/_backtrace_line.haml (1.3ms)
+Could not log "render_partial.action_view" event. NoMethodError: undefined method `<<' for nil:NilClass
+  Rendered /Users/tye/Sites/rubyception/app/views/rubyception/lines/_index.haml (0.8ms)
+Could not log "render_partial.action_view" event. NoMethodError: undefined method `<<' for nil:NilClass
+  Rendered /Users/tye/Sites/rubyception/app/views/rubyception/lines/action_controller/_write_fragment.haml (0.6ms)
+Could not log "render_partial.action_view" event. NoMethodError: undefined method `<<' for nil:NilClass
+  Rendered /Users/tye/Sites/rubyception/app/views/rubyception/lines/action_controller/_read_fragment.haml (0.5ms)
+Could not log "render_partial.action_view" event. NoMethodError: undefined method `<<' for nil:NilClass
+  Rendered /Users/tye/Sites/rubyception/app/views/rubyception/lines/action_controller/_expire_fragment.haml (0.5ms)
+Could not log "render_partial.action_view" event. NoMethodError: undefined method `<<' for nil:NilClass
+  Rendered /Users/tye/Sites/rubyception/app/views/rubyception/lines/action_controller/_exist_fragment.haml (0.5ms)
+Could not log "render_partial.action_view" event. NoMethodError: undefined method `<<' for nil:NilClass
+  Rendered /Users/tye/Sites/rubyception/app/views/rubyception/lines/action_controller/_write_page.haml (0.5ms)
+Could not log "render_partial.action_view" event. NoMethodError: undefined method `<<' for nil:NilClass
+  Rendered /Users/tye/Sites/rubyception/app/views/rubyception/lines/action_controller/_expire_page.haml (0.5ms)
+Could not log "render_partial.action_view" event. NoMethodError: undefined method `<<' for nil:NilClass
+  Rendered /Users/tye/Sites/rubyception/app/views/rubyception/lines/action_controller/_start_processing.haml (0.5ms)
+Could not log "render_partial.action_view" event. NoMethodError: undefined method `<<' for nil:NilClass
+  Rendered /Users/tye/Sites/rubyception/app/views/rubyception/lines/action_controller/_process_action.haml (0.5ms)
+Could not log "render_partial.action_view" event. NoMethodError: undefined method `<<' for nil:NilClass
+  Rendered /Users/tye/Sites/rubyception/app/views/rubyception/lines/action_controller/_send_file.haml (0.6ms)
+Could not log "render_partial.action_view" event. NoMethodError: undefined method `<<' for nil:NilClass
+  Rendered /Users/tye/Sites/rubyception/app/views/rubyception/lines/action_controller/_send_data.haml (0.6ms)
+Could not log "render_partial.action_view" event. NoMethodError: undefined method `<<' for nil:NilClass
+  Rendered /Users/tye/Sites/rubyception/app/views/rubyception/lines/action_controller/_redirect_to.haml (0.5ms)
+Could not log "render_partial.action_view" event. NoMethodError: undefined method `<<' for nil:NilClass
+  Rendered /Users/tye/Sites/rubyception/app/views/rubyception/lines/action_controller/_halted_callback.haml (0.5ms)
+Could not log "render_partial.action_view" event. NoMethodError: undefined method `<<' for nil:NilClass
+  Rendered /Users/tye/Sites/rubyception/app/views/rubyception/lines/action_view/_render_template.haml (1.5ms)
+Could not log "render_partial.action_view" event. NoMethodError: undefined method `<<' for nil:NilClass
+  Rendered /Users/tye/Sites/rubyception/app/views/rubyception/lines/action_view/_render_partial.haml (1.1ms)
+Could not log "render_partial.action_view" event. NoMethodError: undefined method `<<' for nil:NilClass
+  Rendered /Users/tye/Sites/rubyception/app/views/rubyception/lines/active_record/_sql.haml (1.4ms)
+Could not log "render_partial.action_view" event. NoMethodError: undefined method `<<' for nil:NilClass
+  Rendered /Users/tye/Sites/rubyception/app/views/rubyception/lines/active_record/_identity.haml (1.2ms)
+Could not log "render_partial.action_view" event. NoMethodError: undefined method `<<' for nil:NilClass
+  Rendered /Users/tye/Sites/rubyception/app/views/rubyception/lines/action_mailer/_receive.haml (0.5ms)
+Could not log "render_partial.action_view" event. NoMethodError: undefined method `<<' for nil:NilClass
+  Rendered /Users/tye/Sites/rubyception/app/views/rubyception/lines/action_mailer/_deliver.haml (0.5ms)
+Could not log "render_partial.action_view" event. NoMethodError: undefined method `<<' for nil:NilClass
+  Rendered /Users/tye/Sites/rubyception/app/views/rubyception/lines/active_resource/_request.haml (0.5ms)
+Could not log "render_partial.action_view" event. NoMethodError: undefined method `<<' for nil:NilClass
+  Rendered /Users/tye/Sites/rubyception/app/views/rubyception/lines/active_support/_cache_read.haml (0.5ms)
+Could not log "render_partial.action_view" event. NoMethodError: undefined method `<<' for nil:NilClass
+  Rendered /Users/tye/Sites/rubyception/app/views/rubyception/lines/active_support/_cache_generate.haml (0.5ms)
+Could not log "render_partial.action_view" event. NoMethodError: undefined method `<<' for nil:NilClass
+  Rendered /Users/tye/Sites/rubyception/app/views/rubyception/lines/active_support/_cache_fetch_hit.haml (0.5ms)
+Could not log "render_partial.action_view" event. NoMethodError: undefined method `<<' for nil:NilClass
+  Rendered /Users/tye/Sites/rubyception/app/views/rubyception/lines/active_support/_cache_write.haml (0.5ms)
+Could not log "render_partial.action_view" event. NoMethodError: undefined method `<<' for nil:NilClass
+  Rendered /Users/tye/Sites/rubyception/app/views/rubyception/lines/active_support/_cache_delete.haml (0.5ms)
+Could not log "render_partial.action_view" event. NoMethodError: undefined method `<<' for nil:NilClass
+  Rendered /Users/tye/Sites/rubyception/app/views/rubyception/lines/active_support/_cache_exist.haml (0.5ms)
+DEPRECATION WARNING: auto_flushing= is deprecated and will be removed from Rails 3.2. (called from <top (required)> at /Users/tye/Sites/rubyception/config/initializers/websocket_server.rb:5)
+Could not log "render_partial.action_view" event. NoMethodError: undefined method `<<' for nil:NilClass
+  Rendered /Users/tye/Sites/rubyception/app/views/rubyception/entries/_index.haml (0.9ms)
+Could not log "render_partial.action_view" event. NoMethodError: undefined method `<<' for nil:NilClass
+  Rendered /Users/tye/Sites/rubyception/app/views/rubyception/entries/_entry.haml (2.1ms)
+Could not log "render_partial.action_view" event. NoMethodError: undefined method `<<' for nil:NilClass
+  Rendered /Users/tye/Sites/rubyception/app/views/rubyception/backtrace_lines/_index.haml (1.8ms)
+Could not log "render_partial.action_view" event. NoMethodError: undefined method `<<' for nil:NilClass
+  Rendered /Users/tye/Sites/rubyception/app/views/rubyception/backtrace_lines/_backtrace_line.haml (1.3ms)
+Could not log "render_partial.action_view" event. NoMethodError: undefined method `<<' for nil:NilClass
+  Rendered /Users/tye/Sites/rubyception/app/views/rubyception/lines/_index.haml (0.8ms)
+Could not log "render_partial.action_view" event. NoMethodError: undefined method `<<' for nil:NilClass
+  Rendered /Users/tye/Sites/rubyception/app/views/rubyception/lines/action_controller/_write_fragment.haml (0.5ms)
+Could not log "render_partial.action_view" event. NoMethodError: undefined method `<<' for nil:NilClass
+  Rendered /Users/tye/Sites/rubyception/app/views/rubyception/lines/action_controller/_read_fragment.haml (0.5ms)
+Could not log "render_partial.action_view" event. NoMethodError: undefined method `<<' for nil:NilClass
+  Rendered /Users/tye/Sites/rubyception/app/views/rubyception/lines/action_controller/_expire_fragment.haml (0.5ms)
+Could not log "render_partial.action_view" event. NoMethodError: undefined method `<<' for nil:NilClass
+  Rendered /Users/tye/Sites/rubyception/app/views/rubyception/lines/action_controller/_exist_fragment.haml (0.5ms)
+Could not log "render_partial.action_view" event. NoMethodError: undefined method `<<' for nil:NilClass
+  Rendered /Users/tye/Sites/rubyception/app/views/rubyception/lines/action_controller/_write_page.haml (0.5ms)
+Could not log "render_partial.action_view" event. NoMethodError: undefined method `<<' for nil:NilClass
+  Rendered /Users/tye/Sites/rubyception/app/views/rubyception/lines/action_controller/_expire_page.haml (0.6ms)
+Could not log "render_partial.action_view" event. NoMethodError: undefined method `<<' for nil:NilClass
+  Rendered /Users/tye/Sites/rubyception/app/views/rubyception/lines/action_controller/_start_processing.haml (0.5ms)
+Could not log "render_partial.action_view" event. NoMethodError: undefined method `<<' for nil:NilClass
+  Rendered /Users/tye/Sites/rubyception/app/views/rubyception/lines/action_controller/_process_action.haml (0.5ms)
+Could not log "render_partial.action_view" event. NoMethodError: undefined method `<<' for nil:NilClass
+  Rendered /Users/tye/Sites/rubyception/app/views/rubyception/lines/action_controller/_send_file.haml (0.5ms)
+Could not log "render_partial.action_view" event. NoMethodError: undefined method `<<' for nil:NilClass
+  Rendered /Users/tye/Sites/rubyception/app/views/rubyception/lines/action_controller/_send_data.haml (0.7ms)
+Could not log "render_partial.action_view" event. NoMethodError: undefined method `<<' for nil:NilClass
+  Rendered /Users/tye/Sites/rubyception/app/views/rubyception/lines/action_controller/_redirect_to.haml (0.7ms)
+Could not log "render_partial.action_view" event. NoMethodError: undefined method `<<' for nil:NilClass
+  Rendered /Users/tye/Sites/rubyception/app/views/rubyception/lines/action_controller/_halted_callback.haml (0.6ms)
+Could not log "render_partial.action_view" event. NoMethodError: undefined method `<<' for nil:NilClass
+  Rendered /Users/tye/Sites/rubyception/app/views/rubyception/lines/action_view/_render_template.haml (1.7ms)
+Could not log "render_partial.action_view" event. NoMethodError: undefined method `<<' for nil:NilClass
+  Rendered /Users/tye/Sites/rubyception/app/views/rubyception/lines/action_view/_render_partial.haml (1.8ms)
+Could not log "render_partial.action_view" event. NoMethodError: undefined method `<<' for nil:NilClass
+  Rendered /Users/tye/Sites/rubyception/app/views/rubyception/lines/active_record/_sql.haml (1.6ms)
+Could not log "render_partial.action_view" event. NoMethodError: undefined method `<<' for nil:NilClass
+  Rendered /Users/tye/Sites/rubyception/app/views/rubyception/lines/active_record/_identity.haml (1.1ms)
+Could not log "render_partial.action_view" event. NoMethodError: undefined method `<<' for nil:NilClass
+  Rendered /Users/tye/Sites/rubyception/app/views/rubyception/lines/action_mailer/_receive.haml (0.5ms)
+Could not log "render_partial.action_view" event. NoMethodError: undefined method `<<' for nil:NilClass
+  Rendered /Users/tye/Sites/rubyception/app/views/rubyception/lines/action_mailer/_deliver.haml (0.5ms)
+Could not log "render_partial.action_view" event. NoMethodError: undefined method `<<' for nil:NilClass
+  Rendered /Users/tye/Sites/rubyception/app/views/rubyception/lines/active_resource/_request.haml (0.7ms)
+Could not log "render_partial.action_view" event. NoMethodError: undefined method `<<' for nil:NilClass
+  Rendered /Users/tye/Sites/rubyception/app/views/rubyception/lines/active_support/_cache_read.haml (0.5ms)
+Could not log "render_partial.action_view" event. NoMethodError: undefined method `<<' for nil:NilClass
+  Rendered /Users/tye/Sites/rubyception/app/views/rubyception/lines/active_support/_cache_generate.haml (0.5ms)
+Could not log "render_partial.action_view" event. NoMethodError: undefined method `<<' for nil:NilClass
+  Rendered /Users/tye/Sites/rubyception/app/views/rubyception/lines/active_support/_cache_fetch_hit.haml (0.5ms)
+Could not log "render_partial.action_view" event. NoMethodError: undefined method `<<' for nil:NilClass
+  Rendered /Users/tye/Sites/rubyception/app/views/rubyception/lines/active_support/_cache_write.haml (0.5ms)
+Could not log "render_partial.action_view" event. NoMethodError: undefined method `<<' for nil:NilClass
+  Rendered /Users/tye/Sites/rubyception/app/views/rubyception/lines/active_support/_cache_delete.haml (0.5ms)
+Could not log "render_partial.action_view" event. NoMethodError: undefined method `<<' for nil:NilClass
+  Rendered /Users/tye/Sites/rubyception/app/views/rubyception/lines/active_support/_cache_exist.haml (0.5ms)
