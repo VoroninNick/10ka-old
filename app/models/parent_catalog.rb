@@ -7,7 +7,7 @@ class ParentCatalog < ActiveRecord::Base
 
   before_validation :generate_slug_for_p_catalog
 
-  has_many :child_catalogs
+  has_many :child_catalogs, :through => :products
   belongs_to :catalog
 
   def to_param

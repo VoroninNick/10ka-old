@@ -11,7 +11,7 @@ class ChildCatalog < ActiveRecord::Base
   before_validation :generate_slug_for_c_catalog
 
   belongs_to :parent_catalog
-  has_many :products
+  has_many :products #, :through => :parent_catalog
 
   has_attached_file :avatar, :styles => { :tab => '70x70>', :admin_prv => '50x50>' },
                     :url  => '/assets/child-catalog/:id/:style/:basename.:extension',

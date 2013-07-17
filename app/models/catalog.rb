@@ -7,8 +7,9 @@ class Catalog < ActiveRecord::Base
 
   before_validation :generate_slug_for_catalog
 
-  has_many :parent_catalogs
+  has_many :parent_catalogs #, :through => :child_catalogs
   belongs_to :home_position
+  belongs_to :parent_catalog
 
   rails_admin do
     label 'Каталог'
