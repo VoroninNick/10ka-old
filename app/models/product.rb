@@ -40,6 +40,8 @@ class Product < ActiveRecord::Base
     self.slug ||= name.parameterize
   end
 
+
+
 	rails_admin do
 
 		edit do

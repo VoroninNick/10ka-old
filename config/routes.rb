@@ -15,5 +15,12 @@ App10k::Application.routes.draw do
   match 'catalog/:catalog_id/:parent_catalog_id/:id'                        => 'catalogs#show_child', :via => :get, :as => 'child_show'
   match 'catalog/:catalog_id/:parent_catalog_id/:child_catalog_id/:id'      => 'catalogs#show_product', :via => :get, :as => 'product_show'
   match 'public/xml/gmap'                                           => redirect('/public/xml/gmap.xml')
+
+  # new catalog
+  match 'c' => 'new_catalog#index', :as => 'new_catalog_all'
+  match 'c/:id' => 'new_catalog#get_catalog', :as => 'new_catalog'
+  match 'c/:new_catalog_id/:id' => 'new_catalog#get_parent', :as => 'new_catalog_parent'
+  match 'c/:new_catalog_id/:new_parent_catalog_id/:id' => 'new_catalog#get_child', :as => 'new_catalog_child'
+  match 'c/:new_catalog_id/:new_parent_catalog_id/:new_child_catalog_id/:id' => 'new_catalog#get_product', :as => 'new_product'
   root :to                                                          => 'page#index'
 end

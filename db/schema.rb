@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130503145332) do
+ActiveRecord::Schema.define(:version => 20130719112211) do
 
   create_table "articles", :force => true do |t|
     t.string   "name"
@@ -87,6 +87,50 @@ ActiveRecord::Schema.define(:version => 20130503145332) do
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
+
+  create_table "new_catalogs", :force => true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+    t.string   "slug"
+  end
+
+  add_index "new_catalogs", ["slug"], :name => "index_new_catalogs_on_slug"
+
+  create_table "new_child_catalogs", :force => true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.integer  "new_parent_catalog_id"
+    t.datetime "created_at",            :null => false
+    t.datetime "updated_at",            :null => false
+    t.string   "slug"
+    t.integer  "new_product_id"
+  end
+
+  add_index "new_child_catalogs", ["slug"], :name => "index_new_child_catalogs_on_slug"
+
+  create_table "new_parent_catalogs", :force => true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.integer  "new_catalog_id"
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
+    t.string   "slug"
+  end
+
+  add_index "new_parent_catalogs", ["slug"], :name => "index_new_parent_catalogs_on_slug"
+
+  create_table "new_products", :force => true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.integer  "new_child_catalog_id"
+    t.datetime "created_at",           :null => false
+    t.datetime "updated_at",           :null => false
+    t.string   "slug"
+  end
+
+  add_index "new_products", ["slug"], :name => "index_new_products_on_slug"
 
   create_table "parent_catalogs", :force => true do |t|
     t.string   "name"

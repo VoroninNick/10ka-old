@@ -18,6 +18,8 @@ class ChildCatalog < ActiveRecord::Base
                     :path => ':rails_root/public/assets/child-catalog/:id/:style/:basename.:extension'
 
 
+
+
   rails_admin do
     label 'Производитель'
     label_plural 'Производители'
@@ -53,5 +55,17 @@ class ChildCatalog < ActiveRecord::Base
   def generate_slug_for_c_catalog
     name_slugged = name + parent_catalog.slug
     self.slug ||= name_slugged.parameterize
+  end
+
+  def self.fullname
+	  self.parent_catalog.catalog.name + self.parent_catalog.name + self.name
+  end
+
+  def self.value
+	  self.parent_catalog.catalog.name + self.parent_catalog.name + self.name
+  end
+
+  def self.title
+	  self.parent_catalog.catalog.name + self.parent_catalog.name + self.name
   end
 end
