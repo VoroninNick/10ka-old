@@ -1,4 +1,4 @@
- <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script> 
+ <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyAvkI36T-T6xJe8Qif7QkbQ1xvTl8Ha_9o&sensor=false"></script>
 <!-- temporarily commenthed  because of absent Internet connection -->
 <div id="gmap-wrapper" class="container f-height">
   <div class="g12">
@@ -6,22 +6,22 @@
   </div>
   <div class="g12" id="map-container">
   <div id="map">
-    
+
   </div>
 </div>
 </div>
 <script type="text/javascript">
 
-$.ajax('http://maps.google.com/maps/api/geocode/xml?address=Городоцька%20357&sensor=false',
+$.ajax('xml/gmap.xml',
 	{success:function(xml){
 		fullxml=xml;
 		if($('status',xml).text()=='OK')
 		{
 
 
-			var lat=$('geometry location lat',xml).text();
-			var lng=$('geometry location lng',xml).text();
-			//alert('lat:'+lat+';lng:'+lng);		
+			var lat= 49.8163609;//$('geometry location lat',xml).text();
+			var lng= 23.9259267;//$('geometry location lng',xml).text();
+			//alert('lat:'+lat+';lng:'+lng);
 			//var map=new GMaps({
   			//	el: '#map',
   			//	lat: lat,
@@ -33,9 +33,9 @@ $.ajax('http://maps.google.com/maps/api/geocode/xml?address=Городоцька
 			//var marker = new google.maps.Marker({
    			// 	position: myLatlng,
     		//	map: map,
-    		//	title:"Hello World!" 
+    		//	title:"Hello World!"
 			//});
-			
+
 				var myLatlng = new google.maps.LatLng(lat, lng);
 				var myOptions = {
         			zoom: 15,
@@ -47,13 +47,13 @@ $.ajax('http://maps.google.com/maps/api/geocode/xml?address=Городоцька
     			var marker = new google.maps.Marker({
     				position: myLatlng,
     				map: map,
-    				title:"Гуртівня будівельних товарів \"Десятка\"" 
-				}); 
+    				title:"Гуртівня будівельних товарів \"Десятка\""
+				});
 }
 //initialize();
-		
+
 		}
-	
+
 });
 /* temporarily commenthed  because of absent Internet connection */
 $(window).resize(function(){

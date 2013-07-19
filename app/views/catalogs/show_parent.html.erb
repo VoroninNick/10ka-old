@@ -40,7 +40,7 @@
           </div>
         <% end %>
       </div>
-    
+
 
 </div><!-- /tab-control -->
     <div id="tabcontents" class="f-height">
@@ -57,19 +57,19 @@
             <div class="top-border">&nbsp;</div>
             <%# fetch_all_child_ids(@parent_catalog.id).each do |child_ids| %>
             <% fetch_all_products_by_parent(@parent_catalog.id).each do |pr| %>
-	    <% if pr.present? %>
-              <div class="online-item" data-id="" data-catalog-name="" data-price="">
-                <%= link_to image_tag(pr.avatar.url(:prod), :alt => pr.name), catalog_main_path+'/'+@catalog_slug.slug+'/'+parent_slug(get_first_child(@parent_catalog.id).id)+'/'+get_first_child(@parent_catalog.id).slug+'/'+pr.slug, :title => pr.name, :class => '' %>
-                <p><%= pr.name %></p>
-                <%= link_to 'Детальніше', catalog_main_path+'/'+@catalog_slug.slug+'/'+parent_slug(get_first_child(@parent_catalog.id).id)+'/'+get_first_child(@parent_catalog.id).slug+'/'+pr.slug, :title => pr.name, :class => 'submit-branded animate' %>
-              </div>
-            <% end %>
+	             <% if pr.present? %>
+                <div class="online-item" data-id="" data-catalog-name="" data-price="">
+                  <%= link_to image_tag(pr.avatar.url(:prod), :alt => pr.name), catalog_main_path+'/'+@catalog_slug.slug+'/'+parent_slug(get_first_child(@parent_catalog.id).id)+'/'+get_first_child(@parent_catalog.id).slug+'/'+pr.slug, :title => pr.name, :class => '' %>
+                  <p><%= pr.name %></p>
+                  <%= link_to 'Детальніше', catalog_main_path+'/'+@catalog_slug.slug+'/'+parent_slug(get_first_child(@parent_catalog.id).id)+'/'+get_first_child(@parent_catalog.id).slug+'/'+pr.slug, :title => pr.name, :class => 'submit-branded animate' %>
+                </div>
+              <% end %>
             <% end %>
           </div> <!-- /Online store -->
         </div> <!-- /products -->
       </div>
     </div>
-    
+
   </div>
 
 </div> <!-- / div#catalog-content -->
@@ -141,7 +141,7 @@
 
               $('#tabcontents .tab-content-wrapper').html($tab_content);
                 //var $catalog_content=$('div#catalog-content');
-                //var $catalog_parent=$catalog_content.find('div#catalog-parent');                 
+                //var $catalog_parent=$catalog_content.find('div#catalog-parent');
 
                 $tabs.filter('.active').removeClass('active');
                 $tab.addClass('active');
@@ -151,7 +151,7 @@
 
                 // add url handler
 
-                
+
           }
         });
         }

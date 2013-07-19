@@ -41,7 +41,7 @@ class ApplicationController < ActionController::Base
   end
 
   def parent_slug(parent_id)
-    @parent_slug ||= ParentCatalog.find(parent_id).slug
+    @parent_slug = ParentCatalog.find(parent_id).slug
   end
 
   def fetch_all_products(ids)

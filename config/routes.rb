@@ -14,5 +14,6 @@ App10k::Application.routes.draw do
   match 'catalog/:catalog_id/:id'                                   => 'catalogs#show_parent', :via => :get, :as => 'parent_show'
   match 'catalog/:catalog_id/:parent_catalog_id/:id'                        => 'catalogs#show_child', :via => :get, :as => 'child_show'
   match 'catalog/:catalog_id/:parent_catalog_id/:child_catalog_id/:id'      => 'catalogs#show_product', :via => :get, :as => 'product_show'
+  match 'public/xml/gmap'                                           => redirect('/public/xml/gmap.xml')
   root :to                                                          => 'page#index'
 end

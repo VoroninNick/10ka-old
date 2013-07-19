@@ -60,6 +60,9 @@ class Product < ActiveRecord::Base
 				help 'Описание должны быть немение 15 символов'
 				ckeditor true
 			end
+			field :avatar do
+				label 'Главное изображение'
+			end
 		end
 	end
 
