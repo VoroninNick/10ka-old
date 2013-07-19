@@ -11,12 +11,15 @@ class NewChildCatalog < ActiveRecord::Base
   rails_admin do
 	  edit do
 		  field :name
-		  field :description do
-			  ckeditor true
+
+		  field :new_parent_catalog do
+
 		  end
-		  field :new_parent_catalog
 		  field :slug do
 			  read_only true
+		  end
+		  field :description do
+			  ckeditor true
 		  end
 	  end
   end
@@ -29,4 +32,14 @@ class NewChildCatalog < ActiveRecord::Base
 		url = name + '-' + new_parent_catalog.name
 	  self.slug ||= url.parameterize
   end
+
+  def self.fullname
+		"#{self.new_parent_catalog.name} #{self.name}"
+  end
+
+  #def self.name
+	 # parent_catalog = NewCatalog.find(self.new_parent_catalog).first
+	 # self.new_catalog.name = "#{parent_catalog.name self.name}"
+  #end
+
 end

@@ -1,6 +1,9 @@
 class NewProduct < ActiveRecord::Base
   attr_accessible :description, :name, :new_child_catalog_id, :new_child_catalog, :slug, :avatar, :delete_avatar
 	has_one :new_child_catalog
+  belongs_to :new_child_catalog
+  #belongs_to :new_parent_catalog
+
 
   validates :name, presence: true
   validates :slug, uniqueness: true, presence: true
@@ -16,23 +19,40 @@ class NewProduct < ActiveRecord::Base
                     :path => ':rails_root/public/assets/pr/:id/:style/:basename.:extension'
 
   rails_admin do
+	  label 'Товары'
 	  edit do
-		  field :name
+		  field :name do
+			  label 'Название'
+		  end
 		  field :description do
+			  label 'Описание'
 			  ckeditor true
 		  end
-		  field :new_child_catalog
-		  field :avatar do
+		  field :new_child_catalog do
+			  label 'Категория'
+		  end
 
+		  field :avatar do
+				label 'Изображение'
 		  end
 		  field :slug do
 			  read_only true
+			  label 'Ссылка'
 		  end
 	  end
 	  list do
-		  field :name
-		  field :slug
-		  field :new_child_catalog
+		  field :name do
+			  label 'Название'
+		  end
+		  field :new_child_catalog do
+			  label 'Категория'
+		  end
+		  field :slug do
+			  label 'Ссылка'
+		  end
+		  field :avatar do
+			  label 'Изображение'
+		  end
 	  end
   end
 
