@@ -21,7 +21,7 @@
 	/* header properties for all resolutions */
 	
 	background: url(/assets/header-bg.jpg) repeat-x;
-	padding-bottom: 0;
+	padding-bottom: 20px;
 
 	div.mobile-menu-button {
   		display: none;
@@ -59,20 +59,23 @@
 	}
 
 	nav ul.header-nav li a{
-  		font-weight: 300;
+  		font-weight: 400;
   		color: #bf291f;
   		text-decoration: none;
-  		font-size: 1em;
+  		font-size: 1.15em;
 
   		-webkit-transition: 0.6s ease-out all;
   		-moz-transition: 0.6s ease-out all;
   		-ms-transition: 0.6s ease-out all;
   		-o-transition: 0.6s ease-out all;
   		transition: 0.6s ease-out all;
+
+      border-bottom: 1px solid rgba(191, 41, 31, 0);
 	}
 
 	nav ul.header-nav li a:hover{
   		text-decoration: none;
+      border-bottom: 1px solid rgba(191, 41, 31, 1);
 	}
 
 	nav ul.header-nav li.underline:hover a:hover{
@@ -106,7 +109,7 @@
 	nav ul.header-nav li.active span,
 	nav ul.header-nav li.active{
   		color: #a3a3a3;
-  		font-size: 1em;
+  		font-size: 1.15em;
   		text-shadow: 0 1px 0 rgba(255,255,255,.46);
 	}
 
@@ -327,12 +330,16 @@
 	/* footer properties for all resolutions */
 
   	background: url(/assets/footer-bg.jpg) repeat-x transparent;
+    height: 235px;
 
 	h2{
   		color: #bf291f;
   		font-weight: 300;
   		margin: 0 0 0.83em 0;
 	}
+  .contact-info-row{
+    margin-top: 70px;
+  }
 
 	.contact-info-row.contacts p a.tel
 	{
@@ -671,3 +678,8 @@
 	/* end sponsor properties for all resolutions */
 }
 /* sponsor end */
+
+
+.footer-pusher, .header-pusher{
+  @extend .clearfix;
+}

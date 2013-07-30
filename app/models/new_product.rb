@@ -1,8 +1,10 @@
 class NewProduct < ActiveRecord::Base
   attr_accessible :description, :name, :new_child_catalog_id, :new_child_catalog, :slug, :avatar, :delete_avatar
 	has_one :new_child_catalog
+  #accepts_nested_attributes_for :new_child_catalog
   belongs_to :new_child_catalog
   #belongs_to :new_parent_catalog
+  #has_and_belongs_to_many :new_child_catalogs
 
 
   validates :name, presence: true
