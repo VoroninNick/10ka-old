@@ -331,6 +331,66 @@
 
   	background: url(/assets/footer-bg.jpg) repeat-x transparent;
     height: 235px;
+    color: rgba(178, 178, 178, 1);
+    font-size: 0.95em;
+
+  a{
+    -webkit-transition: 0.6s ease-out all;
+    -moz-transition: 0.6s ease-out all;
+    -ms-transition: 0.6s ease-out all;
+    -o-transition: 0.6s ease-out all;
+    transition: 0.6s ease-out all;
+    border-bottom: 1px solid rgba(178, 178, 178, 0.45);
+    &:hover{
+      border-bottom: 1px solid rgba(178, 178, 178, 1);
+    }
+  }
+
+  .me-color{
+    margin-left: 50px;
+    color: #bf291f;
+  }
+
+  .me2{
+    margin-left: 85px;
+  }
+
+  .sub-title{
+    font-style: italic;
+    padding-top: 10px;
+  }
+
+  .tel{
+    border-bottom: 0 !important;
+  }
+
+  .sub-title{
+    a{
+      color: rgba(178, 178, 178, 1);
+      -webkit-transition: 0.6s ease-out all;
+      -moz-transition: 0.6s ease-out all;
+      -ms-transition: 0.6s ease-out all;
+      -o-transition: 0.6s ease-out all;
+      transition: 0.6s ease-out all;
+      border-bottom: 1px solid rgba(178, 178, 178, 0.45);
+      &:hover{
+        border-bottom: 1px solid rgba(178, 178, 178, 1);
+      }
+    }
+  }
+
+  #sale{
+    a{
+      margin-left: 20px;
+    }
+  }
+
+  #office{
+    a{
+      margin-left: 43px;
+    }
+  }
+
 
 	h2{
   		color: #bf291f;
