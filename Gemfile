@@ -14,6 +14,7 @@ gem 'flexslider', :github => 'vikewoods/Flexslider-2-Rails-Gem'
 gem 'rubyception'
 gem 'ckeditor'
 #gem 'will_paginate', '~> 3.0'
+gem 'ruby-prof'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'

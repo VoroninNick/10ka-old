@@ -743,3 +743,19 @@
 .footer-pusher, .header-pusher{
   @extend .clearfix;
 }
+
+
+.error{
+  border: 1px solid #bf291f !important;
+}
+
+.jquery_form_error_message{
+  color: #bf291f !important;
+  text-align: right;
+  margin-left: 25px;
+}
+
+#contact-page-wrapper #contact-wrapper .contact-info-row p.sub-title{
+  padding-top: 10px;
+  font-size: 0.95em !important;
+}

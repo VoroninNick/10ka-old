@@ -42,19 +42,19 @@
     <div id="fields"  class="g5 alpha">
       <div id="validate_name" class="row-input">
         <%= form.text_field :name, :data => { :'validation' => "validate_min_length length3",
-          :'validation-error-msg' => " Name length must be minimum 3 characters" } %>
+          :'validation-error-msg' => " Введіть будь-ласка Ваше імя!" } %>
         <%= form.label "Ім'я" %>
         <span id="validate_name"></span>
       </div>
       <div id="validate_email" class="row-input">
         <%= form.text_field :email, :data => { :'validation' => "validate_email",
-          :'validation-error-msg' => " Email must be correct" } %>
+          :'validation-error-msg' => " Введіть будь-ласка Вашу поштову скриньку!" } %>
         <%= form.label "Електронна пошта" %>
         <span id="validate_email"></span>
       </div>
       <div id="validate_phone" class="row-input">
         <%= form.text_field :phone, :data => { :'validation' => "validate_phone",
-          :'validation-error-msg' => "Phone must be correct" } %>
+          :'validation-error-msg' => "Введіть будь-ласка Ваш телефон!" } %>
         <%= form.label "Телефон" %>
         <span id="validate_phone"></span>
       </div>
@@ -62,7 +62,7 @@
     <div class="g7 omega">
       <div class="row-input">
         <%= form.text_area :body, :data => { :'validation' => "required",
-          :'validation-error-msg' => "This field is required" } %>
+          :'validation-error-msg' => "Введіть будь-ласка Ваше повідомлення!" } %>
         <%= form.label "Повідомлення" %>
       </div>
 
