@@ -176,6 +176,7 @@ GEM
     rdoc (3.12.1)
       json (~> 1.4)
     remotipart (1.0.5)
+    ruby-prof (0.13.0)
     rubyception (0.2.0)
       coffee-script
       compass
@@ -230,6 +231,7 @@ DEPENDENCIES
   rails (= 3.2.11)
   rails-i18n
   rails_admin!
+  ruby-prof
   rubyception
   russian
   sass-rails (~> 3.2.3)
