@@ -13,4 +13,5 @@
 //= require jquery
 //= require jquery_ujs
 //= require flexslider
+//= require modernizr.custom.79639
 //= require_tree .

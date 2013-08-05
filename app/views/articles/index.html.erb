@@ -5,23 +5,9 @@
 <div id="articles-wrapper" class="f-height">
   <!-- Article slider -->
   <div class="shadow-top"></div>
-  <script type="text/javascript">
-    $(document).ready(function() {
 
-    });
-  </script>
   <div class="g12 f-height">
-    <div id="article-banner-wrapper" class="">
-      <div class="item">
-        <%= image_tag('banner.jpg') %>
-        <div class="article-slide-descr">
-          <p class="article-h">Колір в інтерєрі: важливі аспекти контрасту та якості фарби для роботи</p>
-          <p class="article-p">Модальное письмо может быть реализовано на основе принципов центропостоянности и центропеременности, таким образом аккорд образует соноропериод...</p>
-          <a href="#" class="submit-branded animate">Дізнатись більше!</a>
-        </div>
-      </div>
-
-    </div>
+		<%= render :partial => 'partials/article_banner' %>
   </div>
   <div class="shadow-bottom"></div>
   <!-- /Article slider -->
