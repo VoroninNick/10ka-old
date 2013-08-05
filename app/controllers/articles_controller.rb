@@ -9,6 +9,8 @@ class ArticlesController < ApplicationController
 
   def show
     @article = Article.find_by_slug!(params[:id])
+		@article_next = Article.first
+    @article_prev = Article.last
   end
 
 end

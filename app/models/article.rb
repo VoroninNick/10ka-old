@@ -7,7 +7,7 @@ class Article < ActiveRecord::Base
 
   before_validation :generate_slug_for_article
 
-  has_attached_file :avatar, :styles => { :main => "707x108#", :banner => "1920x360#", :banner_item => "2400x440#" }
+  has_attached_file :avatar, :styles => { :main => "707x108#", :banner => "1920x360#", :banner_item => "2400x440#", :article_next_pre => "203x98#" }
 
   def to_param
     slug
