@@ -24,13 +24,6 @@ GIT
   specs:
     flexslider (2.0.1)
 
-GIT
-  remote: git://github.com/vikewoods/fancybox-rails.git
-  revision: 0060b8f8db0bfb46c6c83ab85cba8f9d43bf9d0c
-  specs:
-    fancybox-rails (0.1.5)
-      railties (>= 3.1.0)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -223,7 +216,6 @@ DEPENDENCIES
   ckeditor
   coffee-rails (~> 3.2.1)
   devise
-  fancybox-rails!
   flexslider!
   jquery-rails
   meta_request
