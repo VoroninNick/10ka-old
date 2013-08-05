@@ -101,9 +101,11 @@ RailsAdmin.config do |config|
   #     # using `field` instead of `configure` will exclude all other fields and force the ordering
         edit do
           field :name, :string
+          field :short_description, :text
           field :description, :text do
             ckeditor true
           end
+          field :featured, :boolean
           field :avatar, :paperclip
         end
   end

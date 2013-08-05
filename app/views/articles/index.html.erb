@@ -17,29 +17,13 @@
   <div class="g12">
     <h1>Статті</h1>
   </div>
-  <div class="g6 news-item alpha g6-alpha">
-    <h2 class="article-header">Колір в інтерєрі: важливі аспекти контрасту та якості фарби для роботи</h2>
-    <div class="image-cont"><%= image_tag('article.jpg') %></div>
-    <p class="article-short-description">Модальное письмо может быть реализовано на основе принципов центропостоянности и центропеременности, таким образом аккорд образует соноропериод, и здесь в качестве модуса конструктивных элементов используется ряд каких-либо единых длительностей.</p>
-  </div><!-- g6 news-item -->
-
-  <div class="g6 news-item omega g6-omega">
-    <h2 class="article-header">Колір в інтерєрі: важливі аспекти контрасту та якості фарби для роботи</h2>
-    <div class="image-cont"><%= image_tag('article.jpg') %></div>
-    <p class="article-short-description">Модальное письмо может быть реализовано на основе принципов центропостоянности и центропеременности, таким образом аккорд образует соноропериод, и здесь в качестве модуса конструктивных элементов используется ряд каких-либо единых длительностей.</p>
-  </div><!-- g6 news-item -->
-
-  <div class="g6 news-item alpha g6-alpha">
-    <h2 class="article-header">Колір в інтерєрі: важливі аспекти контрасту та якості фарби для роботи</h2>
-    <div class="image-cont"><%= image_tag('article.jpg') %></div>
-    <p class="article-short-description">Модальное письмо может быть реализовано на основе принципов центропостоянности и центропеременности, таким образом аккорд образует соноропериод, и здесь в качестве модуса конструктивных элементов используется ряд каких-либо единых длительностей.</p>
-  </div><!-- g6 news-item -->
-
-  <div class="g6 news-item omega g6-omega">
-    <h2 class="article-header">Колір в інтерєрі: важливі аспекти контрасту та якості фарби для роботи</h2>
-    <div class="image-cont"><%= image_tag('article.jpg') %></div>
-    <p class="article-short-description">Модальное письмо может быть реализовано на основе принципов центропостоянности и центропеременности, таким образом аккорд образует соноропериод, и здесь в качестве модуса конструктивных элементов используется ряд каких-либо единых длительностей.</p>
-  </div><!-- g6 news-item -->
+	<% @articles.each do |article| %>
+		<div class="g6 news-item <%= cycle('alpha g6-alpha', 'omega g6-omega') %> ">
+			<h2 class="article-header"><%= link_to article.name, article_item_path(article), :title => article.name %></h2>
+			<div class="image-cont"><%= link_to(image_tag(article.avatar.url('main')), article_item_path(article), :title => article.name) %></div>
+			<p class="article-short-description"><%= article.short_description %></p>
+		</div><!-- g6 news-item -->
+	<% end %>
 </div>
 <!-- /Articles -->
 

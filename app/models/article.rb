@@ -1,13 +1,13 @@
 # -*- encoding : utf-8 -*-
 class Article < ActiveRecord::Base
-  attr_accessible :description, :name, :avatar
+  attr_accessible :description, :name, :avatar, :short_description, :featured
 
   validates :name, presence: true
   validates :slug, uniqueness: true, presence: true
 
   before_validation :generate_slug_for_article
 
-  has_attached_file :avatar
+  has_attached_file :avatar, :styles => { :main => "707x108#", :banner => "1920x360#", :banner_item => "2400x440#" }
 
   def to_param
     slug

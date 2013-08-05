@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130719142410) do
+ActiveRecord::Schema.define(:version => 20130805132740) do
 
   create_table "articles", :force => true do |t|
     t.string   "name"
@@ -23,6 +23,8 @@ ActiveRecord::Schema.define(:version => 20130719142410) do
     t.string   "avatar_content_type"
     t.integer  "avatar_file_size"
     t.datetime "avatar_updated_at"
+    t.text     "short_description"
+    t.boolean  "featured"
   end
 
   add_index "articles", ["slug"], :name => "index_articles_on_slug"
