@@ -53,9 +53,33 @@
 }
 
 // Article banner partial
+.main-banner-bg{
+ width: 100%;
+ height: 444px;
+ background: url('main-banner-bg.png') repeat-x;
+ zoom: 1;
+
+  &:after,
+  &:before{
+    content: '\0020';
+    display: block;
+    overflow: hidden;
+    visibility: hidden;
+    width: 0;
+    height: 0;
+  }
+
+  &:after{
+    clear: both;
+  }
+  .g12{
+    margin-top: 30px;
+  }
+}
+
 #article-banner-wrapper{
   zoom: 1;
-
+  height: 360px;
   &:after,
   &:before{
     content: '\0020';
@@ -73,7 +97,7 @@
   //all for slider
   .sl-slider-wrapper {
     width: 100%;
-    height: 400px;
+    height: 360px;
     margin: 0 auto;
     position: relative;
     overflow: hidden;
@@ -85,7 +109,7 @@
     left: 0;
 
     width: 100%;
-    height: 400px;
+    height: 360px;
   }
 
   /* Slide wrapper and slides */
@@ -103,12 +127,12 @@
   .sl-slide {
     z-index: 1;
     width: 100%;
-    height: 400px;
+    height: 360px;
   }
 
   .bg-img{
     width: 100%;
-    height: 400px;
+    height: 360px;
   }
 
     /* The duplicate parts/slices */
@@ -216,7 +240,7 @@
   #item-description{
     position: absolute;
     width: 600px;
-    height: 392px;
+    height: 352px;
     top: 0;
     right: 0;
 
