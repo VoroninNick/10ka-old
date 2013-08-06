@@ -15,6 +15,7 @@ class Banner < ActiveRecord::Base
 
 	rails_admin do
 		label 'Баннера главной страницы'
+		label_plural 'Баннера главной страницы'
 		list do
 			field :name do
 				label 'Название'

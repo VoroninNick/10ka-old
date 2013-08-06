@@ -22,6 +22,7 @@ class NewProduct < ActiveRecord::Base
 
   rails_admin do
 	  label 'Товары'
+	  label_plural 'Товары'
 	  edit do
 		  field :name do
 			  label 'Название'

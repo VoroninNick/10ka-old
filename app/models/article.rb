@@ -21,6 +21,7 @@ class Article < ActiveRecord::Base
 
 	rails_admin do
 		label 'Новости'
+		label_plural 'Новости'
 		list do
 			field :featured do
 				label 'Отображать баннер'

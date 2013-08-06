@@ -3,6 +3,7 @@ class Text < ActiveRecord::Base
 
 	rails_admin do
 		label 'Текста'
+		label_plural 'Текста'
 		list do
 			field :name do
 				label 'Название'

@@ -17,6 +17,7 @@ class Sponsor < ActiveRecord::Base
 
 	rails_admin do
 		label 'Спонсоры'
+		label_plural 'Спонсоры'
 		list do
 			field :sponsor do
 				label 'Изображение'

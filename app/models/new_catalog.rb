@@ -9,6 +9,7 @@ class NewCatalog < ActiveRecord::Base
 
   rails_admin do
 	  label 'Каталог I уровня'
+	  label_plural 'Каталог I уровня'
 	  list do
 		  field :name do
 			  label 'Название'

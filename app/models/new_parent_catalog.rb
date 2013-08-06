@@ -10,6 +10,7 @@ class NewParentCatalog < ActiveRecord::Base
 
   rails_admin do
 	  label 'Каталог II уровня'
+	  label_plural 'Каталог II уровня'
 	  list do
 		  field :name do
 			  label 'Название'
