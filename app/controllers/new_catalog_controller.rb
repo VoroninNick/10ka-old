@@ -4,6 +4,7 @@ class NewCatalogController < ApplicationController
 
   def index
 		@new_catalogs = NewCatalog.all
+		@description_dummy = Text.find(1)
   end
 
   def get_catalog

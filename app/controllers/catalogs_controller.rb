@@ -5,6 +5,7 @@ class CatalogsController < ApplicationController
   def index
     @catalogs ||= Catalog.all
     respond_with(@catalogs)
+		@description_dummy = Text.find(1)
   end
 
   def show

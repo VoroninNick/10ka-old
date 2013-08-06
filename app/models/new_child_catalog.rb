@@ -9,18 +9,31 @@ class NewChildCatalog < ActiveRecord::Base
   before_validation :generate_url
 
   rails_admin do
-	  edit do
-		  field :name
-
-		  field :new_parent_catalog do
-
+	  label 'Каталог III уровня'
+	  list do
+		  field :name do
+			  label 'Название'
 		  end
-		  field :slug do
-			  read_only true
+		  field :new_parent_catalog do
+			  label 'Каталог (II уровень)'
+		  end
+	  end
+	  edit do
+		  field :name do
+			  label 'Название'
+		  end
+		  field :new_parent_catalog do
+				label 'Каталог (II уровень)'
 		  end
 		  field :description do
 			  ckeditor true
+			  label 'Описание'
 		  end
+		  field :slug do
+			  read_only true
+			  label 'url'
+		  end
+
 	  end
   end
 

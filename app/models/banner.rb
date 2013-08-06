@@ -12,4 +12,31 @@ class Banner < ActiveRecord::Base
   has_attached_file :banner, :styles => { :thumb => '150x150>' },
                   :url  => '/assets/banner/:id/:style/:basename.:extension',
                   :path => ':rails_root/public/assets/banner/:id/:style/:basename.:extension'
+
+	rails_admin do
+		label 'Баннера главной страницы'
+		list do
+			field :name do
+				label 'Название'
+			end
+			field :description do
+				label 'Описание'
+			end
+			field :banner do
+				label 'Изображение'
+			end
+		end
+		edit do
+			field :name do
+				label 'Название'
+			end
+			field :description do
+				label 'Описание'
+			end
+			field :banner do
+				label 'Изображение'
+			end
+		end
+	end
+
 end

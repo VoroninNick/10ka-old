@@ -4,6 +4,8 @@ class Article < ActiveRecord::Base
 
   validates :name, presence: true
   validates :slug, uniqueness: true, presence: true
+  validates :description, presence: true
+  validates :short_description, presence: true
 
   before_validation :generate_slug_for_article
 
@@ -16,4 +18,38 @@ class Article < ActiveRecord::Base
   def generate_slug_for_article
     self.slug ||= name.parameterize
   end
+
+	rails_admin do
+		label 'Новости'
+		list do
+			field :featured do
+				label 'Отображать баннер'
+			end
+			field :name do
+				label 'Название'
+			end
+			field :short_description do
+				label 'Короткое описание'
+			end
+		end
+
+		edit do
+			field :featured do
+				label 'Отображать баннер'
+			end
+			field :name do
+				label 'Название'
+			end
+			field :short_description do
+				label 'Короткое описание'
+			end
+			field :description do
+				ckeditor true
+				label 'Описание'
+			end
+			field :avatar do
+				label 'Изображение'
+			end
+		end
+	end
 end

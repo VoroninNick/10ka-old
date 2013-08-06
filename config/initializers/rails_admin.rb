@@ -7,7 +7,7 @@ RailsAdmin.config do |config|
   ################  Global configuration  ################
 
   # Set the admin name here (optional second array element will appear in red). For example:
-  config.main_app_name = ['App10k', 'Admin']
+  config.main_app_name = ['10ka', 'admin section']
   # or for a more dynamic name:
   # config.main_app_name = Proc.new { |controller| [Rails.application.engine_name.titleize, controller.params['action'].titleize] }
 
@@ -27,7 +27,7 @@ RailsAdmin.config do |config|
   # config.default_items_per_page = 20
 
   # Exclude specific models (keep the others):
-  config.excluded_models = ['Catalog', 'ChildCatalog', 'HomePosition', 'ParentCatalog', 'Product']
+  config.excluded_models = ['Catalog', 'ChildCatalog', 'HomePosition', 'ParentCatalog', 'Product', 'Ckeditor::Asset', 'Ckeditor::AttachmentFile', 'Ckeditor::Picture', 'User']
 
   # Include specific models (exclude the others):
   # config.included_models = ['Article', 'Banner', 'Catalog', 'ChildCatalog', 'Ckeditor::Asset', 'Ckeditor::AttachmentFile', 'Ckeditor::Picture', 'HomePosition', 'ParentCatalog', 'Product', 'Sponsor', 'User']
