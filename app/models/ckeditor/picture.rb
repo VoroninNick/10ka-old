@@ -10,4 +10,10 @@ class Ckeditor::Picture < Ckeditor::Asset
   def url_content
     url(:content)
   end
+
+  rails_admin do
+	  label 'Изображение для публикаций'
+	  label_plural 'Изображения для публикаций'
+  end
+
 end
