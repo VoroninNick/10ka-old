@@ -5,6 +5,7 @@ class ArticlesController < ApplicationController
 
   def index
     @articles = Article.all
+		@fetuared = Article.find_all_by_featured(:t)
   end
 
   def show
