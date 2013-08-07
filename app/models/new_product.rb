@@ -23,6 +23,7 @@ class NewProduct < ActiveRecord::Base
   rails_admin do
 	  label 'Товар'
 	  label_plural 'Товары'
+
 	  edit do
 		  field :name do
 			  label 'Название'
@@ -33,11 +34,19 @@ class NewProduct < ActiveRecord::Base
 		  end
 		  field :new_child_catalog do
 			  label 'Категория'
-			  pretty_value do
-				  new_child_catalog_id = bindings[:object].new_child_catalog_id
-				  proper_name = bindings[:view].proper_name(new_child_catalog_id)
-				  bindings[:view].link_to "#{proper_name}", bindings[:view].rails_admin.show_path('new_child_catalog', new_child_catalog_id)
-			  end
+			  inline_add false
+			  #enum do
+				#  ['1a', '1b', '2a', '2b', '3a', '3b', '4a', '4b', '5']
+			  #end
+			  #enum do
+				#  except = bindings[:object].id.nil? ? 0 : bindings[:object].id
+				#  NewChildCatalog.where("id != ?", except).map { |c| [ c.name, c.id, c.new_parent_catalog ] }
+			  #end
+			  #formatted_value do
+				#  new_child_catalog_id = bindings[:object].new_child_catalog_id
+				#  proper_name = bindings[:view].proper_name(new_child_catalog_id)
+				#  bindings[:view].link_to "#{proper_name}", '#' #bindings[:view].rails_admin.edit_path('new_child_catalog', new_child_catalog_id)
+			  #end
 		  end
 
 		  field :avatar do
@@ -79,6 +88,5 @@ class NewProduct < ActiveRecord::Base
 	  url = name
 	  self.slug ||= url.parameterize
   end
-
 
 end

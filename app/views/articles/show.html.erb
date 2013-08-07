@@ -8,7 +8,7 @@
 				$('#banner-item').css({
 					"background-image" : "url(<%= @article.avatar.url('banner_item') %>)",
 				});
-				alert('here!');
+				//alert('here!');
 		});
 	</script>
 	<div class="shadow-top"></div>
@@ -30,6 +30,19 @@
 		<div class="fullDescription">
 			<%= @article.description.html_safe unless @article.description.blank? %>
 		</div>
+	</div>
+
+	<div id="latest-articles">
+		<div class="g12">
+			<h1>Читатачам також сподобались:</h1>
+		</div>
+		<% @lasted.each do |last| %>
+			<div class="g6 news-item <%= cycle('alpha g6-alpha', 'omega g6-omega') %> ">
+				<h2 class="article-header"><%= link_to last.name, article_item_path(last), :title => last.name %></h2>
+				<div class="image-cont"><%= link_to(image_tag(last.avatar.url('main')), article_item_path(last), :title => last.name) %></div>
+				<p class="article-short-description"><%= last.short_description %></p>
+			</div><!-- g6 news-item -->
+		<% end %>
 	</div>
 </div>
 <!-- Article -->
