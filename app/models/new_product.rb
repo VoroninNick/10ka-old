@@ -21,7 +21,7 @@ class NewProduct < ActiveRecord::Base
                     :path => ':rails_root/public/assets/pr/:id/:style/:basename.:extension'
 
   rails_admin do
-	  label 'Товары'
+	  label 'Товар'
 	  label_plural 'Товары'
 	  edit do
 		  field :name do
@@ -33,6 +33,11 @@ class NewProduct < ActiveRecord::Base
 		  end
 		  field :new_child_catalog do
 			  label 'Категория'
+			  pretty_value do
+				  new_child_catalog_id = bindings[:object].new_child_catalog_id
+				  proper_name = bindings[:view].proper_name(new_child_catalog_id)
+				  bindings[:view].link_to "#{proper_name}", bindings[:view].rails_admin.show_path('new_child_catalog', new_child_catalog_id)
+			  end
 		  end
 
 		  field :avatar do
@@ -49,6 +54,11 @@ class NewProduct < ActiveRecord::Base
 		  end
 		  field :new_child_catalog do
 			  label 'Категория'
+			  pretty_value do
+				  new_child_catalog_id = bindings[:object].new_child_catalog_id
+				  proper_name = bindings[:view].proper_name(new_child_catalog_id)
+				  bindings[:view].link_to "#{proper_name}", bindings[:view].rails_admin.show_path('new_child_catalog', new_child_catalog_id)
+			  end
 		  end
 		  field :slug do
 			  label 'Ссылка'
@@ -59,6 +69,8 @@ class NewProduct < ActiveRecord::Base
 	  end
   end
 
+
+
   def to_param
 	  slug
   end
@@ -67,4 +79,6 @@ class NewProduct < ActiveRecord::Base
 	  url = name
 	  self.slug ||= url.parameterize
   end
+
+
 end

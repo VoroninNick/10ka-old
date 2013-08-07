@@ -56,6 +56,7 @@ class Product < ActiveRecord::Base
 			field :child_catalog do
 				label 'Производитель'
 				help 'Выберите пожалуйста производителя'
+
 			end
 			field :description do
 				label 'Описание'
