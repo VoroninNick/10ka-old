@@ -9,7 +9,7 @@ class Banner < ActiveRecord::Base
   validates :name, :presence => true, :length => { :minimum => 2 }
 
   # Paperclip image attachments
-  has_attached_file :banner, :styles => { :thumb => '150x150>' },
+  has_attached_file :banner, :styles => { :thumb => '150x150>', :main => '1200x400#' },
                   :url  => '/assets/banner/:id/:style/:basename.:extension',
                   :path => ':rails_root/public/assets/banner/:id/:style/:basename.:extension'
 

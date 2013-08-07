@@ -4,6 +4,7 @@ class PageController < ApplicationController
 
   def index
 		@last_article = Article.last(4)
+		@banners = Banner.all
   end
 
   def about
