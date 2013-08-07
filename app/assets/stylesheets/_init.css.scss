@@ -30,14 +30,14 @@
 
 
 @import "media-grid/_init_grid_system";
-@import "page";
+@import "page.css.scss";
 @import "basic.css.scss";
 // header
 // footer
 @import "media-grid/_normalize_browsers";
 @import "media-grid/grid";
 
-@import "media-queries/layout";
+@import "media-queries/layout.css.scss";
 @import "media-queries/pages";
 // contact
 // about
