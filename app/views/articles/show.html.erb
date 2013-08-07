@@ -21,8 +21,12 @@
 	</div>
 	<div class="shadow-bottom" style="clear: none;"></div>
 	<br class="clear"/>
+	<div class="article-render-left">
+		<span class="date"><%= @article.created_at.strftime("%m.%d.%Y") %></span>
+	</div>
 	<div class="article-render">
 		<h2><%= @article.name %></h2>
+
 		<div class="shortDescription">
 			<p><%= @article.short_description %></p>
 		</div>

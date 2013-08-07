@@ -379,3 +379,15 @@
     }
   }
 }
+
+.article-render-left{
+  margin-top: 30px;
+  width: 20%;
+  float: left;
+  text-align: right;
+  .date{
+    font-weight: 300;
+    font-size: 14px;
+    color: #676767;
+  }
+}
