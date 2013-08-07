@@ -1,6 +1,6 @@
 # -*- encoding : utf-8 -*-
 class Banner < ActiveRecord::Base
-  attr_accessible :banner, :description, :name, :delete_banner
+  attr_accessible :banner, :description, :name, :delete_banner, :url
 
   attr_accessor :delete_banner
   before_validation { self.banner.clear if self.delete_banner == '1' }
@@ -36,6 +36,9 @@ class Banner < ActiveRecord::Base
 			end
 			field :banner do
 				label 'Изображение'
+			end
+			field :url do
+				label 'Ссылка'
 			end
 		end
 	end
