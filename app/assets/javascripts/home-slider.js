@@ -10,7 +10,7 @@
         titleIndent:0,
         titleWidth:55,
         slideWidth:1120-3*88,
-        position:2,
+        position:1,
         allowAuto:false,
         timeout:5000,
         speed:1000,
