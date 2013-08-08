@@ -1,4 +1,47 @@
 
+  .windows{
+    nav{
+      ul{
+        li{
+          a{
+            font-weight: 600 !important;
+          }
+        }
+      }
+    }
+    li.active{
+      font-weight: 600 !important;
+    }
+
+    h2.article-header a,
+    #wrapper #footer-wrapper h2,
+    #about-wrapper .fd h1{
+      font-weight: 400 !important;
+    }
+
+    #latest-articles .g12 h1,
+    #articles-wrapper div.g12 h1{
+      font-weight: 400 !important;
+    }
+
+    h1{
+
+    }
+
+    h2{
+
+    }
+
+    h3{
+
+    }
+
+    h4{
+
+    }
+
+  }
+
 
 //*$block-margins: 40px;
 //*$block-footer-margins: 60px;
