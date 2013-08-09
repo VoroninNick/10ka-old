@@ -5,8 +5,10 @@ class PageController < ApplicationController
   def index
 		@last_article = Article.last(4)
 		@banners = Banner.all
+		@text = Text.find(2)
   end
 
   def about
+		@text_about = Text.find(3)
   end
 end

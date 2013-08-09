@@ -14,10 +14,8 @@
   </div>
 
   <div id="about" class="g8 omega main-descr-area">
-    <h1>Вас вітає «Десятка» &mdash; гуртівня буд-матеріалів</h1>
-    <p class="h1-cont">&mdash; лідер з гуртового продажу будівельно-оздоблювальних матеріалів у Західній Україні</p>
-    <p class="af-description">Компанія знаходиться на ринку вже протягом 10 років та зарекомендувала себе як надійний партнер не лише для будівельних компаній та гуртових магазинів, а і для мереж гіпермаркетів, таких як «Нова Лінія», «Практікер» та ін.</p>
-    <img src="assets/main-about-image.jpg" alt="image"/>
+    <h1><%= @text.name %></h1>
+    <%= @text.description.html_safe unless @text.description.blank? %>
    </div>
 </div>
 <!-- /Info area -->
