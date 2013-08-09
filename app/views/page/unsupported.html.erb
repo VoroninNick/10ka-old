@@ -1,6 +1,6 @@
 <%= image_tag('logo-big.jpg') %>
-<h1>Ваш браузер устарел!</h1>
-<p>Браузер, которым Вы пользуетесь устарел! У него есть проблемы с безопасностью и у него ограниченные возможности. Вам будут не доступны некоторые детали на многих сайтах.</p>
+<h1><%= @text_unsupported.name %></h1>
+<%= @text_unsupported.description.html_safe unless @text_unsupported.description.blank? %>
 
 <div id="browser-downloads">
 	<%= link_to(image_tag('https://raw.github.com/paulirish/browser-logos/master/ie9-10/ie9-10.png', :width => '120px'), 'http://windows.microsoft.com/ru-ru/internet-explorer/download-ie') %>

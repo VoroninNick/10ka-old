@@ -1,16 +1,16 @@
 #unsupported-wrapper{
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Open Sans', sans-serif !important;
   width: 820px;
   margin: 0 auto;
   text-align: center;
   h1{
-    font-weight: 600;
-    color: #bf291f;
+    font-weight: 600 !important;
+    color: #bf291f !important;
   }
   p{
     text-align: left !important;
-    font-weight: 400;
-    color: #666;
+    font-weight: 400 !important;
+    color: #666 !important;
   }
   a{
     text-decoration: none;
