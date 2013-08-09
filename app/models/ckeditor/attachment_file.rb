@@ -11,7 +11,7 @@ class Ckeditor::AttachmentFile < Ckeditor::Asset
   end
 
 	rails_admin do
-		label 'Файлы'
+		label 'Файл'
 		label_plural 'Файлы'
 	end
 
