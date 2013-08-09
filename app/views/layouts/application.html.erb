@@ -23,7 +23,10 @@
 				width		: '100%',
 				height		: '100%',
 				autoSize	: false,
-				closeClick	: false,
+				closeClick  : false, // prevents closing when clicking INSIDE fancybox
+				helpers     : {
+					overlay : {closeClick: false} // prevents closing when clicking OUTSIDE fancybox
+				},
 				closeBtn: false,
 				openEffect	: 'none',
 				closeEffect	: 'none'
