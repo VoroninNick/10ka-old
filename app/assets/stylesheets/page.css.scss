@@ -139,7 +139,16 @@ div#some-slider-wrapper img{
   color: #bf291f;
   font-size: 1em;
   font-weight: 300;
-  text-decoration: underline;
+  border-bottom: 1px solid rgba(191, 41, 31, 0.35);
+  -webkit-transition: 0.6s ease-out all;
+  -moz-transition: 0.6s ease-out all;
+  -ms-transition: 0.6s ease-out all;
+  -o-transition: 0.6s ease-out all;
+  transition: 0.6s ease-out all;
+}
+
+#catalog-wrapper div.catalog-block div.catalog-item ul.catalog-menu li a:hover{
+  border-bottom: 1px solid rgba(191, 41, 31, 1);
 }
 
 #catalog-wrapper div.catalog-block div.catalog-item.open a.catalog-show-more{
