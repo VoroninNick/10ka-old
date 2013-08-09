@@ -1,0 +1,26 @@
+#unsupported-wrapper{
+  font-family: 'Open Sans', sans-serif;
+  width: 820px;
+  margin: 0 auto;
+  text-align: center;
+  h1{
+    font-weight: 600;
+    color: #bf291f;
+  }
+  p{
+    text-align: left !important;
+    font-weight: 400;
+    color: #666;
+  }
+  a{
+    text-decoration: none;
+    outline: 0;
+    border: 0;
+    float: left;
+    margin-right: 110px;
+
+    &:last-child{
+      margin-right: 0;
+    }
+  }
+}

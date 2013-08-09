@@ -22,5 +22,6 @@ App10k::Application.routes.draw do
   match 'c/:new_catalog_id/:id' => 'new_catalog#get_parent', :as => 'new_catalog_parent'
   match 'c/:new_catalog_id/:new_parent_catalog_id/:id' => 'new_catalog#get_child', :as => 'new_catalog_child'
   match 'c/:new_catalog_id/:new_parent_catalog_id/:new_child_catalog_id/:id' => 'new_catalog#get_product', :as => 'new_product'
+  match 'unsupported' => 'page#unsupported', :as => 'unsupported'
   root :to                                                          => 'page#index'
 end

@@ -16,12 +16,24 @@
 <div id="no-support-script">
 	<script type="text/javascript" charset="utf-8">
 		$(document).ready(function(){
+			$("#link_to_ie8").fancybox({
+				maxWidth	: '80%',
+				//maxHeight	: 600,
+				fitToView	: false,
+				width		: '100%',
+				height		: '100%',
+				autoSize	: false,
+				closeClick	: false,
+				closeBtn: false,
+				openEffect	: 'none',
+				closeEffect	: 'none'
+			});
 			if( $("html").hasClass("ie8") ) {
-				alert('IE8!');
+				$('#link_to_ie8').trigger('click');
 			}
 		});
-
 	</script>
+	<a id="link_to_ie8" data-fancybox-type="iframe" class="fancybox" href="/unsupported" style="display: none;">Unsuport</a>
 </div>
 <div id="contacts-for-header">
 	<div id="phone-head"><%= image_tag('phone-2.png') %> <%= link_to '+38 (032) 244 00 15', 'tel:+38 (032) 244 00 15' %></div>

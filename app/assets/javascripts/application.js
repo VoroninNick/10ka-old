@@ -13,4 +13,5 @@
 //= require jquery
 //= require jquery_ujs
 //= require modernizr.custom.79639
+//= require jquery.fancybox.pack
 //= require_tree .

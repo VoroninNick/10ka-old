@@ -11,4 +11,9 @@ class PageController < ApplicationController
   def about
 		@text_about = Text.find(3)
   end
+
+	def unsupported
+		render :layout => 'unsupported'
+		#@text_unsupported = Text.find(4)
+	end
 end

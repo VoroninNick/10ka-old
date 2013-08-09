@@ -10,4 +10,5 @@
  *
  *= require_self
  *= require _init
+ *= require jquery.fancybox
  */
