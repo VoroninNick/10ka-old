@@ -1,3 +1,5 @@
+<%= current_user.inspect %>
+
 <!-- Header render -->
 <%= render :partial => "partials/head" %>
 <!-- /Header render -->
@@ -6,13 +8,13 @@
 <!-- Info render -->
 <div id="contact-wrapper" class="f-height padding-holder">
   <div class="g12">
-    <h1>Контактна інформація</h1>
+    <h1 contenteditable="true" data-editable-id="1">Контактна інформація</h1>
   </div>
   <div id="contact-info-row-address" class="g4 contact-info-row alpha">
-    <h2 class="title"><%= image_tag('h-img.png') %>Адреса:</h2>
-    <p class="title">вул. Городоцька, 357</p>
-    <p class="title">м. Львів, Україна, 79068</p>
-    <p class="sub-title">GPS: 49° 48° 757° Пн. Ш. 23° 58° 671° Сх. Д.</p>
+    <h2 class="title" contenteditable="true"><%= image_tag('h-img.png') %>Адреса:</h2>
+    <p class="title" contenteditable="true">вул. Городоцька, 357</p>
+    <p class="title" contenteditable="true">м. Львів, Україна, 79068</p>
+    <p class="sub-title" contenteditable="true">GPS: 49° 48° 757° Пн. Ш. 23° 58° 671° Сх. Д.</p>
   </div>
   <div id="contact-info-row-work" class="g4 contact-info-row">
     <h2 class="title"><%= image_tag('h-img.png') %>Графік роботи:</h2>

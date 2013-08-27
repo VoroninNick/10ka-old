@@ -12,6 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery-migrate-min
 //= require modernizr.custom.79639
 //= require jquery.fancybox.pack
 //= require_tree .
