@@ -79,13 +79,14 @@
 <!-- /Form render -->
 <script type="text/javascript">
   var validationSettings = {
-                errorMessagePosition : 'top',
+                errorMessagePosition : 'top'
             };
 
             $('#contact_us')
                 .submit(function() {
-                    if ($(this).validate(false, validationSettings))
-                        alert('Valid!');
+                    if ($(this).validate(false, validationSettings)){
+                        return true;
+                    }
 
                     return false;
                 })
