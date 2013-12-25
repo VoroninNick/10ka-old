@@ -28,8 +28,13 @@
  	}	
 		
 	div#logo{
-  		float: left;
-  		overflow: hidden;
+  	  float: left;
+  	  overflow: hidden;
+
+      @media only screen and(min-width:960px) and(max-width:1330px) {
+        width: 94px;
+      }
+
 	}
 	
 	div#menu{
@@ -52,6 +57,10 @@
   		float: left;
   		margin-right: 5px;
   		padding: 10px 44px;
+
+        &:first-child{
+          padding-left: 0;
+        }
 	}
 
 	nav ul.header-nav li:last-child{
@@ -327,11 +336,13 @@
 
 #wrapper #footer-wrapper{
 
+
+
 	/* footer properties for all resolutions */
 
   	background: url(/assets/footer-bg.jpg) repeat-x transparent;
     height: 235px;
-    color: rgba(178, 178, 178, 1);
+    color: rgba(144, 144, 144, 1);
     font-size: 0.95em;
 
   a{
@@ -368,14 +379,14 @@
 
   .sub-title{
     a{
-      color: rgba(178, 178, 178, 1);
+      color: rgba(144, 144, 144, 1);
       -webkit-transition: 0.6s ease-out all;
       -moz-transition: 0.6s ease-out all;
       -ms-transition: 0.6s ease-out all;
       -o-transition: 0.6s ease-out all;
       transition: 0.6s ease-out all;
-      color: rgba(178, 178, 178, 0.45);
-      border-bottom: 1px solid rgba(178, 178, 178, 0.45);
+      color: rgba(144, 144, 144, 0.45);
+      border-bottom: 1px solid rgba(144, 144, 144, 0.45);
       &:hover{
         color: rgba(191, 41, 31, 1);
         border-bottom: 1px solid rgba(191, 41, 31, 1);
@@ -422,6 +433,19 @@
       float:left;
     }
   }
+
+  .contact-info-row.contacts.g4 {
+    float: right;
+  }
+
+  .contact-info-row.work.g4 {
+    float: right;
+  }
+
+  .contact-info-row.copyright.g4 {
+    float: left;
+  }
+
 	/* end footer properties for all resolutions */
 
 	/* footer media(max-width:959px) */
@@ -430,7 +454,7 @@
 		.contact-info-row p.title, 
   		.contact-info-row p.copyrights,
    		.contact-info-row p.footer-title{
-  			color: #b2b2b2;
+  			color: #929292;
   			font-weight: 300;
   			font-size: 18px;
 		}
@@ -443,7 +467,7 @@
 		}
 
   		.contact-info-row.work.g4 {
-  			float:left;
+  			float:none;
   			width:260px;
   			margin-left: 45px;
   			margin-right: 0;
@@ -458,6 +482,7 @@
     		left: 0;
     		position: relative;
     		width: auto;
+          float: none;
 
     		/*float:left;*/
   			width: auto;/*width:100%;*/
@@ -486,6 +511,7 @@
   			overflow-y:hidden;*/
   			padding-bottom: 0;
   			top:160px;
+          float: none;
  		}
 
  		.contact-info-row.copyright div#developed-by p.title  {
