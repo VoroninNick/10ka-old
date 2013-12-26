@@ -13,6 +13,8 @@ class ContactController < ApplicationController
       new_message = ContactMailer.new_message(@message)
       #new_message.deliver
 
+      redirect_to( contact_path, :notice => 'Message was succesfully sent' )
+
       #redirect_to(root_path, :notice => "Message was successfully sent.")
     else
       #flash.now.alert = "Please fill all fields."
