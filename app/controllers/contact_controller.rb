@@ -11,7 +11,7 @@ class ContactController < ApplicationController
 
     if @message.valid?
       new_message = ContactMailer.new_message(@message)
-      #new_message.deliver
+      new_message.deliver
 
       redirect_to( contact_path, :notice => 'Message was succesfully sent' )
 
