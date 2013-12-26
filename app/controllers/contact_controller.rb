@@ -7,7 +7,7 @@ class ContactController < ApplicationController
 
   def create
     @message = Message.new(params[:message])
-    render :inline => params[:message].inspect
+    render :inline => @message.name.inspect
 
     if @message.valid? && 1 == 2
       new_message = ContactMailer.new_message(@message)
