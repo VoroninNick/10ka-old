@@ -17,6 +17,8 @@ gem 'ckeditor'
 #gem 'will_paginate', '~> 3.0'
 gem 'ruby-prof'
 
+gem 'roadie' # for sending emails
+
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'

@@ -5,7 +5,12 @@ class ContactMailer < ActionMailer::Base
 
   def new_message(message)
     @message = message
-    mail(:subject => "New message from your website!")
+    to = []
+    ContactMessageReceiver.all.each do | r |
+    	to.push(r.email)
+    end
+    #default to: to
+    mail(:subject => "New message from your website!", to: to)
   end
 
 end

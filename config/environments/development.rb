@@ -1,5 +1,17 @@
 # -*- encoding : utf-8 -*-
 App10k::Application.configure do
+  config.action_mailer.default_url_options = { host: "voroninstudio.eu" }
+  config.action_mailer.raise_delivery_errors = true
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+      address: "smtp.gmail.com",
+      port: 587,
+      domain: "voroninstudio.eu",
+      authentication: "plain",
+      enable_starttls_auto: true,
+      user_name: 'support',
+      password: 'Studiosupport123'
+  }
   # Settings specified here will take precedence over those in config/application.rb
 
   # In the development environment your application's code is reloaded on

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130807132618) do
+ActiveRecord::Schema.define(:version => 20140113120129) do
 
   create_table "articles", :force => true do |t|
     t.string   "name"
@@ -83,6 +83,12 @@ ActiveRecord::Schema.define(:version => 20130807132618) do
 
   add_index "ckeditor_assets", ["assetable_type", "assetable_id"], :name => "idx_ckeditor_assetable"
   add_index "ckeditor_assets", ["assetable_type", "type", "assetable_id"], :name => "idx_ckeditor_assetable_type"
+
+  create_table "contact_message_receivers", :force => true do |t|
+    t.string   "email"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "home_positions", :force => true do |t|
     t.string   "name"
