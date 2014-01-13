@@ -177,7 +177,7 @@
   margin-right: 15%;
   width: 23%;
   float: left;
-  margin-bottom: 20px;
+  margin-bottom: 60px;
   //@extend .g;
 
 
@@ -212,6 +212,13 @@
   margin-top: 10px !important;
   margin-bottom: 10px;
   line-height: 1.2em !important;
+
+  &.one-line{
+    height: 1.2em !important;
+  }
+
+  &.line-height
+  
 }
 
 .online-item a{

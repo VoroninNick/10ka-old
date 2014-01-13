@@ -41,6 +41,7 @@
     <div class="g12">
       <h2 class="title"><%= image_tag('h-img.png') %>Зворотній зв'язок:</h2>
     </div>
+    <div id="form-fields">
     <div id="fields"  class="g5 alpha">
       <div id="validate_name" class="row-input">
         <%= form.text_field :name, :data => { :'validation' => "validate_min_length length3",
@@ -73,6 +74,10 @@
     <div class="g12">
       <%= form.submit "Надіслати!", :class => "submit-branded animate" %>
     </div>
+  </div>
+  <div id="thanks-message">
+    
+  </div>
 
 <% end %>
 
@@ -85,7 +90,8 @@
             $('#contact_us')
                 .submit(function() {
                     if ($(this).validate(false, validationSettings)){
-                        return true;
+                        //return true;
+
                     }
 
                     return false;
