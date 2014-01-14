@@ -11,7 +11,23 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140113120129) do
+ActiveRecord::Schema.define(:version => 20140114132251) do
+
+  create_table "about_page_sponsors", :force => true do |t|
+    t.string   "name"
+    t.string   "url"
+    t.text     "short_description"
+    t.integer  "about_page_id"
+    t.datetime "created_at",        :null => false
+    t.datetime "updated_at",        :null => false
+  end
+
+  create_table "about_pages", :force => true do |t|
+    t.text     "top_description"
+    t.text     "bottom_description"
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
+  end
 
   create_table "articles", :force => true do |t|
     t.string   "name"

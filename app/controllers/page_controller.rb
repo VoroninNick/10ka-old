@@ -10,6 +10,8 @@ class PageController < ApplicationController
 
   def about
 		@text_about = Text.find(3)
+
+		@about_page = AboutPage.first
   end
 
 	def unsupported
