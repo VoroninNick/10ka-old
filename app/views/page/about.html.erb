@@ -13,6 +13,13 @@
     <div class="g9 fd omega pd-me">
       <h1><%= @text_about.name %></h1>
 			<%= @text_about.description.html_safe unless @text_about.blank? %>
+      <!--<%= @about_page.top_description %>
+      <% @about_page.about_page_sponsors.each do | s | %>
+        <div class="about-page-sponsor">
+          <%= link_to( s.name, s.url ) %>
+          <%= s.short_description %>
+        </div>
+      <% end %> -->
     </div>
 
 

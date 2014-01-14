@@ -79,8 +79,8 @@
     <p><img style="width:16px;height:16px" src="<%= asset_path('ajax-loader.gif') %>" id="loader-image" />Надсилається...</p>
   </div>
 
-  <div style="display:none;" id="thanks-message">
-    <p><img style="width:16px;height:16px" src="<%= asset_path('ajax-loader.gif') %>" id="loader-image" />Дякуємо за ваш лист</p>
+  <div style="display:none;" id="thanks-message" class="g12">
+    <p>Дякуємо за ваш лист</p>
   </div>
 
 <% end %>
@@ -98,7 +98,8 @@
                         var $form = $('#contact_us');
                         $('#form-fields').hide();
                         $('#sending-message').show();
-                        $.post({
+                        $.ajax({
+                          type:'POST',
                           url: $form.attr('action'),
                           data: $form.serialize(),
                           success: function(){

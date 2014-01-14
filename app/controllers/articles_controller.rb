@@ -11,8 +11,15 @@ class ArticlesController < ApplicationController
 
   def show
     @article = Article.find_by_slug!(params[:id])
-		@article_next = Article.first
-    @article_prev = Article.last
+
+		@article_next = Article.where('id < ?', @article.id).order('id asc').first
+    if @article_next.nil?
+      @article_next = Article.first
+    end
+    @article_prev = Article.where('id > ?', @article.id).order('id desc').first
+    if @article_prev.nil?
+      #@article_prev = Article.last
+    end
     @lasted = Article.last(2)
   end
 
