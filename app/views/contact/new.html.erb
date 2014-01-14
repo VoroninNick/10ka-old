@@ -98,7 +98,8 @@
                         var $form = $('#contact_us');
                         $('#form-fields').hide();
                         $('#sending-message').show();
-                        $.post({
+                        $.ajax({
+                          type:'POST',
                           url: $form.attr('action'),
                           data: $form.serialize(),
                           success: function(){
