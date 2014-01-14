@@ -18,7 +18,7 @@ class ArticlesController < ApplicationController
     end
     @article_prev = Article.where('id > ?', @article.id).order('id desc').first
     if @article_prev.nil?
-      #@article_prev = Article.last
+      @article_prev = Article.last
     end
     @lasted = Article.last(2)
   end
