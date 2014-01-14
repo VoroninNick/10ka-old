@@ -180,6 +180,10 @@
   margin-bottom: 60px;
   //@extend .g;
 
+  &.desktop-last-item-in-row{
+    margin-right: 0;
+  }
+
 
 }
 @media(max-width:960px){
@@ -213,11 +217,21 @@
   margin-bottom: 10px;
   line-height: 1.2em !important;
 
-  &.one-line{
-    height: 1.2em !important;
+  &.desktop-one-line{
+    height: 1.2em;
   }
 
-  &.line-height
+  &.desktop-two-lines{
+    height: 2.4em;
+  }
+
+  &.desktop-three-lines{
+    height: 3.6em;
+  }
+
+  &.desktop-four-lines{
+    height: 4.8em;
+  }
   
 }
 
