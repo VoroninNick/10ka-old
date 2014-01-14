@@ -109,16 +109,73 @@
 				<div class="store-section"><!-- Online store -->
 					<div class="top-border">&nbsp;</div>
 					<% a = 0 %>
+					<% items = get_all_items_from_all_subcatalogs(@new_parent_catalog) %>
+
 					<%# fetch_all_child_ids(@parent_catalog.id).each do |child_ids| %>
-					<% @new_parent_catalog.new_child_catalogs.each do |cc| %>
-						<% get_all_products_by_child_ids(cc.id).each do |pr| %>
+					<% items.each_with_index do |pr, index| %>
 							<% a+= 1 %>
-							<div index="<%= a %>" class="online-item" hello="val" <% if a % 3 == 0 then %> style="margin-right:0;" <% end %> data-id="" data-catalog-name="" data-price="">
-								<%= link_to image_tag(pr.avatar.url(:prod), :alt => pr.name), new_catalog_path(@new_catalog)+'/'+@new_parent_catalog.slug+'/'+cc.slug+'/'+pr.slug, :title => pr.name, :class => '' %>
-								<p><%= pr.name %></p>
-								<%= link_to 'Детальніше', new_catalog_path(@new_catalog)+'/'+@new_parent_catalog.slug+'/'+cc.slug+'/'+pr.slug, :title => pr.name, :class => 'submit-branded animate' %>
+							<% 
+
+							#get row count
+							if a % 3 == 0
+								item_1 = items[a-3]
+								item_2 = items[a-2]
+								item_3 = items[a-1]
+							elsif a % 3 == 2
+								item_1 = items[a-2]
+								item_2 = items[a-1]
+								item_3 = items[a]
+								
+							elsif a % 3 == 1
+								item_1 = items[a-1]
+								item_2 = items[a]
+								item_3 = items[a+1]
+							end
+							row_count = 1
+							max_str_length = 1
+							length_1 = item_1.name.length
+							length_2 = 0
+							length_3 = 0
+							if item_2 != nil
+								length_2 = item_2.name.length
+							end
+
+							if item_3 != nil
+								length_3 = item_3.name.length
+							end
+
+							arr = []
+							arr[0] = length_1
+							arr[1] = length_2
+							arr[2] = length_3
+
+							max_str_length = arr.max
+
+							if max_str_length >= 27
+								row_count = 3
+							end
+
+							if max_str_length >= 64
+								row_count = 4
+							end
+
+							if row_count == 1
+								desktop_rows_count_class = 'desktop-one-line'
+							elsif row_count == 2
+								desktop_rows_count_class = 'desktop-two-lines'
+							elsif row_count == 3
+								desktop_rows_count_class = 'desktop-three-lines'
+							elsif row_count == 4
+								desktop_rows_count_class = 'desktop-four-lines'
+							end
+								
+								
+							%>
+							<div index="<%= a %>" class="online-item<% if a % 3 == 0 then %> desktop-last-item-in-row<% end %>" hello="val"  data-id="" data-catalog-name="" data-price="">
+								<%= link_to image_tag(pr.avatar.url(:prod), :alt => pr.name), new_catalog_path(@new_catalog)+'/'+@new_parent_catalog.slug+'/'+pr.new_child_catalog.slug+'/'+pr.slug, :title => pr.name, :class => '' %>
+								<p class="<%= desktop_rows_count_class %>"><%= pr.name %></p>
+								<%= link_to 'Детальніше', new_catalog_path(@new_catalog)+'/'+@new_parent_catalog.slug+'/'+pr.new_child_catalog.slug+'/'+pr.slug, :title => pr.name, :class => 'submit-branded animate' %>
 							</div>
-						<% end %>
 					<% end %>
 				</div> <!-- /Online store -->
 			</div> <!-- /products -->
