@@ -96,8 +96,8 @@
                     if ($(this).validate(false, validationSettings)){
                         //return true;
                         var $form = $('#contact_us');
-                        $('#form-fields').hide();
-                        $('#sending-message').show();
+                        //$('#form-fields').hide();
+                        //$('#sending-message').show();
                         /*$.ajax({
                           type:'POST',
                           url: $form.attr('action'),
@@ -109,7 +109,7 @@
                         });*/
                     }
 
-                    return false;
+                    //return false;
                 })
                 .validateOnBlur(false, validationSettings)
                 .showHelpOnFocus();
