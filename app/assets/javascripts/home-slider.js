@@ -256,6 +256,10 @@ that.initPosition();
         });
     };
 
+    this.initHeaderSize = function(){
+
+    };
+
 
 
     this.showSlide= function(pos,constructor,destructor)
