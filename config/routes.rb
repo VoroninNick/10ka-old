@@ -4,6 +4,7 @@ App10k::Application.routes.draw do
   mount Ckeditor::Engine => '/ckeditor'
   devise_for :users
   resources :articles
+  match 'pasha', to: 'pasha#cmd'
   match 'articles'                                                  => 'articles#index', :as => 'articles'
   match 'articles/:id'                                              => 'articles#show', :as => 'article_item'
   match 'about'                                                     => 'page#about'
