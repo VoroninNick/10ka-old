@@ -1,6 +1,6 @@
 # -*- encoding : utf-8 -*-
 class ApplicationController < ActionController::Base
-  protect_from_forgery
+  #protect_from_forgery
 
   helper_method :fetch_sponsors, :fetch_banners, :fetch_all_catalog, :get_left_catalogs, :get_center_catalogs, :get_right_catalogs, :fetch_all_child, :fetch_all_products, :count_childs, :child_name_breadcrumb, :parent_name_breadcrumb, :catalog_name_breadcrumb, :get_first_child, :parent_slug, :fetch_all_child_ids, :fetch_all_products_by_parent, :get_all_items_from_all_subcatalogs
 

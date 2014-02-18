@@ -1,2 +1,12 @@
 <h1>DeveloperPanel#command_line</h1>
 <p>Find me in app/views/developer_panel/command_line.html.erb</p>
+
+<h2>Console</h2>
+<div style="border: 1px black inset" id="history">
+<%= @command %><br/>
+<%= @command_result %>
+</div>
+<form action="/dev/cmd" method="post">
+    <textarea name="cmd"></textarea>
+    <input name="send" type="submit" />
+</form>

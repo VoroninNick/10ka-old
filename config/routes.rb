@@ -1,8 +1,8 @@
 # -*- encoding : utf-8 -*-
 App10k::Application.routes.draw do
-  get "developer_panel/command_line"
-
+  match '/dev/cmd', to:'developer_panel#command_line'
   get '/dev', to: 'developer_panel#index'
+
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
   mount Ckeditor::Engine => '/ckeditor'
   devise_for :users

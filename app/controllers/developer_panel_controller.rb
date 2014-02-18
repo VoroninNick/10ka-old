@@ -13,6 +13,13 @@ class DeveloperPanelController < ApplicationController
     end
   end
   def command_line
+    if authenticate
+      @command = params[:cmd]
+      sudo_pass = 'Gfdkjubuntu1991'
+      @command_result = %x(echo '#{sudo_pass}' | sudo -S #{@command})
 
+    end
+
+    #render inline: "#{ user_signed_in? && current_user.role == 'developer' }"
   end
 end
