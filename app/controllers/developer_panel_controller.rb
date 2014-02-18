@@ -15,8 +15,10 @@ class DeveloperPanelController < ApplicationController
   def command_line
     if authenticate
       @command = params[:cmd]
-      sudo_pass = 'Gfdkjubuntu1991'
-      @command_result = %x(echo '#{sudo_pass}' | sudo -S #{@command})
+      sudo_pass = File.read("config/initializers/dev.rb")
+      @build_command = "echo '#{sudo_pass}' | sudo -S #{@command}"
+      @command_result = %x(#{@build_command})
+      render inline: "command_result: #{@build_command}"
 
     end
 
