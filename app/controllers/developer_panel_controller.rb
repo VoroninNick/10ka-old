@@ -1,7 +1,7 @@
 class DeveloperPanelController < ApplicationController
   #layout :developer_panel
   def authenticate
-    if !user_signed_in?
+    if ! (user_signed_in? && current_user.role == 'developer' )
       redirect_to controller: 'devise/sessions', action: 'new'
       return false
     end
