@@ -1,9 +1,13 @@
 # -*- encoding : utf-8 -*-
 App10k::Application.routes.draw do
+  get "developer_panel/command_line"
+
+  get '/dev', to: 'developer_panel#index'
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
   mount Ckeditor::Engine => '/ckeditor'
   devise_for :users
   resources :articles
+  match 'pasha', to: 'pasha#cmd'
   match 'articles'                                                  => 'articles#index', :as => 'articles'
   match 'articles/:id'                                              => 'articles#show', :as => 'article_item'
   match 'about'                                                     => 'page#about'

@@ -45,7 +45,7 @@ RailsAdmin.config do |config|
   # config.default_items_per_page = 20
 
   # Exclude specific models (keep the others):
-  config.excluded_models = ['Catalog', 'ChildCatalog', 'HomePosition', 'ParentCatalog', 'Product', 'User']
+  config.excluded_models = ['Catalog', 'ChildCatalog', 'HomePosition', 'ParentCatalog', 'Product']
 
   # Include specific models (exclude the others):
   # config.included_models = ['Article', 'Banner', 'Catalog', 'ChildCatalog', 'Ckeditor::Asset', 'Ckeditor::AttachmentFile', 'Ckeditor::Picture', 'HomePosition', 'ParentCatalog', 'Product', 'Sponsor', 'User']

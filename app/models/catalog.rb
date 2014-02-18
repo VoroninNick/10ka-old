@@ -54,3 +54,6 @@ class Catalog < ActiveRecord::Base
     self.slug ||= name.parameterize
   end
 end
+
+
+
