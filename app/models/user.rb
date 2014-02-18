@@ -12,5 +12,5 @@ class User < ActiveRecord::Base
 
   attr_accessible :role
 
-  enum_for :role, [:admin, :developer]
+  validates :role, :inclusion => { :in => %w{admin developer} }
 end
