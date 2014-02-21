@@ -19,7 +19,7 @@ class DeveloperPanelController < ApplicationController
       sudo_pass = Rails.configuration.dev_pass
       @build_command = "echo '#{sudo_pass}' | sudo -S #{@command}"
       @command_result = %x(#{@build_command})
-      render inline: "command_result: #{@build_command}"
+      render inline: "command_build: #{@build_command}<br/>command_result:<br/>#{@command_result}"
 
     end
 
