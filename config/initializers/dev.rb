@@ -1,1 +1,1 @@
-Gfdkjubuntu1991
+App10k::Application.config.dev_pass = 'casper12345'
