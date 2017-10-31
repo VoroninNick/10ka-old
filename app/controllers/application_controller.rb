@@ -78,4 +78,30 @@ class ApplicationController < ActionController::Base
   def catalog_name_breadcrumb(id)
     @catalog_name_breadcrumb ||= Catalog.find(id)
   end
+
+  def phone_url(phone)
+    "tel:" + phone.gsub(/[\s\(\)]/, "")
+  end  
+
+  def main_site_phone
+    "+38 (032) 244 00 22"
+  end
+
+  def office_phone
+    "+38 (032) 244 00 00"
+  end  
+
+  def office_phone_url
+    phone_url(office_phone)
+  end  
+
+  def main_site_phone_url
+    phone_url(main_site_phone)
+  end
+
+  def fax_phone
+    "+38 (032) 244 00 09"
+  end  
+
+  helper_method :main_site_phone, :phone_url, :main_site_phone_url, :office_phone, :office_phone_url, :fax_phone
 end

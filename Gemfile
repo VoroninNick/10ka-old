@@ -18,7 +18,7 @@ gem 'ckeditor'
 gem 'ruby-prof'
 
 gem 'roadie' # for sending emails
-
+gem 'eventmachine', '~> 1.0.4'
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
@@ -26,8 +26,10 @@ group :assets do
 end
 
 group :development do
-  gem 'sqlite3'
+  gem 'sqlite3', '~> 1.3.9'
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'meta_request'
 end
+
+gem 'safe_yaml', '~> 0.9.7'

@@ -2,7 +2,7 @@
 App10k::Application.routes.draw do
   match '/dev/cmd', to:'developer_panel#command_line'
   get '/dev', to: 'developer_panel#index'
-
+  post "/dev/file_upload", to: "developer_panel#file_upload", as: :file_upload
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
   mount Ckeditor::Engine => '/ckeditor'
   devise_for :users
